@@ -3,286 +3,324 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>한국사 × 한국뮤지컬 — 초등 한국사 수업을 위한 무대 아카이브</title>
-<meta name="description" content="2022 개정 사회과 성취기준에 연결한 한국 창작뮤지컬 아카이브. 시대의 흐름을 따라 작품을 찾고, 역사 사실과 창작을 구분합니다." />
+<title>한국사 × 한국뮤지컬 — 초등 한국사 수업 교사용 탐색 도구</title>
+<meta name="description" content="2022 개정 사회과 한국사 성취기준에 연결한 한국 창작뮤지컬 자료. 역사 자료와 뮤지컬을 나란히 놓고 사실과 창작을 구분하며, 수업에 활용할 작품과 넘버를 찾습니다." />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <style>
+/* ================================================================
+   1. 디자인 토큰 — 라이트 테마
+   배경은 따뜻한 회백색, 카드는 흰색, 골드는 포인트로만 제한한다.
+================================================================ */
 :root{
+  /* KRDS 기본 */
   --color-primary:#006DD2; --color-primary-light:#E8F3FF;
-  --color-secondary:#00A68A; --color-error:#D32F2F;
-  --color-warning:#F57C00; --color-success:#388E3C;
-  --color-pastel-blue:#BFD9F2; --color-pastel-green:#C8EDD9;
-  --color-pastel-yellow:#FFF3B0; --color-pastel-pink:#FFD6E0;
-  --color-pastel-blue-dark:#1A5F8A; --color-pastel-green-dark:#1A6B47;
-  --color-pastel-yellow-dark:#7A6000; --color-pastel-pink-dark:#8A2840;
-  --color-gray-900:#1A1A1A; --color-gray-700:#404040; --color-gray-500:#767676;
-  --color-gray-300:#B2B2B2; --color-gray-100:#F5F5F5; --color-white:#FFFFFF;
-  --border-radius-sm:4px; --border-radius-md:8px; --border-radius-lg:16px;
-  --spacing-xs:4px; --spacing-sm:8px; --spacing-md:16px; --spacing-lg:24px; --spacing-xl:40px;
+  --color-white:#FFFFFF;
 
-  --ink-900:#12151B; --ink-800:#191D25; --ink-700:#222831; --ink-600:#2E3542;
-  --line:#333B48;
-  --txt-hi:#F2EFE9; --txt-mid:#B6B2A9; --txt-low:#837E75;
-  --gold:#C9A227; --gold-soft:#E3C766;
+  /* 바탕·면 */
+  --bg:#F7F7F5; --bg-soft:#FAF9F6; --surface:#FFFFFF; --surface-alt:#F4F5F7;
+
+  /* 글자 */
+  --ink:#1F2937;        /* 기본 본문 */
+  --ink-soft:#5F6875;   /* 보조 본문 */
+  --ink-mute:#667085;   /* 캡션 (이보다 흐린 회색은 쓰지 않는다) */
+
+  /* 선 */
+  --line:#E3E6EA; --line-soft:#EFF1F3;
+
+  /* 무대 포인트 — 주요 추천·대표 넘버·작은 장식에만 */
+  --gold:#B08A2E; --gold-ink:#7A5E13; --gold-bg:#FDF8EC; --gold-line:#EFE1C0;
+
+  --r-sm:6px; --r-md:10px; --r-lg:16px;
+  --sp-xs:4px; --sp-sm:8px; --sp-md:16px; --sp-lg:24px; --sp-xl:40px;
+
+  /* 시대색 기본값 (H04) */
+  --e-bg:#ECEAF7; --e-ink:#4C46A0; --e-line:#DCD8F0;
 }
+
+/* ================================================================
+   2. 기본 요소
+================================================================ */
 *{box-sizing:border-box;margin:0;padding:0;
   font-family:'Pretendard GOV','Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
 html{scroll-behavior:smooth;}
-body{font-size:16px;line-height:1.65;color:var(--txt-hi);background:var(--ink-900);
-  min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;}
+body{font-size:16px;line-height:1.65;color:var(--ink);background:var(--bg);
+  min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
-a{color:var(--gold-soft);}
-:focus-visible{outline:3px solid var(--gold-soft);outline-offset:3px;border-radius:var(--border-radius-sm);}
+a{color:var(--color-primary);}
+:focus-visible{outline:3px solid var(--color-primary);outline-offset:2px;border-radius:var(--r-sm);}
 main{flex:1;width:100%;}
+h1,h2,h3{letter-spacing:-.4px;}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-.skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--gold);color:#1B1405;
-  padding:10px 16px;border-radius:8px;font-weight:700;}
+.skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--ink);color:#fff;
+  padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;}
 .skip:focus{left:8px;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--sp-md);}
 
-/* ---------- 상단 ---------- */
-.nav{position:sticky;top:0;z-index:60;padding:11px var(--spacing-md);
-  background:linear-gradient(180deg,rgba(18,21,27,.97),rgba(18,21,27,.72));
-  backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s,background .2s;}
-.nav.solid{background:var(--ink-900);border-bottom-color:var(--line);}
-.nav-in{display:flex;align-items:center;gap:var(--spacing-sm);max-width:1180px;margin:0 auto;width:100%;}
-.brand{display:flex;align-items:center;gap:7px;font-size:16px;font-weight:800;letter-spacing:-.5px;
-  color:var(--txt-hi);white-space:nowrap;text-decoration:none;}
-.brand .material-icons-outlined{font-size:21px;color:var(--gold);}
+/* ================================================================
+   3. 상단 네비게이션
+================================================================ */
+.nav{position:sticky;top:0;z-index:60;background:var(--surface);border-bottom:1px solid var(--line);}
+.nav-in{display:flex;align-items:center;flex-wrap:wrap;gap:10px var(--sp-md);max-width:1160px;
+  margin:0 auto;width:100%;padding:10px var(--sp-md);}
+.brand{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:800;letter-spacing:-.5px;
+  color:var(--ink);white-space:nowrap;text-decoration:none;}
+.brand .material-icons-outlined{font-size:22px;color:var(--gold);}
 .nav-links{display:flex;gap:2px;margin-left:auto;}
-.nav-links a{padding:7px 10px;border-radius:999px;font-size:14px;font-weight:600;color:var(--txt-mid);
-  text-decoration:none;white-space:nowrap;transition:all .18s;}
-.nav-links a:hover{color:var(--txt-hi);background:var(--ink-700);}
-.nav-links a[aria-current="page"]{color:#1B1405;background:var(--gold-soft);font-weight:700;}
-.nav-s{display:flex;align-items:center;gap:6px;background:var(--ink-700);border:1px solid var(--line);
-  border-radius:999px;padding:7px 12px;}
-.nav-s:focus-within{border-color:var(--gold-soft);box-shadow:0 0 0 3px rgba(227,199,102,.16);}
-.nav-s .material-icons-outlined{font-size:19px;color:var(--txt-low);}
-.nav-s input{background:none;border:none;outline:none;color:var(--txt-hi);font-size:14px;width:88px;}
-.nav-s input::placeholder{color:var(--txt-low);}
-@media (min-width:768px){.nav-s input{width:180px;}}
+.nav-links a{padding:8px 12px;border-radius:var(--r-md);font-size:15px;font-weight:600;
+  color:var(--ink-soft);text-decoration:none;white-space:nowrap;transition:background .16s,color .16s;}
+.nav-links a:hover{color:var(--ink);background:var(--surface-alt);}
+.nav-links a[aria-current="page"]{color:var(--ink);background:var(--surface-alt);font-weight:700;}
+/* 검색창 — 모바일에서는 한 줄을 통째로 쓰고, 데스크톱에서는 오른쪽에 붙는다 */
+.nav-s{order:3;flex:1 1 100%;display:flex;align-items:center;gap:6px;background:var(--surface-alt);
+  border:1px solid var(--line);border-radius:var(--r-md);padding:8px 12px;}
+.nav-s:focus-within{border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(0,109,210,.14);}
+.nav-s .material-icons-outlined{font-size:20px;color:var(--ink-mute);}
+.nav-s input{background:none;border:none;outline:none;color:var(--ink);font-size:15px;width:100%;}
+.nav-s input::placeholder{color:var(--ink-mute);}
 
-/* ---------- 히어로 ---------- */
-.hero{position:relative;min-height:clamp(400px,64vh,560px);display:flex;align-items:flex-end;
-  padding:116px var(--spacing-md) var(--spacing-xl);overflow:hidden;margin-top:-56px;}
-.hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-bg::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(18,21,27,.4) 0%,rgba(18,21,27,.78) 58%,var(--ink-900) 100%);}
-.hero-bg::before{content:"";position:absolute;inset:0;opacity:.2;
-  background:repeating-linear-gradient(94deg,rgba(255,255,255,.55) 0 2px,transparent 2px 22px);}
-.hero-in{position:relative;z-index:1;max-width:1180px;margin:0 auto;width:100%;}
-.hero-box{max-width:640px;}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:800;letter-spacing:.4px;
-  color:var(--gold-soft);border:1px solid rgba(227,199,102,.45);padding:4px 11px;border-radius:999px;margin-bottom:11px;}
-.hero-eyebrow .material-icons-outlined{font-size:14px;}
-.hero h1{font-size:clamp(1.8rem,6.4vw,2.85rem);line-height:1.18;font-weight:900;letter-spacing:-1.1px;
-  text-shadow:0 4px 26px rgba(0,0,0,.55);}
-.hero-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:11px 0;}
-.hero-desc{font-size:15px;color:var(--txt-mid);margin-bottom:var(--spacing-md);max-width:580px;
-  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
-.hero-btns{display:flex;gap:var(--spacing-sm);flex-wrap:wrap;}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:11px 19px;border-radius:var(--border-radius-md);
-  font-size:15px;font-weight:700;text-decoration:none;transition:all .18s;}
-.btn .material-icons-outlined{font-size:20px;}
-.btn-gold{background:var(--gold-soft);color:#1B1405;}
-.btn-gold:hover{background:#F0DA92;transform:translateY(-1px);}
-.btn-ghost{background:rgba(240,236,226,.14);color:var(--txt-hi);backdrop-filter:blur(4px);}
-.btn-ghost:hover{background:rgba(240,236,226,.24);}
-.hero-dots{display:flex;gap:6px;margin-top:var(--spacing-md);}
-.hero-dots button{width:22px;height:4px;border-radius:2px;background:rgba(255,255,255,.26);transition:all .2s;}
-.hero-dots button[aria-current="true"]{background:var(--gold-soft);width:34px;}
+/* ================================================================
+   4. 공통 — 버튼·배지·칩·섹션
+================================================================ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:11px 20px;
+  border-radius:var(--r-md);font-size:15px;font-weight:700;text-decoration:none;transition:all .16s;}
+.btn-primary{background:var(--ink);color:#fff;}
+.btn-primary:hover{background:#111827;}
+.btn-line{background:var(--surface);color:var(--ink);border:1px solid #CDD3DA;}
+.btn-line:hover{border-color:var(--ink-soft);background:var(--surface-alt);}
 
-/* ---------- 연표 ---------- */
-.tl{position:relative;z-index:3;margin-top:-20px;padding-bottom:var(--spacing-md);}
-.tl-scroll{display:flex;overflow-x:auto;scrollbar-width:none;padding:0 var(--spacing-md) 6px;
-  max-width:1180px;margin:0 auto;}
-.tl-scroll::-webkit-scrollbar{display:none;}
-.tl-i{flex:0 0 auto;position:relative;min-width:124px;text-align:left;padding:26px 14px 10px 0;text-decoration:none;}
-.tl-i::before{content:"";position:absolute;left:6px;right:0;top:30px;height:2px;background:var(--line);}
-.tl-i:last-child::before{right:calc(100% - 8px);}
-.tl-i::after{content:"";position:absolute;left:0;top:25px;width:12px;height:12px;border-radius:50%;
-  background:var(--ink-900);border:2px solid var(--ec);transition:transform .2s,background .2s;}
-.tl-i:hover::after,.tl-i:focus-visible::after{background:var(--ec);transform:scale(1.3);}
-.tl-k{display:block;font-size:10.5px;font-weight:700;color:var(--ec);letter-spacing:.3px;margin-top:14px;}
-.tl-e{display:block;font-size:13.5px;font-weight:800;color:var(--txt-hi);line-height:1.35;margin-top:2px;}
-.tl-c{display:block;font-size:11.5px;color:var(--txt-low);}
+.bdg{display:inline-flex;align-items:center;font-size:13px;font-weight:700;padding:3px 10px;
+  border-radius:999px;white-space:nowrap;line-height:1.5;}
+.bdg-era{background:var(--e-bg);color:var(--e-ink);}
+.bdg-core{background:#EAF0F7;color:#1F4E79;}
+.bdg-sub{background:var(--surface-alt);color:var(--ink-soft);}
+.bdg-mode{background:#F1F3F5;color:#4B5563;}
+.bdg-type{background:var(--gold-bg);color:var(--gold-ink);border:1px solid var(--gold-line);}
 
-/* ---------- 행 ---------- */
-.rows{padding-bottom:var(--spacing-xl);}
-.row{margin-bottom:var(--spacing-lg);}
-.row-head{display:flex;align-items:center;gap:9px;padding:0 var(--spacing-md) 10px;max-width:1180px;margin:0 auto;}
-.row-bar{width:3px;height:17px;border-radius:2px;background:var(--ec);flex-shrink:0;}
-.row-t{font-size:1.05rem;font-weight:800;letter-spacing:-.4px;white-space:nowrap;}
-.row-s{font-size:12.5px;color:var(--txt-low);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.row-more{margin-left:auto;font-size:12.5px;font-weight:700;color:var(--txt-mid);text-decoration:none;white-space:nowrap;}
-.row-more:hover{color:var(--gold-soft);}
-.rail-wrap{position:relative;}
-.rail{display:flex;gap:11px;overflow-x:auto;padding:5px var(--spacing-md) var(--spacing-md);
-  scroll-snap-type:x proximity;scrollbar-width:none;max-width:1180px;margin:0 auto;}
-.rail::-webkit-scrollbar{display:none;}
-.rail-btn{display:none;position:absolute;top:38%;z-index:5;width:36px;height:78px;
-  background:rgba(18,21,27,.86);border:1px solid var(--line);color:var(--txt-hi);
-  align-items:center;justify-content:center;}
-.rail-btn:hover{background:var(--ink-600);}
-.rail-btn.prev{left:0;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;}
-.rail-btn.next{right:0;border-radius:var(--border-radius-md) 0 0 var(--border-radius-md);}
-@media (hover:hover) and (min-width:768px){.rail-wrap:hover .rail-btn{display:flex;}}
+.sec{margin-top:var(--sp-xl);scroll-margin-top:84px;}
+.sec-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:var(--sp-md);}
+.sec-h{font-size:1.25rem;font-weight:800;}
+.sec-d{font-size:14px;color:var(--ink-soft);}
+.sec-more{margin-left:auto;font-size:14px;font-weight:700;color:var(--color-primary);
+  text-decoration:none;white-space:nowrap;}
+.sec-more:hover{text-decoration:underline;}
 
-/* ---------- 포스터 ---------- */
-.poster{flex:0 0 auto;width:152px;scroll-snap-align:start;text-align:left;text-decoration:none;color:inherit;
-  transition:transform .2s;}
-.poster:hover,.poster:focus-visible{transform:translateY(-4px);}
-.poster-art{position:relative;width:100%;aspect-ratio:2/3;border-radius:10px;overflow:hidden;background:var(--ec);
-  display:flex;flex-direction:column;justify-content:flex-end;padding:12px;box-shadow:0 8px 22px rgba(0,0,0,.42);}
-.poster-art::before{content:"";position:absolute;inset:0;opacity:.15;
-  background:repeating-linear-gradient(0deg,rgba(255,255,255,.85) 0 1px,transparent 1px 14px),
-             repeating-linear-gradient(90deg,rgba(255,255,255,.85) 0 1px,transparent 1px 14px);}
-.poster-art::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.05) 0 38%,rgba(0,0,0,.6) 100%);}
-.poster-rule{position:absolute;top:0;left:0;right:0;height:5px;z-index:3;opacity:.85;
-  background:repeating-linear-gradient(90deg,var(--gold) 0 7px,rgba(255,255,255,.55) 7px 14px);}
-.poster-type{position:absolute;top:14px;right:9px;z-index:3;font-size:10px;font-weight:700;
-  background:rgba(18,21,27,.72);color:var(--txt-hi);padding:2px 7px;border-radius:999px;}
-.poster-t{position:relative;z-index:3;font-size:14px;font-weight:800;line-height:1.32;color:#fff;
-  text-shadow:0 2px 9px rgba(0,0,0,.7);
-  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;}
-.poster-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;
-  opacity:0;transition:opacity .35s;background:var(--ec);}
-.poster-img.on{opacity:1;}
-/* 이미지가 뜨면 타이포 대체본을 숨기고, 실패하면 그대로 남긴다 */
-.poster-art.has-img .poster-t{display:none;}
-.poster-art:not(.has-img)~.poster-name{display:none;}
-.poster-art.has-img::after{background:linear-gradient(180deg,rgba(0,0,0,0) 0 62%,rgba(0,0,0,.5) 100%);z-index:3;}
-.poster-foot{display:flex;align-items:center;gap:5px;margin-top:8px;flex-wrap:wrap;}
-.poster-name{display:block;font-size:12.5px;font-weight:700;color:var(--txt-mid);line-height:1.4;margin-top:6px;
+/* ================================================================
+   5. 홈 — 서비스 소개
+================================================================ */
+.intro{background:linear-gradient(180deg,#FFFFFF 0%,var(--bg-soft) 100%);border-bottom:1px solid var(--line);}
+.intro-in{max-width:1160px;margin:0 auto;padding:38px var(--sp-md) 34px;
+  display:flex;flex-direction:column;gap:var(--sp-lg);}
+.intro-t{font-size:clamp(1.55rem,4.6vw,2.05rem);font-weight:800;line-height:1.3;letter-spacing:-1px;}
+.intro-p{margin-top:12px;font-size:16px;color:var(--ink-soft);line-height:1.7;max-width:560px;}
+.intro-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;}
+.intro-stat{margin-top:18px;font-size:14px;color:var(--ink-mute);}
+.intro-stat b{color:var(--ink);font-weight:700;}
+.intro-arts{display:flex;gap:12px;}
+.intro-art{flex:1 1 0;max-width:150px;aspect-ratio:2/3;border-radius:var(--r-md);overflow:hidden;
+  background:var(--surface-alt);border:1px solid var(--line);box-shadow:0 6px 18px rgba(31,41,55,.10);}
+.intro-art img{width:100%;height:100%;object-fit:cover;display:block;}
+.intro-art:nth-child(2){transform:translateY(-10px);}
+
+/* ================================================================
+   6. 홈 — 시대 카드
+================================================================ */
+.eras{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.era-c{display:block;text-align:left;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:16px 16px 15px;text-decoration:none;color:inherit;
+  border-top:3px solid var(--e-ink);transition:box-shadow .16s,transform .16s;}
+.era-c:hover{box-shadow:0 6px 18px rgba(31,41,55,.09);transform:translateY(-2px);}
+.era-n{display:block;font-size:13px;font-weight:800;color:var(--e-ink);letter-spacing:.5px;}
+.era-t{display:block;font-size:17px;font-weight:800;margin-top:2px;line-height:1.35;word-break:keep-all;}
+.era-c-count{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;
+  background:var(--e-bg);color:var(--e-ink);padding:2px 9px;border-radius:999px;}
+.era-k{display:block;margin-top:8px;font-size:13.5px;color:var(--ink-soft);line-height:1.55;}
+
+/* ================================================================
+   7. 작품 카드
+================================================================ */
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 14px;}
+.wcard{display:flex;flex-direction:column;text-decoration:none;color:inherit;}
+.wcard-art{position:relative;width:100%;aspect-ratio:2/3;border-radius:var(--r-md);overflow:hidden;
+  background:var(--e-bg);border:1px solid var(--line);box-shadow:0 2px 8px rgba(31,41,55,.07);
+  transition:box-shadow .18s,transform .18s;}
+.wcard:hover .wcard-art,.wcard:focus-visible .wcard-art{box-shadow:0 10px 22px rgba(31,41,55,.16);transform:translateY(-3px);}
+.wcard-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;
+  opacity:0;transition:opacity .3s;}
+.wcard-img.on{opacity:1;}
+/* 포스터 대체 — 밝은 시대색 타이포그래피 */
+.wcard-fb{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;
+  padding:14px 13px;background:var(--e-bg);}
+.wcard-fb-e{font-size:13px;font-weight:700;color:var(--e-ink);}
+.wcard-fb-t{margin-top:8px;font-size:16px;font-weight:800;color:var(--ink);line-height:1.35;
+  display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;}
+.wcard-fb-n{margin-top:auto;font-size:13px;color:var(--ink-mute);}
+.wcard-art.has-img .wcard-fb{display:none;}
+.wcard-type{position:absolute;top:8px;left:8px;z-index:3;font-size:13px;font-weight:700;
+  background:rgba(255,255,255,.94);color:var(--gold-ink);border:1px solid var(--gold-line);
+  padding:2px 8px;border-radius:999px;}
+.wcard-t{margin-top:10px;font-size:15px;font-weight:700;line-height:1.4;word-break:keep-all;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
-.poster-num{display:flex;align-items:center;gap:4px;font-size:11.5px;color:var(--txt-low);margin-top:4px;
+.wcard-m{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px;}
+.wcard-m .bdg{font-size:13px;padding:2px 8px;}
+.wcard-num{margin-top:6px;font-size:13px;color:var(--gold-ink);
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.poster-num .material-icons-outlined{font-size:14px;color:var(--gold);flex-shrink:0;}
 
-.bdg{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:999px;white-space:nowrap;}
-.bdg-core{background:rgba(201,162,39,.2);color:var(--gold-soft);}
-.bdg-sub{background:var(--ink-700);color:var(--txt-mid);}
-.bdg-era{background:var(--ec-l);color:var(--ec-t);}
-.bdg-mode{background:rgba(158,196,232,.14);color:#9EC4E8;}
+/* ================================================================
+   8. 작품 목록 — 필터
+================================================================ */
+.page{max-width:1160px;margin:0 auto;padding:var(--sp-lg) var(--sp-md) var(--sp-xl);}
+.page-h{font-size:1.6rem;font-weight:800;}
+.page-s{font-size:15px;color:var(--ink-soft);margin-top:6px;}
+.filters{margin:var(--sp-lg) 0 var(--sp-md);background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:14px var(--sp-md);display:flex;flex-direction:column;gap:12px;}
+.fgroup{display:flex;align-items:flex-start;gap:10px;}
+.fgroup-l{flex:0 0 74px;font-size:13.5px;font-weight:700;color:var(--ink-soft);padding-top:7px;}
+.fchips{display:flex;flex-wrap:wrap;gap:6px;flex:1;}
+.chip{padding:6px 13px;border:1px solid var(--line);background:var(--surface);border-radius:999px;
+  font-size:14px;font-weight:600;color:var(--ink-soft);transition:all .14s;white-space:nowrap;}
+.chip:hover{border-color:#C4CBD3;color:var(--ink);}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:700;}
+.chip-era[aria-pressed="true"]{background:var(--e-ink);border-color:var(--e-ink);color:#fff;}
+.count{font-size:15px;color:var(--ink-soft);margin-bottom:var(--sp-md);}
+.count b{color:var(--ink);font-weight:800;}
+.reset{font-size:14px;font-weight:700;color:var(--color-primary);text-decoration:underline;margin-left:8px;}
+.empty{text-align:center;padding:var(--sp-xl) var(--sp-md);background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--r-lg);color:var(--ink-soft);font-size:15px;}
+.empty .material-icons-outlined{font-size:40px;color:#C4CBD3;display:block;margin-bottom:10px;}
 
-/* ---------- 목록 ---------- */
-.page{max-width:1180px;margin:0 auto;padding:var(--spacing-lg) var(--spacing-md) var(--spacing-xl);}
-.page-h{font-size:1.4rem;font-weight:900;letter-spacing:-.6px;}
-.page-s{font-size:13.5px;color:var(--txt-low);margin-top:4px;}
-.quick{display:flex;flex-wrap:wrap;gap:7px;margin:var(--spacing-md) 0;}
-.chip{padding:7px 13px;border:1px solid var(--line);background:var(--ink-800);border-radius:999px;
-  font-size:13px;font-weight:600;color:var(--txt-mid);transition:all .16s;
-  display:inline-flex;align-items:center;gap:5px;}
-.chip .material-icons-outlined{font-size:16px;}
-.chip:hover{border-color:var(--gold-soft);color:var(--txt-hi);}
-.chip[aria-pressed="true"]{background:var(--gold-soft);border-color:var(--gold-soft);color:#1B1405;font-weight:700;}
-.chip-era[aria-pressed="true"]{background:var(--ec);border-color:var(--ec);color:#fff;}
-.count{font-size:13.5px;color:var(--txt-low);margin-bottom:var(--spacing-md);}
-.count b{color:var(--txt-hi);font-weight:800;}
-.reset{font-size:13px;font-weight:700;color:var(--txt-mid);text-decoration:underline;margin-left:6px;}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:16px;}
-.pgrid .poster{width:100%;}
-.empty{text-align:center;padding:var(--spacing-xl) var(--spacing-md);background:var(--ink-800);
-  border:1px solid var(--line);border-radius:var(--border-radius-md);color:var(--txt-mid);}
-.empty .material-icons-outlined{font-size:42px;color:var(--ink-600);display:block;margin-bottom:10px;}
+/* ================================================================
+   9. 작품 상세
+================================================================ */
+.detail{max-width:820px;margin:0 auto;padding:var(--sp-md) var(--sp-md) var(--sp-xl);}
+.back{display:inline-flex;align-items:center;gap:4px;font-size:14px;font-weight:600;
+  color:var(--ink-soft);padding:6px 0;margin-bottom:10px;}
+.back:hover{color:var(--ink);}
+.back .material-icons-outlined{font-size:18px;}
+.dhead{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:var(--sp-md);display:flex;flex-direction:column;gap:var(--sp-md);}
+.dposter{width:172px;aspect-ratio:2/3;border-radius:var(--r-md);overflow:hidden;position:relative;
+  background:var(--e-bg);border:1px solid var(--line);flex-shrink:0;}
+.dposter img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;opacity:0;transition:opacity .3s;}
+.dposter img.on{opacity:1;}
+.dposter .wcard-fb{padding:16px 14px;}
+.dposter.has-img .wcard-fb{display:none;}
+.dtitle{font-size:clamp(1.5rem,4.4vw,1.9rem);font-weight:800;line-height:1.28;word-break:keep-all;}
+.dchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+.dlead{margin-top:14px;font-size:16.5px;line-height:1.65;color:var(--ink);font-weight:600;word-break:keep-all;}
+.dpeople{margin-top:14px;padding-top:13px;border-top:1px solid var(--line-soft);font-size:15px;color:var(--ink-soft);}
+.dpeople b{display:block;font-size:13.5px;color:var(--ink-mute);font-weight:700;margin-bottom:2px;}
+.dbody{max-width:760px;margin:0 auto;}
+.dsec{margin-top:30px;}
+.dsec-h{font-size:1.06rem;font-weight:800;margin-bottom:9px;}
+.dtext{font-size:16px;line-height:1.7;color:var(--ink-soft);word-break:keep-all;}
+.dtext+.dtext{margin-top:8px;}
 
-/* ---------- 모달 ---------- */
-.ov{position:fixed;inset:0;z-index:100;background:rgba(8,10,14,.86);backdrop-filter:blur(5px);
-  display:none;align-items:flex-start;justify-content:center;padding:var(--spacing-md);overflow-y:auto;}
-.ov.on{display:flex;}
-.modal{width:100%;max-width:740px;background:var(--ink-800);border:1px solid var(--line);
-  border-radius:var(--border-radius-lg);overflow:hidden;margin:var(--spacing-md) 0 var(--spacing-xl);
-  animation:pop .22s ease;}
-@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.985);}to{opacity:1;transform:none;}}
-.m-hero{position:relative;padding:var(--spacing-xl) var(--spacing-md) var(--spacing-md);min-height:172px;
-  display:flex;flex-direction:column;justify-content:flex-end;background:var(--ec);}
-.m-hero::before{content:"";position:absolute;inset:0;opacity:.14;
-  background:repeating-linear-gradient(0deg,rgba(255,255,255,.85) 0 1px,transparent 1px 16px),
-             repeating-linear-gradient(90deg,rgba(255,255,255,.85) 0 1px,transparent 1px 16px);}
-.m-hero::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(25,29,37,.08),var(--ink-800) 97%);}
-.m-hero>*{position:relative;z-index:2;}
-.m-hero.has-img::before{background-image:var(--pimg);background-size:cover;background-position:center 22%;opacity:1;}
-.m-hero.has-img::after{background:linear-gradient(180deg,rgba(25,29,37,.42) 0%,rgba(25,29,37,.82) 62%,var(--ink-800) 98%);}
-.m-poster{position:absolute;right:14px;bottom:14px;z-index:3;width:76px;aspect-ratio:2/3;border-radius:6px;
-  overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.18);}
-.m-poster img{width:100%;height:100%;object-fit:cover;display:block;}
-@media (min-width:768px){.m-poster{width:104px;right:20px;bottom:18px;}}
-.m-rule{position:absolute;top:0;left:0;right:0;height:6px;z-index:3;opacity:.9;
-  background:repeating-linear-gradient(90deg,var(--gold) 0 9px,rgba(255,255,255,.55) 9px 18px);}
-.m-close{position:absolute;top:16px;right:12px;z-index:4;width:34px;height:34px;border-radius:50%;
-  background:rgba(18,21,27,.82);display:flex;align-items:center;justify-content:center;}
-.m-close:hover{background:var(--ink-600);}
-.m-title{font-size:1.42rem;font-weight:900;line-height:1.25;text-shadow:0 2px 14px rgba(0,0,0,.55);}
-.m-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
-.m-body{padding:var(--spacing-md);display:flex;flex-direction:column;gap:14px;}
-.sec-l{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;color:var(--txt-low);
-  letter-spacing:.3px;margin-bottom:6px;}
-.sec-l .material-icons-outlined{font-size:15px;}
-.sec-t{font-size:14.5px;color:var(--txt-mid);line-height:1.78;}
-.sec-t strong{color:var(--txt-hi);}
-.tags{display:flex;flex-wrap:wrap;gap:5px;}
-.tg{font-size:12.5px;padding:4px 10px;border-radius:6px;background:var(--ink-700);color:var(--txt-mid);
-  text-decoration:none;border:1px solid transparent;}
-a.tg:hover{border-color:var(--gold-soft);color:var(--txt-hi);}
-.box{border-radius:var(--border-radius-md);padding:13px 15px;}
-.box-fact{background:rgba(158,196,232,.09);border-left:3px solid #7FA9CF;}
-.box-fact .sec-l{color:#9EC4E8;}
-.box-num{background:rgba(201,162,39,.1);border-left:3px solid var(--gold);}
-.box-num .sec-l{color:var(--gold-soft);}
-.box-idea{background:rgba(0,166,138,.09);border-left:3px solid #3FA894;}
-.box-idea .sec-l{color:#5FC3AE;}
-.box-warn{background:rgba(245,124,0,.09);border-left:3px solid var(--color-warning);}
-.box-warn .sec-l{color:#E9A25C;}
-.num-t{display:flex;align-items:center;gap:7px;font-size:1.06rem;font-weight:800;color:var(--txt-hi);}
-.num-t .material-icons-outlined{font-size:20px;color:var(--gold);}
-.num-s{font-size:12.5px;color:var(--txt-low);margin-top:3px;}
-.q-line{margin-top:10px;padding:11px 13px;background:rgba(255,255,255,.05);border-radius:var(--border-radius-md);
-  font-weight:600;color:var(--txt-hi);font-size:14px;line-height:1.7;}
-.m-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;word-break:break-all;text-decoration:none;}
-.m-link:hover{text-decoration:underline;}
-.m-link .material-icons-outlined{font-size:16px;flex-shrink:0;}
+/* 역사와 작품의 관계 — 차분한 정보 카드 */
+.rel{margin-top:26px;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:16px 18px;}
+.rel-l{font-size:13.5px;font-weight:700;color:var(--ink-mute);}
+.rel-m{font-size:17px;font-weight:800;margin-top:3px;}
+.rel-n{margin-top:7px;font-size:15px;line-height:1.65;color:var(--ink-soft);}
 
-.gitem{background:var(--ink-800);border:1px solid var(--line);border-radius:var(--border-radius-md);
-  padding:var(--spacing-md);margin-bottom:11px;}
-.gitem h2{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:800;margin-bottom:7px;}
-.gitem h2 .material-icons-outlined{font-size:19px;color:var(--gold);}
-.gitem p{font-size:14px;color:var(--txt-mid);line-height:1.78;}
-.gitem p+p{margin-top:9px;}
-.gitem strong{color:var(--txt-hi);}
-.notice{font-size:12.5px;color:var(--txt-low);line-height:1.78;background:var(--ink-800);
-  border:1px solid var(--line);border-radius:var(--border-radius-md);padding:var(--spacing-md);margin-top:var(--spacing-lg);}
-.loading{text-align:center;padding:var(--spacing-xl);color:var(--txt-low);}
+/* 대표 넘버 — 유일한 골드 강조 */
+.numcard{background:var(--gold-bg);border:1px solid var(--gold-line);border-radius:var(--r-lg);padding:16px 18px;}
+.numcard-t{font-size:1.2rem;font-weight:800;color:var(--ink);line-height:1.4;}
+.numcard-s{margin-top:4px;font-size:14.5px;color:var(--gold-ink);font-weight:600;}
+.numcard-c{margin-top:9px;font-size:15px;line-height:1.65;color:var(--ink-soft);
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.numnone{font-size:15px;color:var(--ink-mute);background:var(--surface-alt);
+  border-radius:var(--r-md);padding:12px 16px;}
 
-/* ---------- 푸터 ---------- */
-.chichiboo-footer{width:100%;padding:var(--spacing-md) var(--spacing-lg);background-color:var(--ink-800);
+/* 수업 질문 */
+.qbox{margin-top:14px;background:var(--surface-alt);border-radius:var(--r-lg);padding:15px 18px;}
+.qbox-l{font-size:13.5px;font-weight:700;color:var(--ink-mute);}
+.qbox-t{margin-top:5px;font-size:16.5px;font-weight:700;line-height:1.6;word-break:keep-all;}
+.cnote{margin-top:14px;font-size:14.5px;line-height:1.65;color:var(--ink-soft);}
+.cnote b{color:var(--ink);font-weight:700;}
+
+/* 아코디언 */
+.acc{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);}
+.acc>summary{list-style:none;cursor:pointer;padding:13px 16px;font-size:15.5px;font-weight:700;
+  display:flex;align-items:center;gap:8px;}
+.acc>summary::-webkit-details-marker{display:none;}
+.acc>summary::before{content:"▸";color:var(--ink-mute);font-size:13px;transition:transform .18s;}
+.acc[open]>summary::before{transform:rotate(90deg);}
+.acc-b{padding:0 16px 16px;border-top:1px solid var(--line-soft);padding-top:13px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px;}
+.tg{font-size:13.5px;padding:4px 11px;border-radius:999px;background:var(--surface-alt);
+  color:var(--ink-soft);text-decoration:none;}
+a.tg:hover{background:#E8EBEF;color:var(--ink);}
+.stdcode{display:inline-block;font-size:13.5px;font-weight:700;background:var(--color-primary-light);
+  color:#0B4C8C;padding:3px 10px;border-radius:999px;}
+.srcs{display:flex;flex-wrap:wrap;gap:8px;}
+.src{display:inline-flex;align-items:center;gap:5px;font-size:14px;font-weight:600;
+  background:var(--surface-alt);color:var(--ink);text-decoration:none;padding:8px 14px;border-radius:var(--r-md);}
+.src:hover{background:#E8EBEF;}
+
+/* ================================================================
+   10. 이용 안내
+================================================================ */
+.guide{max-width:820px;}
+.steps{display:flex;flex-direction:column;gap:10px;margin-top:var(--sp-md);}
+.step{display:flex;gap:14px;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:15px 16px;}
+.step-n{flex:0 0 30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;}
+.step-t{font-size:16px;font-weight:700;}
+.step-d{font-size:15px;color:var(--ink-soft);margin-top:3px;line-height:1.6;}
+.notice{font-size:14px;color:var(--ink-soft);line-height:1.7;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--sp-md);margin-top:var(--sp-lg);}
+.loading{text-align:center;padding:var(--sp-xl);color:var(--ink-mute);}
+
+/* ================================================================
+   11. 푸터
+================================================================ */
+.chichiboo-footer{width:100%;padding:var(--sp-md) var(--sp-lg);background:var(--surface);
   border-top:1px solid var(--line);text-align:center;margin-top:auto;}
-.chichiboo-footer a{display:inline-flex;align-items:center;gap:var(--spacing-xs);font-size:13px;
-  color:var(--txt-low);text-decoration:none;transition:color .2s;}
-.chichiboo-footer a:hover{color:var(--gold-soft);}
+.chichiboo-footer a{display:inline-flex;align-items:center;gap:var(--sp-xs);font-size:13.5px;
+  color:var(--ink-mute);text-decoration:none;transition:color .2s;}
+.chichiboo-footer a:hover{color:var(--color-primary);}
 .chichiboo-footer .material-icons-outlined{font-size:16px;}
 
-@media (min-width:768px){
-  .nav{padding:12px var(--spacing-lg);}
-  .hero{padding-left:var(--spacing-lg);padding-right:var(--spacing-lg);}
-  .row-head,.rail,.tl-scroll{padding-left:var(--spacing-lg);padding-right:var(--spacing-lg);}
-  .page{padding-left:var(--spacing-lg);padding-right:var(--spacing-lg);}
-  .poster{width:172px;}
-  .m-title{font-size:1.7rem;}
-  .m-body{padding:var(--spacing-lg);}
+/* ================================================================
+   12. 반응형
+================================================================ */
+@media (min-width:600px){
+  .pgrid{grid-template-columns:repeat(3,1fr);gap:22px 16px;}
+  .eras{grid-template-columns:repeat(3,1fr);}
 }
-@media (max-width:380px){
-  .poster{width:134px;}
-  .nav-s input{width:64px;}
-  .brand span:not(.material-icons-outlined){display:none;}
+@media (min-width:768px){
+  .nav-in{padding:12px var(--sp-lg);flex-wrap:nowrap;}
+  .nav-s{order:0;flex:0 0 auto;}
+  .nav-s input{width:190px;}
+  .wrap,.page,.intro-in{padding-left:var(--sp-lg);padding-right:var(--sp-lg);}
+  .detail{padding-left:var(--sp-lg);padding-right:var(--sp-lg);}
+  .intro-in{flex-direction:row;align-items:center;justify-content:space-between;padding-top:44px;padding-bottom:44px;}
+  .intro-box{flex:1 1 auto;max-width:600px;}
+  .intro-arts{flex:0 0 auto;}
+  .dhead{flex-direction:row;gap:var(--sp-lg);padding:var(--sp-lg);}
+  .dhead-info{flex:1;min-width:0;}
+}
+@media (min-width:860px){
+  .pgrid{grid-template-columns:repeat(4,1fr);}
+  .eras{grid-template-columns:repeat(4,1fr);}
+  .dposter{width:200px;}
+}
+@media (min-width:1024px){.pgrid{grid-template-columns:repeat(5,1fr);}}
+@media (min-width:1240px){.pgrid{grid-template-columns:repeat(6,1fr);}}
+@media (max-width:420px){
+  .fgroup{flex-direction:column;gap:5px;}
+  .fgroup-l{padding-top:0;}
 }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
 
-<nav class="nav" id="nav">
+<!-- 상단 네비게이션 -->
+<nav class="nav">
   <div class="nav-in">
     <a class="brand" href="#/"><span class="material-icons-outlined">theater_comedy</span><span>한국사 × 한국뮤지컬</span></a>
     <div class="nav-links">
@@ -291,7 +329,7 @@ a.tg:hover{border-color:var(--gold-soft);color:var(--txt-hi);}
       <a href="#/guide" data-nav="guide">이용 안내</a>
     </div>
     <div class="nav-s">
-      <span class="material-icons-outlined">search</span>
+      <span class="material-icons-outlined" aria-hidden="true">search</span>
       <label class="sr" for="q">작품 검색</label>
       <input id="q" type="search" placeholder="인물·시대·넘버" />
     </div>
@@ -307,13 +345,10 @@ a.tg:hover{border-color:var(--gold-soft);color:var(--txt-hi);}
   </a>
 </footer>
 
-<div class="ov" id="ov" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-  <div class="modal" id="modal"></div>
-</div>
-
 <script>
 /* ================================================================
    데이터 로드 — data/*.json. INLINE_DATA 가 있으면 단일 파일 모드.
+   데이터 객체는 그대로 사용하고, 화면 표현만 아래에서 가공한다.
 ================================================================ */
 const FILES=["h","works","relations","numbers","sources"];
 let DB={};
@@ -331,14 +366,34 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const arr=v=>Array.isArray(v)?v:(v?[v]:[]);
 const splitDot=s=>String(s||"").split(/[·|]/).map(x=>x.trim()).filter(Boolean);
+const sents=s=>(String(s||"").match(/[^.!?]+[.!?]*/g)||[]).map(x=>x.trim()).filter(Boolean);
 
+/* 화면용 용어 정돈 — 2022 개정 초등 사회과 공식 용어 체계에 맞춘다.
+   DB 원문은 바꾸지 않고, 출력 시점에만 문맥이 분명한 표현만 정돈한다. */
+const TERMS=[[/식민지\s*통치/g,"일제의 식민 통치"],[/식민지\s*청년/g,"일제강점기 청년"],
+  [/식민지\s*도시/g,"일제강점기 도시"],[/식민지\s*시대/g,"일제 통치 시기"],
+  [/식민지\s*시기/g,"일제 통치 시기"]];
+const ui=s=>{
+  let t=String(s==null?"":s);
+  TERMS.forEach(p=>{t=t.replace(p[0],p[1]);});
+  /* 내부 식별자(H01~H07)가 문장에 남아 있으면 시대명으로 바꿔 읽히게 한다 */
+  return t.replace(/H0[1-7]/g,m=>{const h=(DB.h||[]).find(x=>x.h_id===m);return h?h.era_short:m;});
+};
+const et=s=>esc(ui(s));   /* 화면 출력 기본 함수 */
+
+/* ================================================================
+   시대색 — 밝은 파스텔 배경 + 선명한 포인트색 (칩·아이콘·포인트에만 사용)
+================================================================ */
 const ERA={
- H01:["#5A6673","#2A3038","#9BAAB9"], H02:["#7A6449","#38302A","#C4A987"],
- H03:["#4E7266","#2A3833","#8FBFB0"], H04:["#42618A","#28323F","#93B4D8"],
- H05:["#8A6A3F","#3A3128","#D2AE79"], H06:["#645069","#2F2A33","#B199B8"],
- H07:["#4E6875","#2A3238","#95B4C2"]};
-const ec=h=>(ERA[h]||ERA.H04)[0];
-const eraVars=h=>`--ec:${(ERA[h]||ERA.H04)[0]};--ec-l:${(ERA[h]||ERA.H04)[1]};--ec-t:${(ERA[h]||ERA.H04)[2]}`;
+  H01:{bg:"#F6EEDF",ink:"#8A6634",line:"#E7D8BC"},  /* 웜 샌드 */
+  H02:{bg:"#E7F1E9",ink:"#2E6B4E",line:"#D2E5D8"},  /* 옅은 그린 */
+  H03:{bg:"#E5EFF8",ink:"#2C5F8A",line:"#D0E1F0"},  /* 옅은 블루 */
+  H04:{bg:"#ECEAF7",ink:"#4C46A0",line:"#DCD8F0"},  /* 옅은 라일락 */
+  H05:{bg:"#F8EDE2",ink:"#96562A",line:"#EEDAC7"},  /* 옅은 오렌지·브라운 */
+  H06:{bg:"#E9EDF2",ink:"#425668",line:"#D8DFE7"},  /* 차분한 블루그레이 */
+  H07:{bg:"#F8EAE7",ink:"#9A4740",line:"#EED6D2"}   /* 옅은 로즈·테라코타 */
+};
+const eraVars=h=>{const e=ERA[h]||ERA.H04;return`--e-bg:${e.bg};--e-ink:${e.ink};--e-line:${e.line}`;};
 
 const HM=()=>Object.fromEntries(DB.h.map(h=>[h.h_id,h]));
 const WM=()=>Object.fromEntries(DB.works.map(w=>[w.work_id,w]));
@@ -347,23 +402,50 @@ const relationsOf=id=>DB.relations.filter(r=>r.work_id===id);
 const numTitleOf=w=>w.representative_number||((numberOf(w.work_id)||{}).number_title)||null;
 const worksOfH=hid=>[...new Set(DB.relations.filter(r=>r.h_id===hid).map(r=>r.work_id))]
   .map(i=>WM()[i]).filter(Boolean).sort((a,b)=>(a.sort_order||0)-(b.sort_order||0));
-const pubStatus=s=>({"확인":"확인","일부 확인":"일부 확인","준비 중":"준비 중"})[s]||"준비 중";
+
+/* 콘텐츠 유형 배지 — 뮤지컬은 기본값이므로 숨기고 예외만 표시 */
+const TYPE_LABEL={M33:"2022 쇼케이스"};
+const typeBadge=w=>TYPE_LABEL[w.work_id]||((w.content_type&&w.content_type!=="뮤지컬")?w.content_type:"");
+
+const STRENGTH_HINT={"핵심":"해당 성취기준과 직접 연결하기 좋은 작품",
+                     "보조":"일부 장면이나 주제를 선별해 활용하기 좋은 작품"};
+
+/* 시대별 학습 키워드 — 관계 데이터의 연결 근거에서 상위 항목만 뽑아 쓴다 */
+function eraKeywords(hid){
+  const c={};
+  DB.relations.filter(r=>r.h_id===hid).forEach(r=>arr(r.relation_basis).forEach(b=>{c[b]=(c[b]||0)+1;}));
+  return Object.keys(c).sort((a,b)=>c[b]-c[a]).slice(0,4).join(" · ");
+}
+
+/* 주의점 — 편집용 선정 사유는 걸러 내고, 수업에서 실제로 확인할 문장만 남긴다 */
+const CUE=/구분|선별|오인|밝힐|균형|보완|주의|유의|조심|허구|가상|창작 인물|창작·|창작이|창작 설정|창작극|재구성임|압축|폭력|잔혹|동일시|볼 것|할 것|말 것|분명히/;
+const SKIP=/H0\d|적합|좋음|직접성|보조작|핵심작|보조로|조정/;
+const nrm=s=>String(s||"").toLowerCase().replace(/[\s·,.'"()《》〈〉:!?]/g,"");
+function bigrams(s){const o=new Set();for(let i=0;i<s.length-1;i++)o.add(s.slice(i,i+2));return o;}
+function sim(a,b){
+  if(!a||!b)return 0;
+  const A=bigrams(a),B=bigrams(b);let n=0;A.forEach(x=>{if(B.has(x))n++;});
+  return n/(A.size+B.size-n);
+}
+function cautionText(w){
+  const ff=nrm(w.fact_fiction_note);
+  return sents(w.caution).filter(s=>CUE.test(s)&&!SKIP.test(s)&&sim(nrm(s),ff)<.45).join(" ");
+}
 
 /* ================================================================
-   상태 — 해시에 저장해 뒤로 가기에서 복원
+   상태 · 라우팅 — 해시에 저장해 뒤로 가기에서 복원
 ================================================================ */
-const DEF={q:"",h:"",only:[]};
-const ONLY=[["핵심","star","수업에 바로 붙는 작품"],
-            ["넘버","music_note","대표 넘버가 있는 작품"],
-            ["초등","child_care","바로 활용하기 좋은 작품"]];
-let S={...DEF,only:[]},route={name:"home",id:null};
+let S={q:"",h:"",strength:"",mode:"",use:"",num:""},route={name:"home",id:null};
+const STRENGTHS=["핵심","보조"];
+const MODES=["실제 인물·사건 중심","팩션·상상 비교"];
 
 function parseHash(){
   const raw=location.hash.replace(/^#/,"")||"/";
   const [path,query]=raw.split("?");
   const p=new URLSearchParams(query||"");
-  S={q:p.get("q")||"",h:p.get("h")||"",only:(p.get("only")||"").split(",").filter(Boolean)};
-  const m=path.match(/^\/work\/([A-Za-z0-9_]+)$/);
+  S={q:p.get("q")||"",h:p.get("h")||"",strength:p.get("s")||"",mode:p.get("m")||"",
+     use:p.get("use")||"",num:p.get("num")||""};
+  const m=path.match(/^\/works?\/([A-Za-z0-9_]+)$/);
   if(m)route={name:"work",id:m[1]};
   else if(path.indexOf("/works")===0)route={name:"works",id:null};
   else if(path.indexOf("/guide")===0)route={name:"guide",id:null};
@@ -372,15 +454,16 @@ function parseHash(){
 function qstr(){
   const p=new URLSearchParams();
   if(S.q)p.set("q",S.q); if(S.h)p.set("h",S.h);
-  if(S.only.length)p.set("only",S.only.join(","));
+  if(S.strength)p.set("s",S.strength); if(S.mode)p.set("m",S.mode);
+  if(S.use)p.set("use",S.use); if(S.num)p.set("num",S.num);
   const s=p.toString();return s?"?"+s:"";
 }
 const goWorks=()=>{location.hash="#/works"+qstr();};
+const hasFilter=()=>!!(S.q||S.h||S.strength||S.mode||S.use||S.num);
 
 /* ================================================================
-   검색 — 검색설계 가중치 반영
+   검색 — 작품명·인물·넘버에 가중치를 둔다
 ================================================================ */
-const nrm=s=>String(s||"").toLowerCase().replace(/[\s·,.'"()《》〈〉:!?]/g,"");
 function score(w,q){
   const t=nrm(q);if(!t)return 1;
   const F=[[nrm(w.title),5],[nrm(w.tags),4],[nrm(w.characters),4],[nrm(numTitleOf(w)),4],
@@ -395,9 +478,10 @@ function score(w,q){
 function filtered(){
   let l=DB.works.slice();
   if(S.h)l=l.filter(w=>arr(w.h_ids).indexOf(S.h)>=0);
-  if(S.only.indexOf("핵심")>=0)l=l.filter(w=>w.relation_strength==="핵심");
-  if(S.only.indexOf("넘버")>=0)l=l.filter(w=>!!numTitleOf(w));
-  if(S.only.indexOf("초등")>=0)l=l.filter(w=>(w.elementary_use||"").indexOf("바로")===0);
+  if(S.strength)l=l.filter(w=>w.relation_strength===S.strength);
+  if(S.mode)l=l.filter(w=>w.history_link_mode===S.mode);
+  if(S.use)l=l.filter(w=>(w.elementary_use||"").indexOf("바로")===0);
+  if(S.num)l=l.filter(w=>!!numTitleOf(w));
   if(S.q)l=l.map(w=>[w,score(w,S.q)]).filter(x=>x[1]>0)
             .sort((a,b)=>b[1]-a[1]||(a[0].sort_order||0)-(b[0].sort_order||0)).map(x=>x[0]);
   else l.sort((a,b)=>(a.sort_order||0)-(b.sort_order||0));
@@ -405,295 +489,326 @@ function filtered(){
 }
 
 /* ================================================================
-   포스터
+   작품 카드 — 포스터 · 작품명 · 시대/활용도 정도로만 유지
 ================================================================ */
-function posterHTML(w){
+function posterFallback(w,noNote){
+  return `<span class="wcard-fb"${w.poster_url?' aria-hidden="true"':""}>
+      <span class="wcard-fb-e">${et(w.era_label||"")}</span>
+      <span class="wcard-fb-t">${et(w.title)}</span>
+      ${w.poster_url||noNote?"":'<span class="wcard-fb-n">포스터 자료 확인 중</span>'}</span>`;
+}
+function posterArt(w,cls){
   const alt=w.poster_alt||(w.title+" 대표 이미지");
-  const num=numTitleOf(w);
-  /* 이미지가 있어도 타이포 대체본을 함께 넣어 둔다.
-     onload 성공 시에만 has-img 를 붙여 대체본을 감추므로, 핫링크 차단·삭제된 이미지도 안전하다. */
   const img=w.poster_url
-    ? `<img class="poster-img" src="${esc(w.poster_url)}" alt="${esc(alt)}"
+    ? `<img class="${cls==="d"?"":"wcard-img"}" src="${esc(w.poster_url)}" alt="${esc(alt)}"
          loading="lazy" decoding="async" referrerpolicy="no-referrer"
          onload="this.classList.add('on');this.parentNode.classList.add('has-img')"
-         onerror="this.remove()" />`
-    : "";
-  const art=`<span class="poster-art" style="${eraVars(w.primary_h)}"${w.poster_url?"":` role="img" aria-label="${esc(alt)}"`}>
-      <span class="poster-rule"></span>
-      ${img}
-      ${w.content_type?`<span class="poster-type">${esc(w.content_type)}</span>`:""}
-      <span class="poster-t"${w.poster_url?' aria-hidden="true"':""}>${esc(w.title)}</span></span>`;
-  return `<a class="poster" href="#/work/${esc(w.work_id)}" style="${eraVars(w.primary_h)}">
-    ${art}
-    <span class="poster-foot">
-      <span class="bdg bdg-era">${esc(w.era_label||"")}</span>
-      ${w.relation_strength==="핵심"?'<span class="bdg bdg-core">핵심</span>':""}
+         onerror="this.remove()" />` : "";
+  return {img:img,fb:posterFallback(w),alt:alt};
+}
+function workCard(w,opt){
+  opt=opt||{};
+  const a=posterArt(w),num=opt.showNum!==false?numTitleOf(w):null,type=typeBadge(w);
+  return `<a class="wcard" href="#/works/${esc(w.work_id)}" style="${eraVars(w.primary_h)}">
+    <span class="wcard-art"${w.poster_url?"":` role="img" aria-label="${esc(a.alt)}"`}>
+      ${a.img}${a.fb}
+      ${type?`<span class="wcard-type">${et(type)}</span>`:""}
     </span>
-    ${w.poster_url?`<span class="poster-name">${esc(w.title)}</span>`:""}
-    ${num?`<span class="poster-num"><span class="material-icons-outlined">music_note</span>${esc(num)}</span>`:""}
+    <span class="wcard-t">${et(w.title)}</span>
+    <span class="wcard-m">
+      ${opt.hideEra?"":`<span class="bdg bdg-era">${et(w.era_label||"")}</span>`}
+      ${w.relation_strength?`<span class="bdg ${w.relation_strength==="핵심"?"bdg-core":"bdg-sub"}">${et(w.relation_strength)}</span>`:""}
+    </span>
+    ${num?`<span class="wcard-num">♪ ${et(num)}</span>`:""}
   </a>`;
+}
+
+/* 시대 균형을 고려해 목록에서 골라 담는다 */
+function pickBalanced(list,n,exclude){
+  const ex=exclude||[],byEra={},out=[];
+  DB.h.forEach(h=>byEra[h.h_id]=[]);
+  list.forEach(w=>{if(ex.indexOf(w.work_id)<0&&byEra[w.primary_h])byEra[w.primary_h].push(w);});
+  for(let round=0;out.length<n;round++){
+    let added=false;
+    for(const h of DB.h){const q=byEra[h.h_id];
+      if(q[round]){out.push(q[round]);added=true;if(out.length>=n)break;}}
+    if(!added)break;
+  }
+  return out;
 }
 
 /* ================================================================
    홈
 ================================================================ */
-const FEAT=["M17","M05","M09","M23","M40"];
-let fi=0,ftimer=null;
-function heroHTML(){
-  const w=WM()[FEAT[fi]]||DB.works[0];
-  const num=numTitleOf(w),rel=relationsOf(w.work_id)[0];
-  return `<div class="hero" id="hero" style="${eraVars(w.primary_h)}">
-    <div class="hero-bg" style="background:${ec(w.primary_h)}"></div>
-    <div class="hero-in"><div class="hero-box">
-      <span class="hero-eyebrow"><span class="material-icons-outlined">local_fire_department</span>이번 학기 눈여겨볼 무대</span>
-      <h1>${esc(w.title)}</h1>
-      <div class="hero-meta">
-        <span class="bdg bdg-era">${esc(w.era_label||"")}</span>
-        ${w.relation_strength?`<span class="bdg ${w.relation_strength==="핵심"?"bdg-core":"bdg-sub"}">${esc(w.relation_strength)} 연결</span>`:""}
-        ${w.history_link_mode?`<span class="bdg bdg-mode">${esc(w.history_link_mode)}</span>`:""}
-        ${num?`<span class="bdg bdg-core">♪ ${esc(num)}</span>`:""}
-      </div>
-      <p class="hero-desc">${esc(w.synopsis||"")}</p>
-      <div class="hero-btns">
-        <a class="btn btn-gold" href="#/work/${esc(w.work_id)}">
-          <span class="material-icons-outlined">menu_book</span>수업 자료 열기</a>
-        ${rel?`<a class="btn btn-ghost" href="#/works?h=${esc(rel.h_id)}">
-          <span class="material-icons-outlined">history_edu</span>같은 시대 작품 보기</a>`:""}
-      </div>
-      <div class="hero-dots">${FEAT.map((_,i)=>
-        `<button data-f="${i}" aria-current="${i===fi}" aria-label="추천 작품 ${i+1}"></button>`).join("")}</div>
-    </div></div></div>`;
-}
-function swapHero(){const el=$("#hero");if(!el)return;el.outerHTML=heroHTML();bindHero();}
-function startHero(){clearInterval(ftimer);
-  ftimer=setInterval(()=>{fi=(fi+1)%FEAT.length;swapHero();},9000);}
-function bindHero(){
-  document.querySelectorAll("[data-f]").forEach(b=>b.addEventListener("click",()=>{
-    fi=+b.dataset.f;swapHero();startHero();}));
-}
-
-function railRow(h,works,extra){
-  if(!works.length)return"";
-  const rid="r"+Math.random().toString(36).slice(2,8);
-  return `<section class="row" style="${h?eraVars(h.h_id):"--ec:"+"var(--gold)"}">
-    <div class="row-head">
-      <span class="row-bar"></span>
-      <h2 class="row-t">${esc(h?h.era_label:extra.title)}</h2>
-      <span class="row-s">${esc(h?h.topic:extra.sub)}</span>
-      ${h?`<a class="row-more" href="#/works?h=${h.h_id}">${works.length}편 모두 보기 →</a>`:""}
-    </div>
-    <div class="rail-wrap">
-      <button class="rail-btn prev" data-rail="${rid}" data-dir="-1" aria-label="이전 작품"><span class="material-icons-outlined">chevron_left</span></button>
-      <div class="rail" id="${rid}">${works.map(posterHTML).join("")}</div>
-      <button class="rail-btn next" data-rail="${rid}" data-dir="1" aria-label="다음 작품"><span class="material-icons-outlined">chevron_right</span></button>
-    </div></section>`;
-}
-
 function viewHome(){
-  const counts={};DB.h.forEach(h=>counts[h.h_id]=worksOfH(h.h_id).length);
-  const timeline=`<div class="tl"><div class="tl-scroll">
-    ${DB.h.map(h=>`<a class="tl-i" href="#/works?h=${h.h_id}" style="${eraVars(h.h_id)}">
-      <span class="tl-k">${esc(h.standard_code)}</span>
-      <span class="tl-e">${esc(h.era_short)}</span>
-      <span class="tl-c">작품 ${counts[h.h_id]}편</span></a>`).join("")}
-  </div></div>`;
-  const easy=DB.works.filter(w=>(w.elementary_use||"").indexOf("바로")===0).slice(0,14);
-  const withNum=DB.works.filter(w=>numTitleOf(w)).slice(0,14);
-  return heroHTML()+timeline+`<div class="rows">
-    ${railRow(null,easy,{title:"바로 활용하기 좋은 작품",sub:"학급에서 그대로 쓰기 편한 자료"})}
-    ${DB.h.map(h=>railRow(h,worksOfH(h.h_id))).join("")}
-    ${railRow(null,withNum,{title:"대표 넘버가 있는 작품",sub:"곡 하나로 수업을 열 수 있는 작품"})}
+  const posters=DB.works.filter(w=>w.poster_url);
+  const showcase=["M17","M40","M31"].map(i=>WM()[i]).filter(w=>w&&w.poster_url);
+  const arts=(showcase.length?showcase:posters.slice(0,3)).slice(0,3);
+  const easy=pickBalanced(DB.works.filter(w=>(w.elementary_use||"").indexOf("바로")===0),6);
+  const nums=pickBalanced(DB.works.filter(w=>numTitleOf(w)),6,easy.map(w=>w.work_id));
+
+  const intro=`<section class="intro"><div class="intro-in">
+    <div class="intro-box">
+      <h1 class="intro-t">한국사 수업과 뮤지컬을 연결합니다</h1>
+      <p class="intro-p">역사 자료와 뮤지컬을 나란히 살펴보며 사실과 창작을 구분하고,
+        수업에 활용할 작품과 넘버를 찾아보세요.</p>
+      <div class="intro-btns">
+        <button class="btn btn-primary" data-scroll="eras">시대별 작품 찾기</button>
+        <a class="btn btn-line" href="#/works">전체 작품 보기</a>
+      </div>
+      <p class="intro-stat">작품 <b>${DB.works.length}편</b> · 시대 <b>${DB.h.length}개</b> · 대표 넘버 <b>${DB.numbers.length}곡</b></p>
+    </div>
+    <div class="intro-arts" aria-hidden="true">
+      ${arts.map(w=>`<span class="intro-art"><img src="${esc(w.poster_url)}" alt=""
+        loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.intro-art').remove()" /></span>`).join("")}
+    </div>
+  </div></section>`;
+
+  const eras=`<section class="sec" id="eras">
+    <div class="sec-head"><h2 class="sec-h">시대로 찾기</h2>
+      <span class="sec-d">수업할 시대를 고르면 그 시대 작품만 모아 봅니다</span></div>
+    <div class="eras">
+      ${DB.h.map((h,i)=>`<a class="era-c" href="#/works?h=${esc(h.h_id)}" style="${eraVars(h.h_id)}">
+        <span class="era-n">${String(i+1).padStart(2,"0")}</span>
+        <span class="era-t">${et(h.era_short)}</span>
+        <span class="era-c-count">${worksOfH(h.h_id).length}개 작품</span>
+        <span class="era-k">${et(eraKeywords(h.h_id))}</span></a>`).join("")}
+    </div></section>`;
+
+  const row=(title,desc,more,moreLabel,list)=>`<section class="sec">
+    <div class="sec-head"><h2 class="sec-h">${title}</h2><span class="sec-d">${desc}</span>
+      <a class="sec-more" href="${more}">${moreLabel} →</a></div>
+    <div class="pgrid">${list.map(w=>workCard(w)).join("")}</div></section>`;
+
+  return intro+`<div class="wrap" style="padding-bottom:var(--sp-xl)">
+    ${eras}
+    ${row("바로 수업에 활용하기 좋은 작품","학급에서 그대로 쓰기 편한 자료","#/works?use=1","모두 보기",easy)}
+    ${row("대표 넘버로 시작하기","곡 하나로 수업을 열 수 있는 작품","#/works?num=1","모두 보기",nums)}
+    <p style="margin-top:var(--sp-lg);text-align:center">
+      <a class="btn btn-line" href="#/works">전체 작품 ${DB.works.length}편 보기</a></p>
   </div>`;
 }
 
 /* ================================================================
-   작품 목록
+   작품 전체 — 탐색 중심
 ================================================================ */
 function viewWorks(){
-  const list=filtered(),hm=HM();
-  const active=S.h||S.only.length||S.q;
-  const cur=S.h?hm[S.h]:null;
+  const list=filtered(),hm=HM(),cur=S.h?hm[S.h]:null;
   return `<div class="page" style="${eraVars(S.h||"H04")}">
-    <h1 class="page-h">${cur?esc(cur.era_label):"작품 전체"}</h1>
-    <p class="page-s">${cur?esc(cur.topic)+" · "+esc(cur.standard_code)
-      :"수록 작품 "+DB.works.length+"편 · 시대를 고르거나 검색해 보세요"}</p>
-    <div class="quick" role="group" aria-label="시대 선택">
-      <button class="chip" data-h="" aria-pressed="${!S.h}">전체 시대</button>
-      ${DB.h.map(h=>`<button class="chip chip-era" style="${eraVars(h.h_id)}" data-h="${h.h_id}"
-        aria-pressed="${S.h===h.h_id}">${esc(h.era_short)}</button>`).join("")}
+    <h1 class="page-h">전체 작품</h1>
+    <p class="page-s">${cur?et(cur.era_label)+" · "+et(cur.topic)
+      :"시대와 역사 연결 방식으로 수업에 맞는 작품을 찾아보세요."}</p>
+
+    <div class="filters">
+      <div class="fgroup"><span class="fgroup-l" id="f-era">시대</span>
+        <div class="fchips" role="group" aria-labelledby="f-era">
+          <button class="chip" data-h="" aria-pressed="${!S.h}">전체</button>
+          ${DB.h.map(h=>`<button class="chip chip-era" style="${eraVars(h.h_id)}" data-h="${h.h_id}"
+            aria-pressed="${S.h===h.h_id}">${et(h.era_short)}</button>`).join("")}
+        </div></div>
+      <div class="fgroup"><span class="fgroup-l" id="f-str">활용도</span>
+        <div class="fchips" role="group" aria-labelledby="f-str">
+          <button class="chip" data-s="" aria-pressed="${!S.strength}">전체</button>
+          ${STRENGTHS.map(s=>`<button class="chip" data-s="${esc(s)}" aria-pressed="${S.strength===s}"
+            title="${esc(STRENGTH_HINT[s])}">${esc(s)}</button>`).join("")}
+        </div></div>
+      <div class="fgroup"><span class="fgroup-l" id="f-mode">역사 연결</span>
+        <div class="fchips" role="group" aria-labelledby="f-mode">
+          <button class="chip" data-m="" aria-pressed="${!S.mode}">전체</button>
+          ${MODES.map(m=>`<button class="chip" data-m="${esc(m)}" aria-pressed="${S.mode===m}">${esc(m)}</button>`).join("")}
+        </div></div>
+      ${(S.use||S.num||S.q)?`<div class="fgroup"><span class="fgroup-l">적용됨</span>
+        <div class="fchips">
+          ${S.use?'<button class="chip" data-use="" aria-pressed="true">바로 활용하기 좋음 ✕</button>':""}
+          ${S.num?'<button class="chip" data-num="" aria-pressed="true">대표 넘버 있음 ✕</button>':""}
+          ${S.q?`<span class="chip" aria-hidden="true">‘${et(S.q)}’ 검색</span>`:""}
+        </div></div>`:""}
     </div>
-    <div class="quick" role="group" aria-label="빠른 조건">
-      ${ONLY.map(o=>`<button class="chip" data-only="${o[0]}" aria-pressed="${S.only.indexOf(o[0])>=0}">
-        <span class="material-icons-outlined">${o[1]}</span>${esc(o[2])}</button>`).join("")}
-    </div>
-    <p class="count">작품 <b>${list.length}</b>편${S.q?" · ‘"+esc(S.q)+"’ 검색":""}
-      ${active?'<button class="reset" id="reset">조건 지우기</button>':""}</p>
-    ${list.length?`<div class="pgrid">${list.map(posterHTML).join("")}</div>`
-      :`<div class="empty"><span class="material-icons-outlined">filter_alt_off</span>
+
+    <p class="count"><b>${list.length}</b>개 작품
+      ${hasFilter()?'<button class="reset" id="reset">조건 지우기</button>':""}</p>
+    ${list.length?`<div class="pgrid">${list.map(w=>workCard(w,{hideEra:!!S.h})).join("")}</div>`
+      :`<div class="empty"><span class="material-icons-outlined" aria-hidden="true">filter_alt_off</span>
         조건에 맞는 작품이 없습니다.<br />조건을 하나 줄이거나 검색어를 짧게 해 보세요.</div>`}
   </div>`;
 }
 
 /* ================================================================
-   이용 안내
+   작품 상세 — 별도 화면(#/works/M17). 핵심 3가지를 먼저 보여준다.
 ================================================================ */
-function viewGuide(){
-  return `<div class="page">
-    <h1 class="page-h">이용 안내</h1>
-    <p class="page-s">수업에 쓰기 전에 한 번 읽어 주세요</p>
-    <div style="height:16px"></div>
-    <div class="gitem"><h2><span class="material-icons-outlined">flag</span>이 자료의 성격</h2>
-      <p>뮤지컬로 역사를 대신 가르치기 위한 자료가 아닙니다. 검증된 한국 창작뮤지컬을 역사 자료와 나란히 놓고,
-        어디까지가 확인된 사실이고 어디부터가 창작인지 학생과 함께 구분하기 위한 교사용 탐색 도구입니다.
-        모든 작품에 <strong>역사 사실과 창작</strong> 항목을 두었으니 이 문장을 먼저 확인해 주세요.</p></div>
-    <div class="gitem"><h2><span class="material-icons-outlined">category</span>수록 기준</h2>
-      <p>2022 개정 사회과 한국사 성취기준 ${DB.h.length}개 주제에 연결되는 작품 ${DB.works.length}편을 수록했습니다.
-        출처가 확인되지 않은 작품과 넘버는 싣지 않았습니다. 대표 넘버가 확인된 작품은 ${DB.numbers.length}편이며
-        나머지는 ‘대표 넘버 준비 중’으로 표시됩니다.</p></div>
-    <div class="gitem"><h2><span class="material-icons-outlined">explore</span>찾는 방법</h2>
-      <p>홈의 연표에서 시대를 고르면 그 시대 작품이 한 줄로 펼쳐집니다. 작품 화면에서는 시대 하나와
-        빠른 조건 세 가지만 두었습니다. 복잡한 조건을 겹치기보다 시대의 흐름을 따라 훑어보는 쪽이 빠릅니다.</p>
-      <p>검색은 작품명뿐 아니라 인물·시대·사건·대표 넘버까지 찾습니다. ‘정조’, ‘가야’, ‘수원 화성’, ‘누가 죄인인가’처럼
-        수업에서 쓰는 말로 검색해 보세요. 고른 조건은 주소에 남아 뒤로 가기를 눌러도 유지됩니다.</p></div>
-    <div class="gitem"><h2><span class="material-icons-outlined">image</span>포스터 이미지</h2>
-      <p>수록 작품 ${DB.works.length}편 가운데 ${DB.works.filter(w=>w.poster_url).length}편은 가장 최근 공연의 메인 포스터를 연결했습니다.
-        각 이미지의 출처는 작품 상세의 <strong>출처</strong>에서 확인할 수 있습니다.</p>
-      <p>포스터를 확인하지 못한 ${DB.works.filter(w=>!w.poster_url).length}편은 시대별 구분색과 작품명을 조합한 대체 이미지를 씁니다.
-        이미지가 내려가거나 불러오지 못하는 경우에도 같은 대체 이미지로 자동 전환되므로 화면이 비어 보이지 않습니다.
-        화면 낭독기에는 어느 쪽이든 작품 대체 텍스트가 전달됩니다.</p>
-      <p>포스터는 원 출처 서버의 이미지를 그대로 불러옵니다. 외부에 공개해 운영하기 전에는 각 출처의 이용 조건을 다시 확인하고,
-        허용되는 범위에서 이미지를 직접 보관해 사용하는 편이 안전합니다.</p></div>
-    <div class="gitem"><h2><span class="material-icons-outlined">gavel</span>수업에서 사용할 때</h2>
-      <p>공연 실황 영상은 제작사·공연기관 공식 채널에 공개된 자료를 사용하세요. 음원은 수업 목적 감상은 가능하나
-        재배포와 편집물 공유는 피해야 합니다. 공연 정보와 대표 넘버는 시즌에 따라 달라질 수 있으니
-        각 작품의 출처 링크에서 최신 정보를 확인한 뒤 사용해 주세요.</p></div>
-    <div class="notice"><strong>출처</strong> · 성취기준과 교육과정 연결: 2022 개정 사회과 교육과정 및 『초등학교 사회 교사용 지도서』.
-      작품·대표 넘버 정보: 각 제작사와 공연기관의 공식 공개 자료.<br /><br />
-      데이터는 정적 JSON으로 관리되며 서버나 로그인 없이 동작합니다.</div>
-  </div>`;
-}
-
-/* ================================================================
-   작품 상세 — 모달
-================================================================ */
-function block(icon,label,inner,cls){
-  if(!inner||!inner.trim())return"";
-  return `<div class="${cls?"box "+cls:""}"><div class="sec-l">
-    <span class="material-icons-outlined">${icon}</span>${label}</div>${inner}</div>`;
-}
-function openWork(id){
+function viewWork(id){
   const w=WM()[id];
-  if(!w){location.hash="#/works";return;}
-  const n=numberOf(w.work_id),rels=relationsOf(w.work_id),hm=HM();
+  if(!w)return `<div class="page"><div class="empty">작품을 찾지 못했습니다.
+    <br /><a href="#/works">전체 작품으로 돌아가기</a></div></div>`;
+  const n=numberOf(w.work_id),hm=HM(),rels=relationsOf(w.work_id);
   const numTitle=numTitleOf(w);
   const singer=w.number_singer||(n&&n.singer);
   const nctx=w.number_context||(n&&n.context);
   const nhist=w.number_history_connection||(n&&n.history_connection);
   const nsrc=w.number_source_url||(n&&n.source_url);
-  const tags=splitDot(w.tags);
+  const type=typeBadge(w),tags=splitDot(w.tags);
+  const cc=sents(w.curriculum_connection);
+  const lead=cc[0]||"",rest=cc.slice(1).join(" ");
+  const caution=cautionText(w);
+  const a=posterArt(w,"d");
+  const std=(hm[w.primary_h]||{});
 
-  const curr=[
-    w.curriculum_connection?`<p class="sec-t">${esc(w.curriculum_connection)}</p>`:"",
-    `<div class="tags" style="margin-top:10px">
-      ${w.standard_code?`<span class="tg">${esc(w.standard_code)}</span>`:""}
-      ${arr(w.h_topics).map(t=>`<span class="tg">${esc(t)}</span>`).join("")}
-      ${arr(w.relation_basis).map(t=>`<span class="tg">${esc(t)}</span>`).join("")}
-    </div>`,
-    rels.length>1?`<p class="sec-t" style="margin-top:11px;font-size:13.5px">이 작품은 ${rels.length}개 시대에 연결됩니다.</p>
-      <div class="tags" style="margin-top:7px">${rels.map(r=>
-        `<a class="tg" href="#/works?h=${esc(r.h_id)}">${esc((hm[r.h_id]||{}).era_label||r.h_id)}</a>`).join("")}</div>`:""
-  ].join("");
-
-  const numInner=numTitle?`
-    <div class="num-t"><span class="material-icons-outlined">music_note</span>${esc(numTitle)}</div>
-    ${singer?`<div class="num-s">${esc(singer)}</div>`:""}
-    <div class="num-s">공개 상태 · ${esc(pubStatus(w.number_status||(n&&n.status)))}</div>
-    ${nctx?`<p class="sec-t" style="margin-top:10px">${esc(nctx)}</p>`:""}
-    ${nhist?`<p class="sec-t" style="margin-top:8px">${esc(nhist)}</p>`:""}`:"";
-
-  const lesson=[
-    w.lesson_activity?`<p class="sec-t">${esc(w.lesson_activity)}</p>`:"",
-    w.lesson_question?`<p class="q-line">${esc(w.lesson_question)}</p>`:""].join("");
-
-  const caution=[
-    w.caution?`<p class="sec-t">${esc(w.caution)}</p>`:"",
-    w.elementary_use?`<p class="sec-t" style="margin-top:8px"><strong>초등 활용</strong> · ${esc(w.elementary_use)}</p>`:""].join("");
-
-  const srcs=[
-    w.work_source_url?`<a class="m-link" href="${esc(w.work_source_url)}" target="_blank" rel="noopener noreferrer">
-      <span class="material-icons-outlined">open_in_new</span>작품 정보 · ${esc(w.work_source_url)}</a>`:"",
-    nsrc?`<a class="m-link" href="${esc(nsrc)}" target="_blank" rel="noopener noreferrer">
-      <span class="material-icons-outlined">open_in_new</span>대표 넘버 · ${esc(nsrc)}</a>`:"",
-    w.poster_source_url?`<a class="m-link" href="${esc(w.poster_source_url)}" target="_blank" rel="noopener noreferrer">
-      <span class="material-icons-outlined">open_in_new</span>포스터${w.poster_source?" ("+esc(w.poster_source)+")":""} · ${esc(w.poster_source_url)}</a>`:""
-    ].filter(Boolean).join("");
-
-  const pAlt=w.poster_alt||(w.title+" 대표 이미지");
-  const heroStyle=eraVars(w.primary_h)+(w.poster_url?`;--pimg:url('${esc(w.poster_url)}')`:"");
-  $("#modal").innerHTML=`
-    <div class="m-hero" style="${heroStyle}">
-      <span class="m-rule"></span>
-      <button class="m-close" aria-label="닫기" data-close><span class="material-icons-outlined">close</span></button>
-      ${w.poster_url?`<span class="m-poster"><img src="${esc(w.poster_url)}" alt="${esc(pAlt)}"
-        decoding="async" referrerpolicy="no-referrer"
-        onload="this.closest('.m-hero').classList.add('has-img')"
-        onerror="this.closest('.m-poster').remove()" /></span>`:""}
-      <h2 class="m-title" id="mTitle">${esc(w.title)}</h2>
-      <div class="m-meta">
-        <span class="bdg bdg-era">${esc(w.era_label||"")}</span>
-        ${w.content_type?`<span class="bdg bdg-sub">${esc(w.content_type)}</span>`:""}
-        ${w.relation_strength?`<span class="bdg ${w.relation_strength==="핵심"?"bdg-core":"bdg-sub"}">${esc(w.relation_strength)} 연결</span>`:""}
-        ${w.history_link_mode?`<span class="bdg bdg-mode">${esc(w.history_link_mode)}</span>`:""}
+  /* 상단 — 포스터 한 번, 판단에 필요한 정보만 */
+  const head=`<div class="dhead" style="${eraVars(w.primary_h)}">
+    <span class="dposter"${w.poster_url?"":` role="img" aria-label="${esc(a.alt)}"`}>${a.img}${a.fb}</span>
+    <div class="dhead-info">
+      <h1 class="dtitle">${et(w.title)}</h1>
+      <div class="dchips">
+        <span class="bdg bdg-era">${et(w.era_label||"")}</span>
+        ${w.relation_strength?`<span class="bdg ${w.relation_strength==="핵심"?"bdg-core":"bdg-sub"}"
+          title="${esc(STRENGTH_HINT[w.relation_strength]||"")}">${et(w.relation_strength)}</span>`:""}
+        ${w.history_link_mode?`<span class="bdg bdg-mode">${et(w.history_link_mode)}</span>`:""}
+        ${type?`<span class="bdg bdg-type">${et(type)}</span>`:""}
       </div>
-    </div>
-    <div class="m-body">
-      ${block("subject","작품 소개",[
-        w.synopsis?`<p class="sec-t">${esc(w.synopsis)}</p>`:"",
-        w.characters?`<p class="sec-t" style="margin-top:9px"><strong>주요 인물</strong> · ${esc(w.characters)}</p>`:"",
-        tags.length?`<div class="tags" style="margin-top:10px">${tags.map(t=>
-          `<a class="tg" href="#/works?q=${encodeURIComponent(t)}">${esc(t)}</a>`).join("")}</div>`:""
-      ].join(""))}
-      ${block("school","한국사 수업에서 왜 이 작품인가",curr)}
-      ${block("balance","역사 사실과 창작",w.fact_fiction_note?`<p class="sec-t">${esc(w.fact_fiction_note)}</p>`:"","box-fact")}
-      ${block("music_note","대표 넘버",numInner,"box-num")}
-      ${block("lightbulb","수업에 활용하기",lesson,"box-idea")}
-      ${block("warning_amber","활용 주의점",caution,"box-warn")}
-      ${block("link","출처",srcs?`<div style="display:flex;flex-direction:column;gap:7px">${srcs}</div>`:"")}
-    </div>`;
-  showModal();
-}
-let lastFocus=null;
-function showModal(){
-  lastFocus=document.activeElement;$("#ov").classList.add("on");
-  document.body.style.overflow="hidden";
-  const c=$("#modal").querySelector("[data-close]");if(c)c.focus();
-}
-function closeModal(goBack){
-  if(!$("#ov").classList.contains("on"))return;
-  $("#ov").classList.remove("on");document.body.style.overflow="";
-  if(goBack&&route.name==="work"){history.back();}
-  else if(lastFocus&&lastFocus.focus)lastFocus.focus();
+      ${lead?`<p class="dlead">${et(lead)}</p>`:""}
+      ${w.characters?`<p class="dpeople"><b>주요 인물</b>${et(splitDot(w.characters).join(" · "))}</p>`:""}
+    </div></div>`;
+
+  /* 역사와 작품의 관계 — 서비스의 핵심 구분 */
+  const rel=w.history_link_mode?`<section class="rel">
+      <p class="rel-l">역사와 작품의 관계</p>
+      <p class="rel-m">${et(w.history_link_mode)}</p>
+      ${w.fact_fiction_note?`<p class="rel-n">${et(w.fact_fiction_note)}</p>`:""}
+    </section>`:"";
+
+  /* ① 왜 이 작품인가 */
+  const why=rest?`<section class="dsec">
+      <h2 class="dsec-h">한국사 수업에서 이 작품을 보는 이유</h2>
+      <p class="dtext">${et(rest)}</p></section>`:"";
+
+  /* ② 대표 넘버 */
+  const num=`<section class="dsec">
+    <h2 class="dsec-h">🎵 대표 넘버</h2>
+    ${numTitle?`<div class="numcard">
+      <p class="numcard-t">〈${et(numTitle)}〉</p>
+      ${singer?`<p class="numcard-s">${et(splitDot(singer).join(" · "))}</p>`:""}
+      ${nctx?`<p class="numcard-c">${et(nctx)}</p>`:""}
+    </div>`:`<p class="numnone">대표 넘버 자료 준비 중</p>`}</section>`;
+
+  /* ③ 수업 활용 */
+  const lesson=`<section class="dsec">
+    <h2 class="dsec-h">💡 수업 아이디어</h2>
+    ${w.lesson_activity?`<p class="dtext">${et(w.lesson_activity)}</p>`:""}
+    ${w.lesson_question?`<div class="qbox"><p class="qbox-l">❓ 수업 질문</p>
+      <p class="qbox-t">“${et(w.lesson_question)}”</p></div>`:""}
+    ${caution?`<p class="cnote"><b>⚠️ 수업에서 확인하세요</b> · ${et(caution)}</p>`:""}
+  </section>`;
+
+  /* 나머지는 접어서 제공 */
+  const acc=(label,inner)=>inner&&inner.trim()?`<details class="acc"><summary>${label}</summary>
+    <div class="acc-b">${inner}</div></details>`:"";
+  const otherH=rels.filter(r=>r.h_id!==w.primary_h);
+  /* 출처 — 긴 URL 문자열 대신 링크 버튼으로만 제공 */
+  const srcLink=(url,label)=>url?`<a class="src" href="${esc(url)}" target="_blank"
+    rel="noopener noreferrer">${label} <span aria-hidden="true">↗</span></a>`:"";
+  const srcs=[srcLink(w.work_source_url,"작품 정보 보기"),
+              srcLink(nsrc,"대표 넘버 출처"),
+              srcLink(w.poster_source_url,"포스터 출처"+(w.poster_source?" ("+et(w.poster_source)+")":""))
+             ].filter(Boolean).join("");
+  const details=`<div class="dsec">
+    ${acc("작품 줄거리와 인물",[
+      w.synopsis?`<p class="dtext">${et(w.synopsis)}</p>`:"",
+      w.characters?`<p class="dtext" style="margin-top:9px"><strong>주요 인물</strong> · ${et(splitDot(w.characters).join(" · "))}</p>`:"",
+      tags.length?`<div class="tags">${tags.map(t=>
+        `<a class="tg" href="#/works?q=${encodeURIComponent(t)}">${et(t)}</a>`).join("")}</div>`:""
+    ].join(""))}
+    ${acc("2022 개정 사회과 연결",[
+      w.standard_code?`<p><span class="stdcode">2022 개정 사회 ${esc(w.standard_code)}</span></p>`:"",
+      std.standard_text?`<p class="dtext" style="margin-top:9px">${et(std.standard_text)}</p>`:"",
+      w.curriculum_connection?`<p class="dtext" style="margin-top:11px">${et(w.curriculum_connection)}</p>`:"",
+      (arr(w.h_topics).length||arr(w.relation_basis).length)?`<div class="tags">
+        ${arr(w.h_topics).map(t=>`<span class="tg">${et(t)}</span>`).join("")}
+        ${arr(w.relation_basis).map(t=>`<span class="tg">${et(t)}</span>`).join("")}</div>`:"",
+      otherH.length?`<p class="dtext" style="margin-top:11px">이 작품은 다른 시대에도 연결됩니다.</p>
+        <div class="tags">${otherH.map(r=>
+          `<a class="tg" href="#/works?h=${esc(r.h_id)}">${et((hm[r.h_id]||{}).era_label||r.h_id)}</a>`).join("")}</div>`:""
+    ].join(""))}
+    ${acc("대표 넘버 자세히",numTitle&&(nctx||nhist)?[
+      nctx?`<p class="dtext">${et(nctx)}</p>`:"",
+      nhist?`<p class="dtext" style="margin-top:8px">${et(nhist)}</p>`:""
+    ].join(""):"")}
+    ${acc("수업 활용 시 참고",[
+      w.elementary_use?`<p class="dtext"><strong>초등 활용</strong> · ${et(w.elementary_use)}</p>`:"",
+      w.caution&&!caution?`<p class="dtext" style="margin-top:8px">${et(w.caution)}</p>`:""
+    ].join(""))}
+    ${acc("출처",srcs?`<div class="srcs">${srcs}</div>`:"")}
+  </div>`;
+
+  return `<div class="detail">
+    <button class="back" data-back><span class="material-icons-outlined" aria-hidden="true">arrow_back</span>작품 목록으로</button>
+    ${head}
+    <div class="dbody">${rel}${why}${num}${lesson}${details}</div>
+  </div>`;
 }
 
 /* ================================================================
-   렌더
+   이용 안내 — 단계형 + 아코디언
+================================================================ */
+const STEPS=[
+  ["시대를 고릅니다","홈의 시대 카드에서 수업할 시대를 선택합니다."],
+  ["작품을 살펴봅니다","작품의 역사 연결 방식과 활용도를 확인합니다."],
+  ["사실과 창작을 구분합니다","실제 역사 자료와 작품의 상상 부분을 비교합니다."],
+  ["넘버 또는 장면을 고릅니다","대표 넘버가 있는 경우 수업 자료로 활용합니다."],
+  ["역사 자료와 함께 봅니다","뮤지컬 자체를 역사적 사실로 사용하지 않습니다."]];
+
+function viewGuide(){
+  const withPoster=DB.works.filter(w=>w.poster_url).length;
+  return `<div class="page guide">
+    <h1 class="page-h">이용 안내</h1>
+    <p class="page-s">이 자료는 이렇게 사용하세요</p>
+    <div class="steps">
+      ${STEPS.map((s,i)=>`<div class="step"><span class="step-n" aria-hidden="true">${i+1}</span>
+        <div><p class="step-t">${esc(s[0])}</p><p class="step-d">${esc(s[1])}</p></div></div>`).join("")}
+    </div>
+    <div style="margin-top:var(--sp-lg)">
+      <details class="acc"><summary>작품 선정 기준</summary><div class="acc-b">
+        <p class="dtext">2022 개정 사회과 한국사 성취기준 ${DB.h.length}개 주제에 연결되는 작품 ${DB.works.length}편을 실었습니다.
+          출처가 확인되지 않은 작품과 넘버는 싣지 않았습니다. 대표 넘버가 확인된 작품은 ${DB.numbers.length}편이며,
+          나머지는 ‘대표 넘버 자료 준비 중’으로 표시됩니다.</p>
+        <p class="dtext" style="margin-top:9px">정식 본공연이 아닌 자료는 <strong>쇼케이스</strong>처럼 형태를 함께 표시합니다.</p></div></details>
+      <details class="acc"><summary>교육과정 연결 기준 — 핵심과 보조</summary><div class="acc-b">
+        <p class="dtext"><strong>핵심</strong> · ${esc(STRENGTH_HINT["핵심"])}</p>
+        <p class="dtext" style="margin-top:6px"><strong>보조</strong> · ${esc(STRENGTH_HINT["보조"])}</p>
+        <p class="dtext" style="margin-top:11px"><strong>실제 인물·사건 중심</strong> · 실존 인물과 사건을 바탕으로 하되 대사와 관계, 사건 배열에는 극적 재구성이 있습니다.</p>
+        <p class="dtext" style="margin-top:6px"><strong>팩션·상상 비교</strong> · 창작 비중이 커서 역사 자료와 나란히 놓고 사실과 상상을 구분하며 볼 자료입니다.</p>
+        <p class="dtext" style="margin-top:11px">성취기준 전문은 각 작품 상세의 ‘2022 개정 사회과 연결’에서 확인할 수 있습니다.</p></div></details>
+      <details class="acc"><summary>포스터 및 저작권</summary><div class="acc-b">
+        <p class="dtext">수록 작품 ${DB.works.length}편 가운데 ${withPoster}편은 가장 최근 공연의 메인 포스터를 연결했습니다.
+          포스터를 확인하지 못한 ${DB.works.length-withPoster}편은 시대색과 작품명을 조합한 대체 이미지를 씁니다.
+          이미지를 불러오지 못하는 경우에도 같은 대체 이미지로 자동 전환됩니다.</p>
+        <p class="dtext" style="margin-top:9px">포스터는 원 출처 서버의 이미지를 그대로 불러옵니다. 외부에 공개해 운영하기 전에는
+          각 출처의 이용 조건을 확인하고, 허용되는 범위에서 이미지를 직접 보관해 사용하는 편이 안전합니다.</p>
+        <p class="dtext" style="margin-top:9px">공연 실황 영상은 제작사·공연기관 공식 채널의 자료를 사용하고,
+          음원은 수업 목적 감상까지만 활용해 주세요.</p></div></details>
+      <details class="acc"><summary>데이터 및 출처</summary><div class="acc-b">
+        <p class="dtext">성취기준과 교육과정 연결은 2022 개정 사회과 교육과정과 『초등학교 사회 교사용 지도서』를,
+          작품·대표 넘버 정보는 각 제작사와 공연기관의 공식 공개 자료를 따랐습니다.
+          각 작품 상세의 ‘출처’에서 원 자료로 이동할 수 있습니다.</p>
+        <p class="dtext" style="margin-top:9px">공연 정보와 대표 넘버는 시즌에 따라 달라질 수 있으니 사용 전 출처 링크에서 최신 정보를 확인해 주세요.
+          데이터는 정적 JSON으로 관리되며 서버나 로그인 없이 동작합니다.</p></div></details>
+    </div>
+    <div class="notice">이 자료는 뮤지컬로 역사를 대신 가르치기 위한 것이 아닙니다.
+      역사 자료와 뮤지컬을 나란히 놓고, 어디까지가 확인된 사실이고 어디부터가 창작인지
+      학생과 함께 구분하기 위한 교사용 탐색 도구입니다.</div>
+  </div>`;
+}
+
+/* ================================================================
+   렌더 · 이벤트
 ================================================================ */
 const app=()=>$("#app");
 function render(){
   parseHash();
   const v=route.name;
-  if(v==="work"){
-    if(app().dataset.view!=="home"){app().innerHTML=viewHome();app().dataset.view="home";bindHero();}
-    clearInterval(ftimer);
-    openWork(route.id);
-  }else{
-    closeModal(false);
-    clearInterval(ftimer);
-    app().innerHTML = v==="works"?viewWorks() : v==="guide"?viewGuide() : viewHome();
-    app().dataset.view=v;
-    if(v==="home"){bindHero();startHero();}
-    window.scrollTo({top:0,behavior:"instant"});
-  }
+  app().innerHTML = v==="work"?viewWork(route.id) : v==="works"?viewWorks()
+                  : v==="guide"?viewGuide() : viewHome();
+  app().dataset.view=v;
+  window.scrollTo({top:0,behavior:"instant"});
   document.querySelectorAll(".nav-links a").forEach(a=>{
     const on=(a.dataset.nav==="home"&&v==="home")||(a.dataset.nav==="works"&&(v==="works"||v==="work"))
            ||(a.dataset.nav==="guide"&&v==="guide");
@@ -703,32 +818,37 @@ function render(){
   const qi=$("#q");if(qi&&document.activeElement!==qi)qi.value=S.q;
   bind();
 }
-let qTimer=null;
 function bind(){
-  document.querySelectorAll("[data-rail]").forEach(b=>b.addEventListener("click",()=>{
-    const r=$("#"+b.dataset.rail);
-    r.scrollBy({left:b.dataset.dir*Math.round(r.clientWidth*.82),behavior:"smooth"});}));
-  document.querySelectorAll("[data-h]").forEach(b=>b.addEventListener("click",()=>{
-    S.h=b.dataset.h;goWorks();}));
-  document.querySelectorAll("[data-only]").forEach(b=>b.addEventListener("click",()=>{
-    const k=b.dataset.only,i=S.only.indexOf(k);
-    i>=0?S.only.splice(i,1):S.only.push(k);goWorks();}));
+  document.querySelectorAll("[data-h]").forEach(b=>b.addEventListener("click",()=>{S.h=b.dataset.h;goWorks();}));
+  document.querySelectorAll("[data-s]").forEach(b=>b.addEventListener("click",()=>{S.strength=b.dataset.s;goWorks();}));
+  document.querySelectorAll("[data-m]").forEach(b=>b.addEventListener("click",()=>{S.mode=b.dataset.m;goWorks();}));
+  document.querySelectorAll("[data-use]").forEach(b=>b.addEventListener("click",()=>{S.use="";goWorks();}));
+  document.querySelectorAll("[data-num]").forEach(b=>b.addEventListener("click",()=>{S.num="";goWorks();}));
   const rs=$("#reset");
-  if(rs)rs.addEventListener("click",()=>{S={q:"",h:"",only:[]};location.hash="#/works";});
+  if(rs)rs.addEventListener("click",()=>{location.hash="#/works";});
+  const sc=document.querySelector("[data-scroll]");
+  if(sc)sc.addEventListener("click",()=>{const t=$("#"+sc.dataset.scroll);
+    if(t)t.scrollIntoView({behavior:"smooth",block:"start"});});
+  const bk=document.querySelector("[data-back]");
+  if(bk)bk.addEventListener("click",()=>{
+    if(history.length>1)history.back();else location.hash="#/works";});
+  /* 아코디언 — 여는 상태를 보조기기에 함께 알린다 */
+  document.querySelectorAll("details.acc").forEach(d=>{
+    const s=d.querySelector("summary");
+    s.setAttribute("aria-expanded",d.open?"true":"false");
+    d.addEventListener("toggle",()=>s.setAttribute("aria-expanded",d.open?"true":"false"));});
 }
+let qTimer=null;
 $("#q").addEventListener("input",e=>{
   clearTimeout(qTimer);const v=e.target.value.trim();
-  qTimer=setTimeout(()=>{S.q=v;S.h="";goWorks();},280);});
-$("#ov").addEventListener("click",e=>{if(e.target===$("#ov"))closeModal(true);});
-document.addEventListener("click",e=>{if(e.target.closest("[data-close]"))closeModal(true);});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal(true);});
+  /* 상단 검색은 전역 검색이므로 남아 있던 필터를 함께 비운다 */
+  qTimer=setTimeout(()=>{S={q:v,h:"",strength:"",mode:"",use:"",num:""};goWorks();},280);});
 window.addEventListener("hashchange",render);
-window.addEventListener("scroll",()=>{$("#nav").classList.toggle("solid",window.scrollY>40);});
 
 loadData().then(render).catch(err=>{
   app().innerHTML=`<div class="page"><div class="empty">
-    <span class="material-icons-outlined">cloud_off</span>자료 파일을 불러오지 못했습니다.
-    <p style="margin-top:10px;font-size:13.5px">이 파일은 <code>data/</code> 폴더의 JSON을 함께 읽습니다.
+    <span class="material-icons-outlined" aria-hidden="true">cloud_off</span>자료 파일을 불러오지 못했습니다.
+    <p style="margin-top:10px;font-size:14.5px">이 파일은 <code>data/</code> 폴더의 JSON을 함께 읽습니다.
     폴더째 웹 서버로 실행하거나(<code>python3 -m http.server</code>) 단일 파일 버전을 사용해 주세요.</p></div></div>`;
   console.error(err);});
 </script>
