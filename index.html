@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>한국사 × 한국뮤지컬 — 초등 한국사 수업을 위한 무대 아카이브</title>
+<meta name="description" content="2022 개정 사회과 성취기준에 연결한 한국 창작뮤지컬 아카이브. 시대의 흐름을 따라 작품을 찾고, 역사 사실과 창작을 구분합니다." />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<style>
+:root{
+  --color-primary:#006DD2; --color-primary-light:#E8F3FF;
+  --color-secondary:#00A68A; --color-error:#D32F2F;
+  --color-warning:#F57C00; --color-success:#388E3C;
+  --color-pastel-blue:#BFD9F2; --color-pastel-green:#C8EDD9;
+  --color-pastel-yellow:#FFF3B0; --color-pastel-pink:#FFD6E0;
+  --color-pastel-blue-dark:#1A5F8A; --color-pastel-green-dark:#1A6B47;
+  --color-pastel-yellow-dark:#7A6000; --color-pastel-pink-dark:#8A2840;
+  --color-gray-900:#1A1A1A; --color-gray-700:#404040; --color-gray-500:#767676;
+  --color-gray-300:#B2B2B2; --color-gray-100:#F5F5F5; --color-white:#FFFFFF;
+  --border-radius-sm:4px; --border-radius-md:8px; --border-radius-lg:16px;
+  --spacing-xs:4px; --spacing-sm:8px; --spacing-md:16px; --spacing-lg:24px; --spacing-xl:40px;
+
+  --ink-900:#12151B; --ink-800:#191D25; --ink-700:#222831; --ink-600:#2E3542;
+  --line:#333B48;
+  --txt-hi:#F2EFE9; --txt-mid:#B6B2A9; --txt-low:#837E75;
+  --gold:#C9A227; --gold-soft:#E3C766;
+}
+*{box-sizing:border-box;margin:0;padding:0;
+  font-family:'Pretendard GOV','Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
+html{scroll-behavior:smooth;}
+body{font-size:16px;line-height:1.65;color:var(--txt-hi);background:var(--ink-900);
+  min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+a{color:var(--gold-soft);}
+:focus-visible{outline:3px solid var(--gold-soft);outline-offset:3px;border-radius:var(--border-radius-sm);}
+main{flex:1;width:100%;}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--gold);color:#1B1405;
+  padding:10px 16px;border-radius:8px;font-weight:700;}
+.skip:focus{left:8px;}
+
+/* ---------- 상단 ---------- */
+.nav{position:sticky;top:0;z-index:60;padding:11px var(--spacing-md);
+  background:linear-gradient(180deg,rgba(18,21,27,.97),rgba(18,21,27,.72));
+  backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s,background .2s;}
+.nav.solid{background:var(--ink-900);border-bottom-color:var(--line);}
+.nav-in{display:flex;align-items:center;gap:var(--spacing-sm);max-width:1180px;margin:0 auto;width:100%;}
+.brand{display:flex;align-items:center;gap:7px;font-size:16px;font-weight:800;letter-spacing:-.5px;
+  color:var(--txt-hi);white-space:nowrap;text-decoration:none;}
+.brand .material-icons-outlined{font-size:21px;color:var(--gold);}
+.nav-links{display:flex;gap:2px;margin-left:auto;}
+.nav-links a{padding:7px 10px;border-radius:999px;font-size:14px;font-weight:600;color:var(--txt-mid);
+  text-decoration:none;white-space:nowrap;transition:all .18s;}
+.nav-links a:hover{color:var(--txt-hi);background:var(--ink-700);}
+.nav-links a[aria-current="page"]{color:#1B1405;background:var(--gold-soft);font-weight:700;}
+.nav-s{display:flex;align-items:center;gap:6px;background:var(--ink-700);border:1px solid var(--line);
+  border-radius:999px;padding:7px 12px;}
+.nav-s:focus-within{border-color:var(--gold-soft);box-shadow:0 0 0 3px rgba(227,199,102,.16);}
+.nav-s .material-icons-outlined{font-size:19px;color:var(--txt-low);}
+.nav-s input{background:none;border:none;outline:none;color:var(--txt-hi);font-size:14px;width:88px;}
+.nav-s input::placeholder{color:var(--txt-low);}
+@media (min-width:768px){.nav-s input{width:180px;}}
+
+/* ---------- 히어로 ---------- */
+.hero{position:relative;min-height:clamp(400px,64vh,560px);display:flex;align-items:flex-end;
+  padding:116px var(--spacing-md) var(--spacing-xl);overflow:hidden;margin-top:-56px;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(18,21,27,.4) 0%,rgba(18,21,27,.78) 58%,var(--ink-900) 100%);}
+.hero-bg::before{content:"";position:absolute;inset:0;opacity:.2;
+  background:repeating-linear-gradient(94deg,rgba(255,255,255,.55) 0 2px,transparent 2px 22px);}
+.hero-in{position:relative;z-index:1;max-width:1180px;margin:0 auto;width:100%;}
+.hero-box{max-width:640px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:800;letter-spacing:.4px;
+  color:var(--gold-soft);border:1px solid rgba(227,199,102,.45);padding:4px 11px;border-radius:999px;margin-bottom:11px;}
+.hero-eyebrow .material-icons-outlined{font-size:14px;}
+.hero h1{font-size:clamp(1.8rem,6.4vw,2.85rem);line-height:1.18;font-weight:900;letter-spacing:-1.1px;
+  text-shadow:0 4px 26px rgba(0,0,0,.55);}
+.hero-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:11px 0;}
+.hero-desc{font-size:15px;color:var(--txt-mid);margin-bottom:var(--spacing-md);max-width:580px;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.hero-btns{display:flex;gap:var(--spacing-sm);flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:11px 19px;border-radius:var(--border-radius-md);
+  font-size:15px;font-weight:700;text-decoration:none;transition:all .18s;}
+.btn .material-icons-outlined{font-size:20px;}
+.btn-gold{background:var(--gold-soft);color:#1B1405;}
+.btn-gold:hover{background:#F0DA92;transform:translateY(-1px);}
+.btn-ghost{background:rgba(240,236,226,.14);color:var(--txt-hi);backdrop-filter:blur(4px);}
+.btn-ghost:hover{background:rgba(240,236,226,.24);}
+.hero-dots{display:flex;gap:6px;margin-top:var(--spacing-md);}
+.hero-dots button{width:22px;height:4px;border-radius:2px;background:rgba(255,255,255,.26);transition:all .2s;}
+.hero-dots button[aria-current="true"]{background:var(--gold-soft);width:34px;}
+
+/* ---------- 연표 ---------- */
+.tl{position:relative;z-index:3;margin-top:-20px;padding-bottom:var(--spacing-md);}
+.tl-scroll{display:flex;overflow-x:auto;scrollbar-width:none;padding:0 var(--spacing-md) 6px;
+  max-width:1180px;margin:0 auto;}
+.tl-scroll::-webkit-scrollbar{display:none;}
+.tl-i{flex:0 0 auto;position:relative;min-width:124px;text-align:left;padding:26px 14px 10px 0;text-decoration:none;}
+.tl-i::before{content:"";position:absolute;left:6px;right:0;top:30px;height:2px;background:var(--line);}
+.tl-i:last-child::before{right:calc(100% - 8px);}
+.tl-i::after{content:"";position:absolute;left:0;top:25px;width:12px;height:12px;border-radius:50%;
+  background:var(--ink-900);border:2px solid var(--ec);transition:transform .2s,background .2s;}
+.tl-i:hover::after,.tl-i:focus-visible::after{background:var(--ec);transform:scale(1.3);}
+.tl-k{display:block;font-size:10.5px;font-weight:700;color:var(--ec);letter-spacing:.3px;margin-top:14px;}
+.tl-e{display:block;font-size:13.5px;font-weight:800;color:var(--txt-hi);line-height:1.35;margin-top:2px;}
+.tl-c{display:block;font-size:11.5px;color:var(--txt-low);}
+
+/* ---------- 행 ---------- */
+.rows{padding-bottom:var(--spacing-xl);}
+.row{margin-bottom:var(--spacing-lg);}
+.row-head{display:flex;align-items:center;gap:9px;padding:0 var(--spacing-md) 10px;max-width:1180px;margin:0 auto;}
+.row-bar{width:3px;height:17px;border-radius:2px;background:var(--ec);flex-shrink:0;}
+.row-t{font-size:1.05rem;font-weight:800;letter-spacing:-.4px;white-space:nowrap;}
+.row-s{font-size:12.5px;color:var(--txt-low);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.row-more{margin-left:auto;font-size:12.5px;font-weight:700;color:var(--txt-mid);text-decoration:none;white-space:nowrap;}
+.row-more:hover{color:var(--gold-soft);}
+.rail-wrap{position:relative;}
+.rail{display:flex;gap:11px;overflow-x:auto;padding:5px var(--spacing-md) var(--spacing-md);
+  scroll-snap-type:x proximity;scrollbar-width:none;max-width:1180px;margin:0 auto;}
+.rail::-webkit-scrollbar{display:none;}
+.rail-btn{display:none;position:absolute;top:38%;z-index:5;width:36px;height:78px;
+  background:rgba(18,21,27,.86);border:1px solid var(--line);color:var(--txt-hi);
+  align-items:center;justify-content:center;}
+.rail-btn:hover{background:var(--ink-600);}
+.rail-btn.prev{left:0;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;}
+.rail-btn.next{right:0;border-radius:var(--border-radius-md) 0 0 var(--border-radius-md);}
+@media (hover:hover) and (min-width:768px){.rail-wrap:hover .rail-btn{display:flex;}}
+
+/* ---------- 포스터 ---------- */
+.poster{flex:0 0 auto;width:152px;scroll-snap-align:start;text-align:left;text-decoration:none;color:inherit;
+  transition:transform .2s;}
+.poster:hover,.poster:focus-visible{transform:translateY(-4px);}
+.poster-art{position:relative;width:100%;aspect-ratio:2/3;border-radius:10px;overflow:hidden;background:var(--ec);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:12px;box-shadow:0 8px 22px rgba(0,0,0,.42);}
+.poster-art::before{content:"";position:absolute;inset:0;opacity:.15;
+  background:repeating-linear-gradient(0deg,rgba(255,255,255,.85) 0 1px,transparent 1px 14px),
+             repeating-linear-gradient(90deg,rgba(255,255,255,.85) 0 1px,transparent 1px 14px);}
+.poster-art::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.05) 0 38%,rgba(0,0,0,.6) 100%);}
+.poster-rule{position:absolute;top:0;left:0;right:0;height:5px;z-index:3;opacity:.85;
+  background:repeating-linear-gradient(90deg,var(--gold) 0 7px,rgba(255,255,255,.55) 7px 14px);}
+.poster-type{position:absolute;top:14px;right:9px;z-index:3;font-size:10px;font-weight:700;
+  background:rgba(18,21,27,.72);color:var(--txt-hi);padding:2px 7px;border-radius:999px;}
+.poster-t{position:relative;z-index:3;font-size:14px;font-weight:800;line-height:1.32;color:#fff;
+  text-shadow:0 2px 9px rgba(0,0,0,.7);
+  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;}
+.poster-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;
+  opacity:0;transition:opacity .35s;background:var(--ec);}
+.poster-img.on{opacity:1;}
+/* 이미지가 뜨면 타이포 대체본을 숨기고, 실패하면 그대로 남긴다 */
+.poster-art.has-img .poster-t{display:none;}
+.poster-art:not(.has-img)~.poster-name{display:none;}
+.poster-art.has-img::after{background:linear-gradient(180deg,rgba(0,0,0,0) 0 62%,rgba(0,0,0,.5) 100%);z-index:3;}
+.poster-foot{display:flex;align-items:center;gap:5px;margin-top:8px;flex-wrap:wrap;}
+.poster-name{display:block;font-size:12.5px;font-weight:700;color:var(--txt-mid);line-height:1.4;margin-top:6px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.poster-num{display:flex;align-items:center;gap:4px;font-size:11.5px;color:var(--txt-low);margin-top:4px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.poster-num .material-icons-outlined{font-size:14px;color:var(--gold);flex-shrink:0;}
+
+.bdg{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:999px;white-space:nowrap;}
+.bdg-core{background:rgba(201,162,39,.2);color:var(--gold-soft);}
+.bdg-sub{background:var(--ink-700);color:var(--txt-mid);}
+.bdg-era{background:var(--ec-l);color:var(--ec-t);}
+.bdg-mode{background:rgba(158,196,232,.14);color:#9EC4E8;}
+
+/* ---------- 목록 ---------- */
+.page{max-width:1180px;margin:0 auto;padding:var(--spacing-lg) var(--spacing-md) var(--spacing-xl);}
+.page-h{font-size:1.4rem;font-weight:900;letter-spacing:-.6px;}
+.page-s{font-size:13.5px;color:var(--txt-low);margin-top:4px;}
+.quick{display:flex;flex-wrap:wrap;gap:7px;margin:var(--spacing-md) 0;}
+.chip{padding:7px 13px;border:1px solid var(--line);background:var(--ink-800);border-radius:999px;
+  font-size:13px;font-weight:600;color:var(--txt-mid);transition:all .16s;
+  display:inline-flex;align-items:center;gap:5px;}
+.chip .material-icons-outlined{font-size:16px;}
+.chip:hover{border-color:var(--gold-soft);color:var(--txt-hi);}
+.chip[aria-pressed="true"]{background:var(--gold-soft);border-color:var(--gold-soft);color:#1B1405;font-weight:700;}
+.chip-era[aria-pressed="true"]{background:var(--ec);border-color:var(--ec);color:#fff;}
+.count{font-size:13.5px;color:var(--txt-low);margin-bottom:var(--spacing-md);}
+.count b{color:var(--txt-hi);font-weight:800;}
+.reset{font-size:13px;font-weight:700;color:var(--txt-mid);text-decoration:underline;margin-left:6px;}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:16px;}
+.pgrid .poster{width:100%;}
+.empty{text-align:center;padding:var(--spacing-xl) var(--spacing-md);background:var(--ink-800);
+  border:1px solid var(--line);border-radius:var(--border-radius-md);color:var(--txt-mid);}
+.empty .material-icons-outlined{font-size:42px;color:var(--ink-600);display:block;margin-bottom:10px;}
+
+/* ---------- 모달 ---------- */
+.ov{position:fixed;inset:0;z-index:100;background:rgba(8,10,14,.86);backdrop-filter:blur(5px);
+  display:none;align-items:flex-start;justify-content:center;padding:var(--spacing-md);overflow-y:auto;}
+.ov.on{display:flex;}
+.modal{width:100%;max-width:740px;background:var(--ink-800);border:1px solid var(--line);
+  border-radius:var(--border-radius-lg);overflow:hidden;margin:var(--spacing-md) 0 var(--spacing-xl);
+  animation:pop .22s ease;}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.985);}to{opacity:1;transform:none;}}
+.m-hero{position:relative;padding:var(--spacing-xl) var(--spacing-md) var(--spacing-md);min-height:172px;
+  display:flex;flex-direction:column;justify-content:flex-end;background:var(--ec);}
+.m-hero::before{content:"";position:absolute;inset:0;opacity:.14;
+  background:repeating-linear-gradient(0deg,rgba(255,255,255,.85) 0 1px,transparent 1px 16px),
+             repeating-linear-gradient(90deg,rgba(255,255,255,.85) 0 1px,transparent 1px 16px);}
+.m-hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(25,29,37,.08),var(--ink-800) 97%);}
+.m-hero>*{position:relative;z-index:2;}
+.m-hero.has-img::before{background-image:var(--pimg);background-size:cover;background-position:center 22%;opacity:1;}
+.m-hero.has-img::after{background:linear-gradient(180deg,rgba(25,29,37,.42) 0%,rgba(25,29,37,.82) 62%,var(--ink-800) 98%);}
+.m-poster{position:absolute;right:14px;bottom:14px;z-index:3;width:76px;aspect-ratio:2/3;border-radius:6px;
+  overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.18);}
+.m-poster img{width:100%;height:100%;object-fit:cover;display:block;}
+@media (min-width:768px){.m-poster{width:104px;right:20px;bottom:18px;}}
+.m-rule{position:absolute;top:0;left:0;right:0;height:6px;z-index:3;opacity:.9;
+  background:repeating-linear-gradient(90deg,var(--gold) 0 9px,rgba(255,255,255,.55) 9px 18px);}
+.m-close{position:absolute;top:16px;right:12px;z-index:4;width:34px;height:34px;border-radius:50%;
+  background:rgba(18,21,27,.82);display:flex;align-items:center;justify-content:center;}
+.m-close:hover{background:var(--ink-600);}
+.m-title{font-size:1.42rem;font-weight:900;line-height:1.25;text-shadow:0 2px 14px rgba(0,0,0,.55);}
+.m-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+.m-body{padding:var(--spacing-md);display:flex;flex-direction:column;gap:14px;}
+.sec-l{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;color:var(--txt-low);
+  letter-spacing:.3px;margin-bottom:6px;}
+.sec-l .material-icons-outlined{font-size:15px;}
+.sec-t{font-size:14.5px;color:var(--txt-mid);line-height:1.78;}
+.sec-t strong{color:var(--txt-hi);}
+.tags{display:flex;flex-wrap:wrap;gap:5px;}
+.tg{font-size:12.5px;padding:4px 10px;border-radius:6px;background:var(--ink-700);color:var(--txt-mid);
+  text-decoration:none;border:1px solid transparent;}
+a.tg:hover{border-color:var(--gold-soft);color:var(--txt-hi);}
+.box{border-radius:var(--border-radius-md);padding:13px 15px;}
+.box-fact{background:rgba(158,196,232,.09);border-left:3px solid #7FA9CF;}
+.box-fact .sec-l{color:#9EC4E8;}
+.box-num{background:rgba(201,162,39,.1);border-left:3px solid var(--gold);}
+.box-num .sec-l{color:var(--gold-soft);}
+.box-idea{background:rgba(0,166,138,.09);border-left:3px solid #3FA894;}
+.box-idea .sec-l{color:#5FC3AE;}
+.box-warn{background:rgba(245,124,0,.09);border-left:3px solid var(--color-warning);}
+.box-warn .sec-l{color:#E9A25C;}
+.num-t{display:flex;align-items:center;gap:7px;font-size:1.06rem;font-weight:800;color:var(--txt-hi);}
+.num-t .material-icons-outlined{font-size:20px;color:var(--gold);}
+.num-s{font-size:12.5px;color:var(--txt-low);margin-top:3px;}
+.q-line{margin-top:10px;padding:11px 13px;background:rgba(255,255,255,.05);border-radius:var(--border-radius-md);
+  font-weight:600;color:var(--txt-hi);font-size:14px;line-height:1.7;}
+.m-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;word-break:break-all;text-decoration:none;}
+.m-link:hover{text-decoration:underline;}
+.m-link .material-icons-outlined{font-size:16px;flex-shrink:0;}
+
+.gitem{background:var(--ink-800);border:1px solid var(--line);border-radius:var(--border-radius-md);
+  padding:var(--spacing-md);margin-bottom:11px;}
+.gitem h2{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:800;margin-bottom:7px;}
+.gitem h2 .material-icons-outlined{font-size:19px;color:var(--gold);}
+.gitem p{font-size:14px;color:var(--txt-mid);line-height:1.78;}
+.gitem p+p{margin-top:9px;}
+.gitem strong{color:var(--txt-hi);}
+.notice{font-size:12.5px;color:var(--txt-low);line-height:1.78;background:var(--ink-800);
+  border:1px solid var(--line);border-radius:var(--border-radius-md);padding:var(--spacing-md);margin-top:var(--spacing-lg);}
+.loading{text-align:center;padding:var(--spacing-xl);color:var(--txt-low);}
+
+/* ---------- 푸터 ---------- */
+.chichiboo-footer{width:100%;padding:var(--spacing-md) var(--spacing-lg);background-color:var(--ink-800);
+  border-top:1px solid var(--line);text-align:center;margin-top:auto;}
+.chichiboo-footer a{display:inline-flex;align-items:center;gap:var(--spacing-xs);font-size:13px;
+  color:var(--txt-low);text-decoration:none;transition:color .2s;}
+.chichiboo-footer a:hover{color:var(--gold-soft);}
+.chichiboo-footer .material-icons-outlined{font-size:16px;}
+
+@media (min-width:768px){
+  .nav{padding:12px var(--spacing-lg);}
+  .hero{padding-left:var(--spacing-lg);padding-right:var(--spacing-lg);}
+  .row-head,.rail,.tl-scroll{padding-left:var(--spacing-lg);padding-right:var(--spacing-lg);}
+  .page{padding-left:var(--spacing-lg);padding-right:var(--spacing-lg);}
+  .poster{width:172px;}
+  .m-title{font-size:1.7rem;}
+  .m-body{padding:var(--spacing-lg);}
+}
+@media (max-width:380px){
+  .poster{width:134px;}
+  .nav-s input{width:64px;}
+  .brand span:not(.material-icons-outlined){display:none;}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#/"><span class="material-icons-outlined">theater_comedy</span><span>한국사 × 한국뮤지컬</span></a>
+    <div class="nav-links">
+      <a href="#/" data-nav="home">홈</a>
+      <a href="#/works" data-nav="works">작품</a>
+      <a href="#/guide" data-nav="guide">이용 안내</a>
+    </div>
+    <div class="nav-s">
+      <span class="material-icons-outlined">search</span>
+      <label class="sr" for="q">작품 검색</label>
+      <input id="q" type="search" placeholder="인물·시대·넘버" />
+    </div>
+  </div>
+</nav>
+
+<main id="main"><div id="app"><div class="loading">자료를 불러오는 중입니다…</div></div></main>
+
+<footer class="chichiboo-footer">
+  <a href="https://litt.ly/chichiboo" target="_blank" rel="noopener noreferrer">
+    <span class="material-icons-outlined">auto_stories</span>
+    Created by. 교육뮤지컬 꿈꾸는 치수쌤
+  </a>
+</footer>
+
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal" id="modal"></div>
+</div>
+
+<script>
+/* ================================================================
+   데이터 로드 — data/*.json. INLINE_DATA 가 있으면 단일 파일 모드.
+================================================================ */
+const FILES=["h","works","relations","numbers","sources"];
+let DB={};
+async function loadData(){
+  if(window.INLINE_DATA){DB=window.INLINE_DATA;return;}
+  const res=await Promise.all(FILES.map(f=>fetch(`./data/${f}.json`).then(r=>{
+    if(!r.ok)throw new Error(f);return r.json();})));
+  FILES.forEach((f,i)=>DB[f]=res[i]);
+}
+
+/* ================================================================
+   유틸
+================================================================ */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const arr=v=>Array.isArray(v)?v:(v?[v]:[]);
+const splitDot=s=>String(s||"").split(/[·|]/).map(x=>x.trim()).filter(Boolean);
+
+const ERA={
+ H01:["#5A6673","#2A3038","#9BAAB9"], H02:["#7A6449","#38302A","#C4A987"],
+ H03:["#4E7266","#2A3833","#8FBFB0"], H04:["#42618A","#28323F","#93B4D8"],
+ H05:["#8A6A3F","#3A3128","#D2AE79"], H06:["#645069","#2F2A33","#B199B8"],
+ H07:["#4E6875","#2A3238","#95B4C2"]};
+const ec=h=>(ERA[h]||ERA.H04)[0];
+const eraVars=h=>`--ec:${(ERA[h]||ERA.H04)[0]};--ec-l:${(ERA[h]||ERA.H04)[1]};--ec-t:${(ERA[h]||ERA.H04)[2]}`;
+
+const HM=()=>Object.fromEntries(DB.h.map(h=>[h.h_id,h]));
+const WM=()=>Object.fromEntries(DB.works.map(w=>[w.work_id,w]));
+const numberOf=id=>DB.numbers.find(n=>n.work_id===id)||null;
+const relationsOf=id=>DB.relations.filter(r=>r.work_id===id);
+const numTitleOf=w=>w.representative_number||((numberOf(w.work_id)||{}).number_title)||null;
+const worksOfH=hid=>[...new Set(DB.relations.filter(r=>r.h_id===hid).map(r=>r.work_id))]
+  .map(i=>WM()[i]).filter(Boolean).sort((a,b)=>(a.sort_order||0)-(b.sort_order||0));
+const pubStatus=s=>({"확인":"확인","일부 확인":"일부 확인","준비 중":"준비 중"})[s]||"준비 중";
+
+/* ================================================================
+   상태 — 해시에 저장해 뒤로 가기에서 복원
+================================================================ */
+const DEF={q:"",h:"",only:[]};
+const ONLY=[["핵심","star","수업에 바로 붙는 작품"],
+            ["넘버","music_note","대표 넘버가 있는 작품"],
+            ["초등","child_care","바로 활용하기 좋은 작품"]];
+let S={...DEF,only:[]},route={name:"home",id:null};
+
+function parseHash(){
+  const raw=location.hash.replace(/^#/,"")||"/";
+  const [path,query]=raw.split("?");
+  const p=new URLSearchParams(query||"");
+  S={q:p.get("q")||"",h:p.get("h")||"",only:(p.get("only")||"").split(",").filter(Boolean)};
+  const m=path.match(/^\/work\/([A-Za-z0-9_]+)$/);
+  if(m)route={name:"work",id:m[1]};
+  else if(path.indexOf("/works")===0)route={name:"works",id:null};
+  else if(path.indexOf("/guide")===0)route={name:"guide",id:null};
+  else route={name:"home",id:null};
+}
+function qstr(){
+  const p=new URLSearchParams();
+  if(S.q)p.set("q",S.q); if(S.h)p.set("h",S.h);
+  if(S.only.length)p.set("only",S.only.join(","));
+  const s=p.toString();return s?"?"+s:"";
+}
+const goWorks=()=>{location.hash="#/works"+qstr();};
+
+/* ================================================================
+   검색 — 검색설계 가중치 반영
+================================================================ */
+const nrm=s=>String(s||"").toLowerCase().replace(/[\s·,.'"()《》〈〉:!?]/g,"");
+function score(w,q){
+  const t=nrm(q);if(!t)return 1;
+  const F=[[nrm(w.title),5],[nrm(w.tags),4],[nrm(w.characters),4],[nrm(numTitleOf(w)),4],
+    [nrm(w.era_label)+nrm(arr(w.h_topics).join(""))+nrm(arr(w.h_ids).join("")),3],
+    [nrm(w.synopsis),2],[nrm(arr(w.relation_basis).join(""))+nrm(w.curriculum_connection),2],
+    [nrm(w.lesson_activity)+nrm(w.lesson_question),1],[nrm(w.search_text),1]];
+  let s=0;
+  F.forEach(f=>{const hay=f[0],wt=f[1];
+    if(hay){if(hay===t)s+=wt*3;else if(hay.indexOf(t)>=0)s+=wt;}});
+  return s;
+}
+function filtered(){
+  let l=DB.works.slice();
+  if(S.h)l=l.filter(w=>arr(w.h_ids).indexOf(S.h)>=0);
+  if(S.only.indexOf("핵심")>=0)l=l.filter(w=>w.relation_strength==="핵심");
+  if(S.only.indexOf("넘버")>=0)l=l.filter(w=>!!numTitleOf(w));
+  if(S.only.indexOf("초등")>=0)l=l.filter(w=>(w.elementary_use||"").indexOf("바로")===0);
+  if(S.q)l=l.map(w=>[w,score(w,S.q)]).filter(x=>x[1]>0)
+            .sort((a,b)=>b[1]-a[1]||(a[0].sort_order||0)-(b[0].sort_order||0)).map(x=>x[0]);
+  else l.sort((a,b)=>(a.sort_order||0)-(b.sort_order||0));
+  return l;
+}
+
+/* ================================================================
+   포스터
+================================================================ */
+function posterHTML(w){
+  const alt=w.poster_alt||(w.title+" 대표 이미지");
+  const num=numTitleOf(w);
+  /* 이미지가 있어도 타이포 대체본을 함께 넣어 둔다.
+     onload 성공 시에만 has-img 를 붙여 대체본을 감추므로, 핫링크 차단·삭제된 이미지도 안전하다. */
+  const img=w.poster_url
+    ? `<img class="poster-img" src="${esc(w.poster_url)}" alt="${esc(alt)}"
+         loading="lazy" decoding="async" referrerpolicy="no-referrer"
+         onload="this.classList.add('on');this.parentNode.classList.add('has-img')"
+         onerror="this.remove()" />`
+    : "";
+  const art=`<span class="poster-art" style="${eraVars(w.primary_h)}"${w.poster_url?"":` role="img" aria-label="${esc(alt)}"`}>
+      <span class="poster-rule"></span>
+      ${img}
+      ${w.content_type?`<span class="poster-type">${esc(w.content_type)}</span>`:""}
+      <span class="poster-t"${w.poster_url?' aria-hidden="true"':""}>${esc(w.title)}</span></span>`;
+  return `<a class="poster" href="#/work/${esc(w.work_id)}" style="${eraVars(w.primary_h)}">
+    ${art}
+    <span class="poster-foot">
+      <span class="bdg bdg-era">${esc(w.era_label||"")}</span>
+      ${w.relation_strength==="핵심"?'<span class="bdg bdg-core">핵심</span>':""}
+    </span>
+    ${w.poster_url?`<span class="poster-name">${esc(w.title)}</span>`:""}
+    ${num?`<span class="poster-num"><span class="material-icons-outlined">music_note</span>${esc(num)}</span>`:""}
+  </a>`;
+}
+
+/* ================================================================
+   홈
+================================================================ */
+const FEAT=["M17","M05","M09","M23","M40"];
+let fi=0,ftimer=null;
+function heroHTML(){
+  const w=WM()[FEAT[fi]]||DB.works[0];
+  const num=numTitleOf(w),rel=relationsOf(w.work_id)[0];
+  return `<div class="hero" id="hero" style="${eraVars(w.primary_h)}">
+    <div class="hero-bg" style="background:${ec(w.primary_h)}"></div>
+    <div class="hero-in"><div class="hero-box">
+      <span class="hero-eyebrow"><span class="material-icons-outlined">local_fire_department</span>이번 학기 눈여겨볼 무대</span>
+      <h1>${esc(w.title)}</h1>
+      <div class="hero-meta">
+        <span class="bdg bdg-era">${esc(w.era_label||"")}</span>
+        ${w.relation_strength?`<span class="bdg ${w.relation_strength==="핵심"?"bdg-core":"bdg-sub"}">${esc(w.relation_strength)} 연결</span>`:""}
+        ${w.history_link_mode?`<span class="bdg bdg-mode">${esc(w.history_link_mode)}</span>`:""}
+        ${num?`<span class="bdg bdg-core">♪ ${esc(num)}</span>`:""}
+      </div>
+      <p class="hero-desc">${esc(w.synopsis||"")}</p>
+      <div class="hero-btns">
+        <a class="btn btn-gold" href="#/work/${esc(w.work_id)}">
+          <span class="material-icons-outlined">menu_book</span>수업 자료 열기</a>
+        ${rel?`<a class="btn btn-ghost" href="#/works?h=${esc(rel.h_id)}">
+          <span class="material-icons-outlined">history_edu</span>같은 시대 작품 보기</a>`:""}
+      </div>
+      <div class="hero-dots">${FEAT.map((_,i)=>
+        `<button data-f="${i}" aria-current="${i===fi}" aria-label="추천 작품 ${i+1}"></button>`).join("")}</div>
+    </div></div></div>`;
+}
+function swapHero(){const el=$("#hero");if(!el)return;el.outerHTML=heroHTML();bindHero();}
+function startHero(){clearInterval(ftimer);
+  ftimer=setInterval(()=>{fi=(fi+1)%FEAT.length;swapHero();},9000);}
+function bindHero(){
+  document.querySelectorAll("[data-f]").forEach(b=>b.addEventListener("click",()=>{
+    fi=+b.dataset.f;swapHero();startHero();}));
+}
+
+function railRow(h,works,extra){
+  if(!works.length)return"";
+  const rid="r"+Math.random().toString(36).slice(2,8);
+  return `<section class="row" style="${h?eraVars(h.h_id):"--ec:"+"var(--gold)"}">
+    <div class="row-head">
+      <span class="row-bar"></span>
+      <h2 class="row-t">${esc(h?h.era_label:extra.title)}</h2>
+      <span class="row-s">${esc(h?h.topic:extra.sub)}</span>
+      ${h?`<a class="row-more" href="#/works?h=${h.h_id}">${works.length}편 모두 보기 →</a>`:""}
+    </div>
+    <div class="rail-wrap">
+      <button class="rail-btn prev" data-rail="${rid}" data-dir="-1" aria-label="이전 작품"><span class="material-icons-outlined">chevron_left</span></button>
+      <div class="rail" id="${rid}">${works.map(posterHTML).join("")}</div>
+      <button class="rail-btn next" data-rail="${rid}" data-dir="1" aria-label="다음 작품"><span class="material-icons-outlined">chevron_right</span></button>
+    </div></section>`;
+}
+
+function viewHome(){
+  const counts={};DB.h.forEach(h=>counts[h.h_id]=worksOfH(h.h_id).length);
+  const timeline=`<div class="tl"><div class="tl-scroll">
+    ${DB.h.map(h=>`<a class="tl-i" href="#/works?h=${h.h_id}" style="${eraVars(h.h_id)}">
+      <span class="tl-k">${esc(h.standard_code)}</span>
+      <span class="tl-e">${esc(h.era_short)}</span>
+      <span class="tl-c">작품 ${counts[h.h_id]}편</span></a>`).join("")}
+  </div></div>`;
+  const easy=DB.works.filter(w=>(w.elementary_use||"").indexOf("바로")===0).slice(0,14);
+  const withNum=DB.works.filter(w=>numTitleOf(w)).slice(0,14);
+  return heroHTML()+timeline+`<div class="rows">
+    ${railRow(null,easy,{title:"바로 활용하기 좋은 작품",sub:"학급에서 그대로 쓰기 편한 자료"})}
+    ${DB.h.map(h=>railRow(h,worksOfH(h.h_id))).join("")}
+    ${railRow(null,withNum,{title:"대표 넘버가 있는 작품",sub:"곡 하나로 수업을 열 수 있는 작품"})}
+  </div>`;
+}
+
+/* ================================================================
+   작품 목록
+================================================================ */
+function viewWorks(){
+  const list=filtered(),hm=HM();
+  const active=S.h||S.only.length||S.q;
+  const cur=S.h?hm[S.h]:null;
+  return `<div class="page" style="${eraVars(S.h||"H04")}">
+    <h1 class="page-h">${cur?esc(cur.era_label):"작품 전체"}</h1>
+    <p class="page-s">${cur?esc(cur.topic)+" · "+esc(cur.standard_code)
+      :"수록 작품 "+DB.works.length+"편 · 시대를 고르거나 검색해 보세요"}</p>
+    <div class="quick" role="group" aria-label="시대 선택">
+      <button class="chip" data-h="" aria-pressed="${!S.h}">전체 시대</button>
+      ${DB.h.map(h=>`<button class="chip chip-era" style="${eraVars(h.h_id)}" data-h="${h.h_id}"
+        aria-pressed="${S.h===h.h_id}">${esc(h.era_short)}</button>`).join("")}
+    </div>
+    <div class="quick" role="group" aria-label="빠른 조건">
+      ${ONLY.map(o=>`<button class="chip" data-only="${o[0]}" aria-pressed="${S.only.indexOf(o[0])>=0}">
+        <span class="material-icons-outlined">${o[1]}</span>${esc(o[2])}</button>`).join("")}
+    </div>
+    <p class="count">작품 <b>${list.length}</b>편${S.q?" · ‘"+esc(S.q)+"’ 검색":""}
+      ${active?'<button class="reset" id="reset">조건 지우기</button>':""}</p>
+    ${list.length?`<div class="pgrid">${list.map(posterHTML).join("")}</div>`
+      :`<div class="empty"><span class="material-icons-outlined">filter_alt_off</span>
+        조건에 맞는 작품이 없습니다.<br />조건을 하나 줄이거나 검색어를 짧게 해 보세요.</div>`}
+  </div>`;
+}
+
+/* ================================================================
+   이용 안내
+================================================================ */
+function viewGuide(){
+  return `<div class="page">
+    <h1 class="page-h">이용 안내</h1>
+    <p class="page-s">수업에 쓰기 전에 한 번 읽어 주세요</p>
+    <div style="height:16px"></div>
+    <div class="gitem"><h2><span class="material-icons-outlined">flag</span>이 자료의 성격</h2>
+      <p>뮤지컬로 역사를 대신 가르치기 위한 자료가 아닙니다. 검증된 한국 창작뮤지컬을 역사 자료와 나란히 놓고,
+        어디까지가 확인된 사실이고 어디부터가 창작인지 학생과 함께 구분하기 위한 교사용 탐색 도구입니다.
+        모든 작품에 <strong>역사 사실과 창작</strong> 항목을 두었으니 이 문장을 먼저 확인해 주세요.</p></div>
+    <div class="gitem"><h2><span class="material-icons-outlined">category</span>수록 기준</h2>
+      <p>2022 개정 사회과 한국사 성취기준 ${DB.h.length}개 주제에 연결되는 작품 ${DB.works.length}편을 수록했습니다.
+        출처가 확인되지 않은 작품과 넘버는 싣지 않았습니다. 대표 넘버가 확인된 작품은 ${DB.numbers.length}편이며
+        나머지는 ‘대표 넘버 준비 중’으로 표시됩니다.</p></div>
+    <div class="gitem"><h2><span class="material-icons-outlined">explore</span>찾는 방법</h2>
+      <p>홈의 연표에서 시대를 고르면 그 시대 작품이 한 줄로 펼쳐집니다. 작품 화면에서는 시대 하나와
+        빠른 조건 세 가지만 두었습니다. 복잡한 조건을 겹치기보다 시대의 흐름을 따라 훑어보는 쪽이 빠릅니다.</p>
+      <p>검색은 작품명뿐 아니라 인물·시대·사건·대표 넘버까지 찾습니다. ‘정조’, ‘가야’, ‘수원 화성’, ‘누가 죄인인가’처럼
+        수업에서 쓰는 말로 검색해 보세요. 고른 조건은 주소에 남아 뒤로 가기를 눌러도 유지됩니다.</p></div>
+    <div class="gitem"><h2><span class="material-icons-outlined">image</span>포스터 이미지</h2>
+      <p>수록 작품 ${DB.works.length}편 가운데 ${DB.works.filter(w=>w.poster_url).length}편은 가장 최근 공연의 메인 포스터를 연결했습니다.
+        각 이미지의 출처는 작품 상세의 <strong>출처</strong>에서 확인할 수 있습니다.</p>
+      <p>포스터를 확인하지 못한 ${DB.works.filter(w=>!w.poster_url).length}편은 시대별 구분색과 작품명을 조합한 대체 이미지를 씁니다.
+        이미지가 내려가거나 불러오지 못하는 경우에도 같은 대체 이미지로 자동 전환되므로 화면이 비어 보이지 않습니다.
+        화면 낭독기에는 어느 쪽이든 작품 대체 텍스트가 전달됩니다.</p>
+      <p>포스터는 원 출처 서버의 이미지를 그대로 불러옵니다. 외부에 공개해 운영하기 전에는 각 출처의 이용 조건을 다시 확인하고,
+        허용되는 범위에서 이미지를 직접 보관해 사용하는 편이 안전합니다.</p></div>
+    <div class="gitem"><h2><span class="material-icons-outlined">gavel</span>수업에서 사용할 때</h2>
+      <p>공연 실황 영상은 제작사·공연기관 공식 채널에 공개된 자료를 사용하세요. 음원은 수업 목적 감상은 가능하나
+        재배포와 편집물 공유는 피해야 합니다. 공연 정보와 대표 넘버는 시즌에 따라 달라질 수 있으니
+        각 작품의 출처 링크에서 최신 정보를 확인한 뒤 사용해 주세요.</p></div>
+    <div class="notice"><strong>출처</strong> · 성취기준과 교육과정 연결: 2022 개정 사회과 교육과정 및 『초등학교 사회 교사용 지도서』.
+      작품·대표 넘버 정보: 각 제작사와 공연기관의 공식 공개 자료.<br /><br />
+      데이터는 정적 JSON으로 관리되며 서버나 로그인 없이 동작합니다.</div>
+  </div>`;
+}
+
+/* ================================================================
+   작품 상세 — 모달
+================================================================ */
+function block(icon,label,inner,cls){
+  if(!inner||!inner.trim())return"";
+  return `<div class="${cls?"box "+cls:""}"><div class="sec-l">
+    <span class="material-icons-outlined">${icon}</span>${label}</div>${inner}</div>`;
+}
+function openWork(id){
+  const w=WM()[id];
+  if(!w){location.hash="#/works";return;}
+  const n=numberOf(w.work_id),rels=relationsOf(w.work_id),hm=HM();
+  const numTitle=numTitleOf(w);
+  const singer=w.number_singer||(n&&n.singer);
+  const nctx=w.number_context||(n&&n.context);
+  const nhist=w.number_history_connection||(n&&n.history_connection);
+  const nsrc=w.number_source_url||(n&&n.source_url);
+  const tags=splitDot(w.tags);
+
+  const curr=[
+    w.curriculum_connection?`<p class="sec-t">${esc(w.curriculum_connection)}</p>`:"",
+    `<div class="tags" style="margin-top:10px">
+      ${w.standard_code?`<span class="tg">${esc(w.standard_code)}</span>`:""}
+      ${arr(w.h_topics).map(t=>`<span class="tg">${esc(t)}</span>`).join("")}
+      ${arr(w.relation_basis).map(t=>`<span class="tg">${esc(t)}</span>`).join("")}
+    </div>`,
+    rels.length>1?`<p class="sec-t" style="margin-top:11px;font-size:13.5px">이 작품은 ${rels.length}개 시대에 연결됩니다.</p>
+      <div class="tags" style="margin-top:7px">${rels.map(r=>
+        `<a class="tg" href="#/works?h=${esc(r.h_id)}">${esc((hm[r.h_id]||{}).era_label||r.h_id)}</a>`).join("")}</div>`:""
+  ].join("");
+
+  const numInner=numTitle?`
+    <div class="num-t"><span class="material-icons-outlined">music_note</span>${esc(numTitle)}</div>
+    ${singer?`<div class="num-s">${esc(singer)}</div>`:""}
+    <div class="num-s">공개 상태 · ${esc(pubStatus(w.number_status||(n&&n.status)))}</div>
+    ${nctx?`<p class="sec-t" style="margin-top:10px">${esc(nctx)}</p>`:""}
+    ${nhist?`<p class="sec-t" style="margin-top:8px">${esc(nhist)}</p>`:""}`:"";
+
+  const lesson=[
+    w.lesson_activity?`<p class="sec-t">${esc(w.lesson_activity)}</p>`:"",
+    w.lesson_question?`<p class="q-line">${esc(w.lesson_question)}</p>`:""].join("");
+
+  const caution=[
+    w.caution?`<p class="sec-t">${esc(w.caution)}</p>`:"",
+    w.elementary_use?`<p class="sec-t" style="margin-top:8px"><strong>초등 활용</strong> · ${esc(w.elementary_use)}</p>`:""].join("");
+
+  const srcs=[
+    w.work_source_url?`<a class="m-link" href="${esc(w.work_source_url)}" target="_blank" rel="noopener noreferrer">
+      <span class="material-icons-outlined">open_in_new</span>작품 정보 · ${esc(w.work_source_url)}</a>`:"",
+    nsrc?`<a class="m-link" href="${esc(nsrc)}" target="_blank" rel="noopener noreferrer">
+      <span class="material-icons-outlined">open_in_new</span>대표 넘버 · ${esc(nsrc)}</a>`:"",
+    w.poster_source_url?`<a class="m-link" href="${esc(w.poster_source_url)}" target="_blank" rel="noopener noreferrer">
+      <span class="material-icons-outlined">open_in_new</span>포스터${w.poster_source?" ("+esc(w.poster_source)+")":""} · ${esc(w.poster_source_url)}</a>`:""
+    ].filter(Boolean).join("");
+
+  const pAlt=w.poster_alt||(w.title+" 대표 이미지");
+  const heroStyle=eraVars(w.primary_h)+(w.poster_url?`;--pimg:url('${esc(w.poster_url)}')`:"");
+  $("#modal").innerHTML=`
+    <div class="m-hero" style="${heroStyle}">
+      <span class="m-rule"></span>
+      <button class="m-close" aria-label="닫기" data-close><span class="material-icons-outlined">close</span></button>
+      ${w.poster_url?`<span class="m-poster"><img src="${esc(w.poster_url)}" alt="${esc(pAlt)}"
+        decoding="async" referrerpolicy="no-referrer"
+        onload="this.closest('.m-hero').classList.add('has-img')"
+        onerror="this.closest('.m-poster').remove()" /></span>`:""}
+      <h2 class="m-title" id="mTitle">${esc(w.title)}</h2>
+      <div class="m-meta">
+        <span class="bdg bdg-era">${esc(w.era_label||"")}</span>
+        ${w.content_type?`<span class="bdg bdg-sub">${esc(w.content_type)}</span>`:""}
+        ${w.relation_strength?`<span class="bdg ${w.relation_strength==="핵심"?"bdg-core":"bdg-sub"}">${esc(w.relation_strength)} 연결</span>`:""}
+        ${w.history_link_mode?`<span class="bdg bdg-mode">${esc(w.history_link_mode)}</span>`:""}
+      </div>
+    </div>
+    <div class="m-body">
+      ${block("subject","작품 소개",[
+        w.synopsis?`<p class="sec-t">${esc(w.synopsis)}</p>`:"",
+        w.characters?`<p class="sec-t" style="margin-top:9px"><strong>주요 인물</strong> · ${esc(w.characters)}</p>`:"",
+        tags.length?`<div class="tags" style="margin-top:10px">${tags.map(t=>
+          `<a class="tg" href="#/works?q=${encodeURIComponent(t)}">${esc(t)}</a>`).join("")}</div>`:""
+      ].join(""))}
+      ${block("school","한국사 수업에서 왜 이 작품인가",curr)}
+      ${block("balance","역사 사실과 창작",w.fact_fiction_note?`<p class="sec-t">${esc(w.fact_fiction_note)}</p>`:"","box-fact")}
+      ${block("music_note","대표 넘버",numInner,"box-num")}
+      ${block("lightbulb","수업에 활용하기",lesson,"box-idea")}
+      ${block("warning_amber","활용 주의점",caution,"box-warn")}
+      ${block("link","출처",srcs?`<div style="display:flex;flex-direction:column;gap:7px">${srcs}</div>`:"")}
+    </div>`;
+  showModal();
+}
+let lastFocus=null;
+function showModal(){
+  lastFocus=document.activeElement;$("#ov").classList.add("on");
+  document.body.style.overflow="hidden";
+  const c=$("#modal").querySelector("[data-close]");if(c)c.focus();
+}
+function closeModal(goBack){
+  if(!$("#ov").classList.contains("on"))return;
+  $("#ov").classList.remove("on");document.body.style.overflow="";
+  if(goBack&&route.name==="work"){history.back();}
+  else if(lastFocus&&lastFocus.focus)lastFocus.focus();
+}
+
+/* ================================================================
+   렌더
+================================================================ */
+const app=()=>$("#app");
+function render(){
+  parseHash();
+  const v=route.name;
+  if(v==="work"){
+    if(app().dataset.view!=="home"){app().innerHTML=viewHome();app().dataset.view="home";bindHero();}
+    clearInterval(ftimer);
+    openWork(route.id);
+  }else{
+    closeModal(false);
+    clearInterval(ftimer);
+    app().innerHTML = v==="works"?viewWorks() : v==="guide"?viewGuide() : viewHome();
+    app().dataset.view=v;
+    if(v==="home"){bindHero();startHero();}
+    window.scrollTo({top:0,behavior:"instant"});
+  }
+  document.querySelectorAll(".nav-links a").forEach(a=>{
+    const on=(a.dataset.nav==="home"&&v==="home")||(a.dataset.nav==="works"&&(v==="works"||v==="work"))
+           ||(a.dataset.nav==="guide"&&v==="guide");
+    on?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current");});
+  const w=v==="work"?WM()[route.id]:null;
+  document.title=(w?w.title+" — ":"")+"한국사 × 한국뮤지컬";
+  const qi=$("#q");if(qi&&document.activeElement!==qi)qi.value=S.q;
+  bind();
+}
+let qTimer=null;
+function bind(){
+  document.querySelectorAll("[data-rail]").forEach(b=>b.addEventListener("click",()=>{
+    const r=$("#"+b.dataset.rail);
+    r.scrollBy({left:b.dataset.dir*Math.round(r.clientWidth*.82),behavior:"smooth"});}));
+  document.querySelectorAll("[data-h]").forEach(b=>b.addEventListener("click",()=>{
+    S.h=b.dataset.h;goWorks();}));
+  document.querySelectorAll("[data-only]").forEach(b=>b.addEventListener("click",()=>{
+    const k=b.dataset.only,i=S.only.indexOf(k);
+    i>=0?S.only.splice(i,1):S.only.push(k);goWorks();}));
+  const rs=$("#reset");
+  if(rs)rs.addEventListener("click",()=>{S={q:"",h:"",only:[]};location.hash="#/works";});
+}
+$("#q").addEventListener("input",e=>{
+  clearTimeout(qTimer);const v=e.target.value.trim();
+  qTimer=setTimeout(()=>{S.q=v;S.h="";goWorks();},280);});
+$("#ov").addEventListener("click",e=>{if(e.target===$("#ov"))closeModal(true);});
+document.addEventListener("click",e=>{if(e.target.closest("[data-close]"))closeModal(true);});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal(true);});
+window.addEventListener("hashchange",render);
+window.addEventListener("scroll",()=>{$("#nav").classList.toggle("solid",window.scrollY>40);});
+
+loadData().then(render).catch(err=>{
+  app().innerHTML=`<div class="page"><div class="empty">
+    <span class="material-icons-outlined">cloud_off</span>자료 파일을 불러오지 못했습니다.
+    <p style="margin-top:10px;font-size:13.5px">이 파일은 <code>data/</code> 폴더의 JSON을 함께 읽습니다.
+    폴더째 웹 서버로 실행하거나(<code>python3 -m http.server</code>) 단일 파일 버전을 사용해 주세요.</p></div></div>`;
+  console.error(err);});
+</script>
+</body>
+</html>

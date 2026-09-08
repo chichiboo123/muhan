@@ -1,0 +1,867 @@
+[
+ {
+  "relation_id": "R027",
+  "h_id": "H01",
+  "h_sort": 1,
+  "h_topic": "선사 시대·고조선 사람들의 생활",
+  "work_id": "M26",
+  "title": "두근두근 움스프렌즈: 신석기 더 비기닝",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "시대 생활",
+   "유적·유물"
+  ],
+  "connection_summary": "암사동 유적을 모티브로 구석기에서 신석기로 넘어가는 생활 변화를 어린이 캐릭터의 성장과 함께 보여준다. 신석기 주거·도구·정착 생활을 실제 유적·유물과 대조하기 좋다.",
+  "lesson_activity": "암사동 유적 사진과 작품 장면을 나란히 놓고 ‘확인 가능한 생활 모습 / 작품이 상상한 모습’으로 분류한다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://www.ieum.or.kr/user/show/view.do?idx=811",
+  "number_source_url": null
+ },
+ {
+  "relation_id": "R028",
+  "h_id": "H01",
+  "h_sort": 1,
+  "h_topic": "선사 시대·고조선 사람들의 생활",
+  "work_id": "M27",
+  "title": "한왕! 바람, 노래가 되다",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "역사적 상상"
+  ],
+  "connection_summary": "고조선 마지막 왕 준왕과 위만의 갈등을 다뤄 고조선이라는 국가를 구체적 인물 서사로 접하게 한다. 다만 성취기준의 핵심인 유적·유물로 생활을 추론하는 활동은 별도 자료로 보완해야 한다.",
+  "lesson_activity": "준왕의 이동 서사를 간단히 정리한 뒤 고조선 유물 카드를 보고 ‘왕의 이야기로 알 수 있는 것’과 ‘유물로 알 수 있는 생활’을 구분한다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://munhwajl.kr/article_preview_2608",
+  "number_source_url": null
+ },
+ {
+  "relation_id": "R002",
+  "h_id": "H02",
+  "h_sort": 2,
+  "h_topic": "고대 사람들의 생각과 생활",
+  "work_id": "M02",
+  "title": "화랑",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "제도",
+   "시대 생활",
+   "역사적 상상"
+  ],
+  "connection_summary": "신라 화랑을 현대적 오디션과 성장극의 형식으로 재구성한다. 실제 화랑 제도와 작품 속 청년들의 훈련·경쟁 방식을 비교하며 제도와 상상을 구분할 수 있다.",
+  "lesson_activity": "화랑 관련 사료의 핵심어를 뽑고 작품의 오디션·훈련 장면과 비교해 ‘실제 제도 / 현대적 각색’ 표를 만든다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1854",
+  "number_source_url": "https://music.bugs.co.kr/album/290781"
+ },
+ {
+  "relation_id": "R003",
+  "h_id": "H02",
+  "h_sort": 2,
+  "h_topic": "고대 사람들의 생각과 생활",
+  "work_id": "M03",
+  "title": "원효",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "문화"
+  ],
+  "connection_summary": "원효와 의상, 불교 사상을 중심으로 통일신라 사람들의 종교적 생각을 드러낸다. 원효의 전승과 불교 대중화에 관한 역사 자료를 작품의 장면과 비교하기 적합하다.",
+  "lesson_activity": "원효 관련 기록과 〈금강삼매경의 노래〉 장면을 비교해 ‘원효가 백성에게 불교를 전하는 방식’을 근거와 함께 설명한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1703",
+  "number_source_url": "https://www.nocutnews.co.kr/news/892592"
+ },
+ {
+  "relation_id": "R008",
+  "h_id": "H02",
+  "h_sort": 2,
+  "h_topic": "고대 사람들의 생각과 생활",
+  "work_id": "M08",
+  "title": "바람의 나라_무휼",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "실존 인물",
+   "역사적 상상"
+  ],
+  "connection_summary": "고구려 대무신왕 무휼이라는 실존 인물을 바탕으로 전쟁·왕권·이상 국가를 판타지로 확장한다. 실제 왕의 기록과 원작·무대의 창작을 비교하는 자료로 활용할 수 있다.",
+  "lesson_activity": "대무신왕 관련 기록 1개와 작품 속 무휼의 선택을 대조해 ‘역사 기록이 말하는 왕 / 작품이 만든 왕’ 두 칸 인물 카드를 만든다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1445",
+  "number_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1445"
+ },
+ {
+  "relation_id": "R011",
+  "h_id": "H02",
+  "h_sort": 2,
+  "h_topic": "고대 사람들의 생각과 생활",
+  "work_id": "M10",
+  "title": "아랑가",
+  "relation_strength": "핵심",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "문학·예술",
+   "역사적 상상"
+  ],
+  "connection_summary": "『삼국사기』 도미 설화와 개로왕을 백제 궁중의 비극적 서사로 재구성한다. 짧은 기록에 무대가 어떤 감정과 관계를 추가했는지 비교하기 좋다.",
+  "lesson_activity": "『삼국사기』 도미전의 짧은 기록을 읽고 〈달이 진다〉가 아랑에게 새롭게 부여한 감정과 사건을 찾아 표시한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Magazine/Detail?num=4537",
+  "number_source_url": "https://ch.yes24.com/article/details/79993"
+ },
+ {
+  "relation_id": "R030",
+  "h_id": "H02",
+  "h_sort": 2,
+  "h_topic": "고대 사람들의 생각과 생활",
+  "work_id": "M29",
+  "title": "몽유도원",
+  "relation_strength": "핵심",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "문학·예술",
+   "제도",
+   "역사적 상상"
+  ],
+  "connection_summary": "도미 설화를 바탕으로 하되 백제 왕비를 둘러싼 해씨·진씨 세력의 경쟁을 극적으로 보여준다. 왕실과 귀족 세력의 관계를 사료와 비교하면서 역사적 개연성과 창작을 구분할 수 있다.",
+  "lesson_activity": "제공된 시츠프로브 4분 25초부터 〈왕비를 정하소서〉를 보고 해씨·진씨의 주장을 정리한 뒤 백제 왕실과 귀족 세력 자료와 비교한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.yna.co.kr/view/AKR20260107144700005",
+  "number_source_url": "https://www.youtube.com/watch?v=tfBJodDcdxw"
+ },
+ {
+  "relation_id": "R031",
+  "h_id": "H02",
+  "h_sort": 2,
+  "h_topic": "고대 사람들의 생각과 생활",
+  "work_id": "M31",
+  "title": "가야의 노래",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "문화"
+  ],
+  "connection_summary": "국립중앙박물관 가야 특별전과 연계해 가실왕·우륵, 가야의 멸망과 음악 문화를 무대화했다. 박물관의 가야 유물과 작품 속 인물·문화 표현을 직접 연결하기 좋다.",
+  "lesson_activity": "가야 특별전 유물 한 점을 골라 작품 속 가실왕·우륵의 이야기와 연결되는 단서를 찾고 ‘유물이 들려주는 가야’ 한 문장을 쓴다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://www.museum.go.kr/MUSEUM/contents/M0102030000.do?cp=36&schM=view&showId=514989&type=type1&typeCode=culture",
+  "number_source_url": null
+ },
+ {
+  "relation_id": "R032",
+  "h_id": "H02",
+  "h_sort": 2,
+  "h_topic": "고대 사람들의 생각과 생활",
+  "work_id": "M32",
+  "title": "가야십이지곡",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "문화"
+  ],
+  "connection_summary": "가실왕과 우륵, 가야금 열두 음을 중심으로 멸망 직전 가야의 문화적 정체성을 다룬다. 음악 문화가 나라와 사람들에게 어떤 의미였는지 탐구할 수 있다.",
+  "lesson_activity": "우륵·가야금 관련 기록을 읽고 작품이 ‘가야의 음악’을 나라의 정체성과 어떻게 연결하는지 짧은 해설 카드로 정리한다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=2150",
+  "number_source_url": null
+ },
+ {
+  "relation_id": "R033",
+  "h_id": "H02",
+  "h_sort": 2,
+  "h_topic": "고대 사람들의 생각과 생활",
+  "work_id": "M33",
+  "title": "오션스",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "제도",
+   "시대 생활"
+  ],
+  "connection_summary": "장보고의 신분과 골품제, 청해진, 동아시아 해상무역을 한 작품 안에 묶어 보여준다. 통일신라의 신분 질서와 국제 교류를 지도·기록과 함께 살펴보기 좋다.",
+  "lesson_activity": "청해진을 중심으로 한 교역 지도를 그린 뒤 장보고의 신분과 골품제 자료를 연결해 ‘신분의 한계와 이동의 가능성’을 토론한다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://www.yna.co.kr/view/AKR20220804072000005",
+  "number_source_url": null
+ },
+ {
+  "relation_id": "R034",
+  "h_id": "H02",
+  "h_sort": 2,
+  "h_topic": "고대 사람들의 생각과 생활",
+  "work_id": "M34",
+  "title": "쌍화별곡",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "문화"
+  ],
+  "connection_summary": "원효와 의상의 수행과 불교 사상을 팩션으로 풀어낸다. ‘일체유심조’ 같은 사상 표현을 실제 불교 전승·기록과 비교해 고대인의 생각을 탐구할 수 있다.",
+  "lesson_activity": "원효의 해골물 전승과 〈일체유심조〉의 장면을 비교해 같은 메시지가 기록과 무대에서 어떻게 다르게 표현되는지 정리한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1887",
+  "number_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1887"
+ },
+ {
+  "relation_id": "R023",
+  "h_id": "H03",
+  "h_sort": 3,
+  "h_topic": "고려 시대 사회 모습과 사람들의 생활",
+  "work_id": "M22",
+  "title": "왕의 나라",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실제 사건",
+   "역사적 공간",
+   "시대 생활"
+  ],
+  "connection_summary": "홍건적 침입을 피해 안동으로 몽진한 공민왕과 지역 백성의 이야기를 다룬다. 왕의 피난이라는 사건과 전쟁을 맞은 지역 사람들의 삶을 함께 볼 수 있다.",
+  "lesson_activity": "공민왕의 안동 몽진 이동 경로와 작품 속 백성의 역할을 지도에 표시하고 ‘전쟁이 지역 사람들의 삶을 어떻게 바꾸었을까’를 기록한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=2185",
+  "number_source_url": "https://www.themusical.co.kr/Musical/Detail?num=2185"
+ },
+ {
+  "relation_id": "R035",
+  "h_id": "H03",
+  "h_sort": 3,
+  "h_topic": "고려 시대 사회 모습과 사람들의 생활",
+  "work_id": "M35",
+  "title": "꼭두별초",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실제 사건",
+   "역사적 공간",
+   "시대 생활"
+  ],
+  "connection_summary": "1270년 삼별초의 대몽항쟁을 안산 별망성의 지역사와 민초의 삶으로 풀어낸다. 전쟁 사건뿐 아니라 지역 주민의 경험과 기억을 함께 살펴볼 수 있다.",
+  "lesson_activity": "삼별초의 이동 경로와 별망성 자료를 보고 작품 속 민초의 시선을 더해 ‘사건 중심 역사 / 사람 중심 역사’ 두 관점으로 요약한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.culture.go.kr/portal/cltKnw/artCont/view.do?cdVal=B&knwldgClsfCd=B154&knwldgSn=8633&menuNo=200022",
+  "number_source_url": "https://www.igbf.kr/gugak_web/radio/radio_program_board.jsp?bIdx=129363&idx=RD2014001829&pageNo=49&state=view&sub_id=744&sub_num=0"
+ },
+ {
+  "relation_id": "R036",
+  "h_id": "H03",
+  "h_sort": 3,
+  "h_topic": "고려 시대 사회 모습과 사람들의 생활",
+  "work_id": "M36",
+  "title": "팔만대장경",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "문화",
+   "실제 사건",
+   "시대 생활"
+  ],
+  "connection_summary": "몽골 침입 속 팔만대장경 제작을 고려 백성의 고초·정성과 불교 신앙에 연결한다. 문화유산이 만들어진 사회적 배경과 사람들의 삶을 함께 추론하기 좋다.",
+  "lesson_activity": "팔만대장경 목판 사진을 관찰한 뒤 제작 과정에서 필요했을 사람·기술·시간을 추론하고 작품의 백성 서사와 비교한다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=571",
+  "number_source_url": null
+ },
+ {
+  "relation_id": "R004",
+  "h_id": "H04",
+  "h_sort": 4,
+  "h_topic": "조선 시대 유교 문화와 사람들의 생각·생활",
+  "work_id": "M04",
+  "title": "왕세자 실종사건",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "시대 생활",
+   "제도",
+   "역사적 상상"
+  ],
+  "connection_summary": "가상 조선의 궁중에서 내시·나인·상궁 등 여러 지위의 인물이 움직이는 모습을 보여준다. 실제 궁중 직역·위계와 작품의 가상 사건을 비교하는 생활사 자료로 활용할 수 있다.",
+  "lesson_activity": "내시·나인·상궁 등 궁중 직역 카드를 실제 자료로 먼저 정리한 뒤 작품 속 인물의 역할과 맞는지 확인한다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1752",
+  "number_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1877"
+ },
+ {
+  "relation_id": "R005",
+  "h_id": "H04",
+  "h_sort": 4,
+  "h_topic": "조선 시대 유교 문화와 사람들의 생각·생활",
+  "work_id": "M05",
+  "title": "세종, 1446",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "문화"
+  ],
+  "connection_summary": "세종과 훈민정음 창제를 직접 다루지만 H04의 유교 생활문화 자체가 중심은 아니다. 왕실·교육·백성을 바라보는 세종의 관점을 유교 국가의 통치 이념과 연결하는 보조 자료로 적합하다.",
+  "lesson_activity": "훈민정음 관련 자료와 〈그대의 길을 따르리〉를 연결해 ‘세종이 생각한 백성’이 기록과 무대에서 어떻게 표현되는지 비교한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/News/Detail?num=13741",
+  "number_source_url": "https://www.korea.kr/news/examPassView.do?newsId=148865425"
+ },
+ {
+  "relation_id": "R006",
+  "h_id": "H04",
+  "h_sort": 4,
+  "h_topic": "조선 시대 유교 문화와 사람들의 생각·생활",
+  "work_id": "M06",
+  "title": "난설",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "문학·예술",
+   "시대 생활"
+  ],
+  "connection_summary": "허난설헌의 삶과 실제 시를 통해 조선 여성의 교육·문학 활동과 사회적 제약을 드러낸다. 유교적 성 역할과 가족·사회 규범이 개인의 삶에 미친 영향을 탐구하기 좋다.",
+  "lesson_activity": "허난설헌의 실제 시 한 편과 작품의 장면을 읽고 조선 여성에게 가능했던 교육·문학 활동과 제약을 ‘가능/제한’ 표로 정리한다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=2965",
+  "number_source_url": "https://www.themusical.co.kr/Magazine/Detail?num=4566"
+ },
+ {
+  "relation_id": "R010",
+  "h_id": "H04",
+  "h_sort": 4,
+  "h_topic": "조선 시대 유교 문화와 사람들의 생각·생활",
+  "work_id": "M09",
+  "title": "스웨그에이지: 외쳐, 조선!",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "문화",
+   "제도",
+   "역사적 상상"
+  ],
+  "connection_summary": "가상 조선의 신분 불평등과 백성의 역할을 통해 조선 사회의 위계와 규범을 비판적으로 바라보게 한다. 실제 유교 질서의 재현이 아니라 현대적 창작임을 전제로 비교 자료로만 활용한다.",
+  "lesson_activity": "가상 조선의 규칙과 실제 조선의 유교적 신분·가족 규범을 비교해 ‘작품이 일부러 바꾼 점’을 찾아 창작 의도를 설명한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Magazine/Detail?num=4439",
+  "number_source_url": "https://music.bugs.co.kr/track/6074478?wl_ref=list_tr_08_ab"
+ },
+ {
+  "relation_id": "R037",
+  "h_id": "H04",
+  "h_sort": 4,
+  "h_topic": "조선 시대 유교 문화와 사람들의 생각·생활",
+  "work_id": "M37",
+  "title": "왕자대전",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "제도",
+   "시대 생활"
+  ],
+  "connection_summary": "태종과 양녕·효령·충녕의 관계를 통해 왕실의 가족 질서와 군신의 도리를 무대화한다. 유교적 역할 윤리가 왕실 가족의 선택에 어떻게 작동하는지 살펴볼 수 있다.",
+  "lesson_activity": "〈신하된 자의 도리〉의 핵심 생각을 군신·부자·형제 관계의 유교적 역할과 연결해 ‘인물에게 요구된 도리’ 관계도를 만든다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.dimf.or.kr/portal/festival/view.do?idx=204&mId=0203020100&searchType=001",
+  "number_source_url": "https://www.dimf.or.kr/portal/festival/view.do?idx=182&mId=0203020200&searchType=002"
+ },
+ {
+  "relation_id": "R038",
+  "h_id": "H04",
+  "h_sort": 4,
+  "h_topic": "조선 시대 유교 문화와 사람들의 생각·생활",
+  "work_id": "M38",
+  "title": "이순신",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "실제 사건"
+  ],
+  "connection_summary": "임진왜란과 이순신이라는 실제 인물·사건을 다룬다. H04의 핵심과는 거리가 있지만 충·책임·전쟁 속 역할을 실제 기록과 비교하는 보조 자료로 쓸 수 있다.",
+  "lesson_activity": "『난중일기』의 짧은 기록과 〈나를 태워라〉의 영웅적 표현을 비교해 이순신을 바라보는 기록과 공연의 관점 차이를 찾는다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1403",
+  "number_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1403"
+ },
+ {
+  "relation_id": "R039",
+  "h_id": "H04",
+  "h_sort": 4,
+  "h_topic": "조선 시대 유교 문화와 사람들의 생각·생활",
+  "work_id": "M40",
+  "title": "대장금",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "시대 생활",
+   "제도",
+   "역사적 상상"
+  ],
+  "connection_summary": "궁중 수라간과 의녀의 세계를 통해 여성 직역·신분·교육과 노동을 보여준다. 드라마적 창작을 구분하면서 조선 궁중 여성의 생활과 사회적 제약을 살펴볼 수 있다.",
+  "lesson_activity": "장금의 직역 변화를 수라간 나인·의녀 자료와 연결해 조선 궁중 여성의 일·교육·신분 이동 가능성을 표로 정리한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1601",
+  "number_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1601"
+ },
+ {
+  "relation_id": "R040",
+  "h_id": "H04",
+  "h_sort": 4,
+  "h_topic": "조선 시대 유교 문화와 사람들의 생각·생활",
+  "work_id": "M41",
+  "title": "칠서",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "제도",
+   "시대 생활",
+   "실제 사건"
+  ],
+  "connection_summary": "1608년 서자 집단과 허균을 통해 서얼 차별과 신분 질서를 전면에 드러낸다. 유교적 신분 질서가 사람들의 진로·관계·선택을 제한한 사례로 활용하기 좋다.",
+  "lesson_activity": "서얼의 사회적 제한을 보여주는 자료와 〈일어선다〉를 비교하고, 칠서 인물들이 바꾸고 싶었던 규칙을 한 문장씩 쓴다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=2475",
+  "number_source_url": "https://ch.yes24.com/article/details/79756"
+ },
+ {
+  "relation_id": "R041",
+  "h_id": "H04",
+  "h_sort": 4,
+  "h_topic": "조선 시대 유교 문화와 사람들의 생각·생활",
+  "work_id": "M42",
+  "title": "한복 입은 남자",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "실존 인물",
+   "역사적 상상"
+  ],
+  "connection_summary": "장영실·세종의 실제 기록에서 출발하지만 유럽·다빈치와의 연결은 창작이다. 신분과 과학기술에 관한 실제 기록과 무대의 상상을 분류하는 팩션 수업에 적합하다.",
+  "lesson_activity": "장영실에 대해 사료로 확인되는 사실과 작품의 유럽·다빈치 서사를 카드로 분류해 ‘팩션 판별 기준’을 만든다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://tickets.interpark.com/contents/notice/detail/11139",
+  "number_source_url": null
+ },
+ {
+  "relation_id": "R001",
+  "h_id": "H05",
+  "h_sort": 5,
+  "h_topic": "조선 후기·개항기 사회·문화 변화와 달라진 생활",
+  "work_id": "M01",
+  "title": "금악",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "문화",
+   "시대 생활",
+   "역사적 상상"
+  ],
+  "connection_summary": "순조 말기 효명세자 대리청정기의 장악원·궁중음악 세계에 ‘신라에서 전해진 금지된 악보’라는 판타지를 결합한다. 조선 후기 궁중문화의 실제와 상상을 비교할 수 있다.",
+  "lesson_activity": "효명세자와 장악원 관련 실제 자료를 보고 작품 속 ‘금지된 악보’ 설정을 사실/상상으로 분류한 뒤 궁중음악의 역할을 정리한다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://www.ggac.or.kr/?p=154&page=23&reqIdx=202105060902295817&viewMode=view",
+  "number_source_url": "https://www.ggac.or.kr/?p=154&page=23&reqIdx=202105060902295817&viewMode=view"
+ },
+ {
+  "relation_id": "R007",
+  "h_id": "H05",
+  "h_sort": 5,
+  "h_topic": "조선 후기·개항기 사회·문화 변화와 달라진 생활",
+  "work_id": "M07",
+  "title": "화성에서 꿈꾸다",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "실제 사건",
+   "문화"
+  ],
+  "connection_summary": "정조의 개혁과 수원 화성, 실학자와의 교류를 중심으로 조선 후기의 새로운 사상과 제도 변화를 보여준다. 화성 관련 기록·그림·기술 자료와 연결하기 좋다.",
+  "lesson_activity": "화성성역의궤 그림 또는 화성 자료와 〈꿈길〉을 함께 보고 정조의 개혁이 도시·기술·사람의 생활과 어떻게 연결되었는지 찾는다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=696",
+  "number_source_url": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0540&key=20080707.22017205033"
+ },
+ {
+  "relation_id": "R009",
+  "h_id": "H05",
+  "h_sort": 5,
+  "h_topic": "조선 후기·개항기 사회·문화 변화와 달라진 생활",
+  "work_id": "M09",
+  "title": "스웨그에이지: 외쳐, 조선!",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "문화",
+   "제도",
+   "역사적 상상"
+  ],
+  "connection_summary": "시조가 금지된 가상 조선을 통해 신분 불평등과 백성의 문화적 목소리를 현대적으로 재구성한다. 실제 조선 후기 서민문화와 비교하는 확장 자료로 활용할 수 있다.",
+  "lesson_activity": "〈정녕 당연한 일인가〉가 문제 삼는 신분 불평등을 실제 조선 후기 신분·서민문화 자료와 비교하고 ‘같은 점/다른 점’을 정리한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Magazine/Detail?num=4439",
+  "number_source_url": "https://music.bugs.co.kr/track/6074478?wl_ref=list_tr_08_ab"
+ },
+ {
+  "relation_id": "R012",
+  "h_id": "H05",
+  "h_sort": 5,
+  "h_topic": "조선 후기·개항기 사회·문화 변화와 달라진 생활",
+  "work_id": "M11",
+  "title": "명성황후",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "실제 사건"
+  ],
+  "connection_summary": "별기군·임오군란·외세 접근·을미사변 등 개항기 정치 변화를 명성황후의 서사로 묶는다. 정치사 중심이므로 근대 문물과 생활 변화는 별도 자료로 보완해야 한다.",
+  "lesson_activity": "〈왕비 오시는 날〉에서 시작해 별기군·임오군란·을미사변까지 사건 카드를 시간 순으로 배열하고 ‘정치 변화와 생활 변화’를 구분한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=420",
+  "number_source_url": "https://www.themusical.co.kr/Media/Detail?num=7317"
+ },
+ {
+  "relation_id": "R013",
+  "h_id": "H05",
+  "h_sort": 5,
+  "h_topic": "조선 후기·개항기 사회·문화 변화와 달라진 생활",
+  "work_id": "M12",
+  "title": "잃어버린 얼굴 1895",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "실제 사건",
+   "문학·예술"
+  ],
+  "connection_summary": "1895년 명성황후와 ‘남아 있지 않은 얼굴’을 중심으로 역사적 기억과 이미지의 문제를 다룬다. 개항기 사건과 함께 역사 자료가 인물을 어떻게 기억하는지 탐구할 수 있다.",
+  "lesson_activity": "명성황후의 사진·초상 관련 자료와 〈잃어버린 얼굴〉을 연결해 ‘역사 인물의 얼굴을 우리는 무엇으로 기억하는가’를 토론한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=2215",
+  "number_source_url": "https://music.bugs.co.kr/album/529931"
+ },
+ {
+  "relation_id": "R014",
+  "h_id": "H05",
+  "h_sort": 5,
+  "h_topic": "조선 후기·개항기 사회·문화 변화와 달라진 생활",
+  "work_id": "M13",
+  "title": "곤 투모로우",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "실제 사건",
+   "역사적 상상"
+  ],
+  "connection_summary": "갑신정변 이후 김옥균과 홍종우의 실제 역사를 가상 인물과 함께 재구성한다. 개항기 개혁 세력의 선택과 좌절을 정치 변화의 맥락에서 살펴보는 보조 자료다.",
+  "lesson_activity": "갑신정변 전후 사건을 5장 타임라인으로 만든 뒤 〈조선의 붕괴〉가 개혁의 좌절을 어떻게 극적으로 강조하는지 찾는다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/News/Detail?num=13747",
+  "number_source_url": "https://www.mymusic5.com/thmusics2/105991"
+ },
+ {
+  "relation_id": "R042",
+  "h_id": "H05",
+  "h_sort": 5,
+  "h_topic": "조선 후기·개항기 사회·문화 변화와 달라진 생활",
+  "work_id": "M44",
+  "title": "판",
+  "relation_strength": "핵심",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "시대 생활",
+   "문화",
+   "제도"
+  ],
+  "connection_summary": "19세기 세책가·전기수·필사장과 독서문화를 전면에 내세운다. 조선 후기 서민의 읽기 문화, 풍자, 여성의 활동이 어떻게 확장되었는지 생활사 관점에서 살펴보기 좋다.",
+  "lesson_activity": "세책가·전기수·필사장 자료를 조사하고 〈새가 날아든다〉의 인물 역할과 연결해 ‘조선 후기 책이 사람에게 가는 길’을 순서도로 만든다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.cjazit.org/support/stage-up/selection/1323?p=2",
+  "number_source_url": "https://mobile.newsis.com/view/NISX20180531_0000323264"
+ },
+ {
+  "relation_id": "R043",
+  "h_id": "H05",
+  "h_sort": 5,
+  "h_topic": "조선 후기·개항기 사회·문화 변화와 달라진 생활",
+  "work_id": "M45",
+  "title": "정조",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "실제 사건",
+   "역사적 공간"
+  ],
+  "connection_summary": "정조와 수원화성을 중심으로 개혁 정치와 지역사를 다룬다. 화성 건설·도시 변화와 정조의 정책을 실제 자료와 비교하는 보조 자료로 활용할 수 있다.",
+  "lesson_activity": "수원화성 자료와 정조의 개혁 정책을 연결한 뒤 작품에서 강조하는 정조의 목표와 실제 정책의 공통점을 찾는다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://www.suwon.go.kr/culture/endCultureView.do?ctrSeqNo=461&listType=end&q_currPage=32&q_sortName=name",
+  "number_source_url": null
+ },
+ {
+  "relation_id": "R044",
+  "h_id": "H05",
+  "h_sort": 5,
+  "h_topic": "조선 후기·개항기 사회·문화 변화와 달라진 생활",
+  "work_id": "M47",
+  "title": "다산, 물 위의 별",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "문화",
+   "실제 사건"
+  ],
+  "connection_summary": "정약용의 실학, 규장각, 수원화성, 거중기·배다리, 유배를 한 작품에 묶는다. 조선 후기 새로운 지식과 기술이 사회 변화를 어떻게 지향했는지 탐구하기 좋다.",
+  "lesson_activity": "정약용의 거중기·배다리·수원화성 관련 자료를 묶어 ‘실학자가 해결하려 한 문제’를 정리하고 작품의 정약용 서사와 비교한다.",
+  "use_status": "작품 기반 활용(넘버 보류)",
+  "work_source_url": "https://www.nyjcf.or.kr/www/19?date=2026-09-12&action=read&action-value=105",
+  "number_source_url": "https://www.nyjcf.or.kr/www/19?date=2026-09-12&action=read&action-value=105"
+ },
+ {
+  "relation_id": "R015",
+  "h_id": "H06",
+  "h_sort": 6,
+  "h_topic": "일제 식민 통치와 저항이 사회와 생활에 미친 영향",
+  "work_id": "M14",
+  "title": "아리랑",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "시대 생활",
+   "실제 사건",
+   "전쟁과 기억"
+  ],
+  "connection_summary": "일제강점기의 수탈과 독립운동을 여러 민중의 삶으로 장기간 보여준다. 식민 통치가 농민·가족·공동체의 생활에 미친 영향을 구체적으로 살펴볼 수 있다.",
+  "lesson_activity": "토지 수탈·독립운동 관련 자료를 읽고 〈풀꽃아리랑〉의 여러 인물이 왜 함께 노래하는지 각 인물의 처지와 연결한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Magazine/Detail?num=2492",
+  "number_source_url": "https://www.viva100.com/20170728010010839"
+ },
+ {
+  "relation_id": "R016",
+  "h_id": "H06",
+  "h_sort": 6,
+  "h_topic": "일제 식민 통치와 저항이 사회와 생활에 미친 영향",
+  "work_id": "M15",
+  "title": "신흥무관학교",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실제 사건",
+   "시대 생활"
+  ],
+  "connection_summary": "신흥무관학교의 설립과 훈련을 실존·창작 청년의 삶으로 보여준다. 망명과 독립군 양성이 개인의 일상과 선택을 어떻게 바꾸었는지 살펴보기 좋다.",
+  "lesson_activity": "신흥무관학교 사진·기록과 〈가난한 유서〉를 보고 독립운동에 참여한 청년들이 포기해야 했던 일상과 선택을 추론한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=2613",
+  "number_source_url": "https://gonggam.korea.kr/newsContentView.es?mid=a10215000000&news_id=EBC6D4010D8C4203E0540021F662AC5F&section_id=NCCD_VIDEO"
+ },
+ {
+  "relation_id": "R017",
+  "h_id": "H06",
+  "h_sort": 6,
+  "h_topic": "일제 식민 통치와 저항이 사회와 생활에 미친 영향",
+  "work_id": "M16",
+  "title": "영웅",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "실제 사건"
+  ],
+  "connection_summary": "안중근의 단지동맹·하얼빈 의거·재판을 직접 다룬다. 1910년 이전 사건이므로 식민 통치의 본시보다는 일제 침략과 저항의 전사로 활용하는 것이 정확하다.",
+  "lesson_activity": "안중근 재판 관련 기록과 〈누가 죄인인가〉에서 제시한 죄목을 대조해 일치·강조·생략된 내용을 표시한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://m.themusical.co.kr/Musical/Detail?articlePage=4&mediaPage=1&num=3034",
+  "number_source_url": "https://www.themusical.co.kr/Media/Detail?num=2916"
+ },
+ {
+  "relation_id": "R018",
+  "h_id": "H06",
+  "h_sort": 6,
+  "h_topic": "일제 식민 통치와 저항이 사회와 생활에 미친 영향",
+  "work_id": "M17",
+  "title": "윤동주, 달을 쏘다.",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실존 인물",
+   "문학·예술",
+   "시대 생활"
+  ],
+  "connection_summary": "윤동주와 송몽규 등 식민지 청년의 언어·글쓰기·양심을 보여준다. 우리말과 이름, 문학을 지키는 행위가 식민지 통치에 대한 문화적 저항이 되었음을 살펴볼 수 있다.",
+  "lesson_activity": "윤동주의 시와 〈시를 쓴다는 것〉을 읽고 식민지 시기 ‘글을 쓴다’는 행동이 개인의 삶과 저항에 어떤 의미였는지 말한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=2302",
+  "number_source_url": "https://ch.yes24.com/article/details/78696"
+ },
+ {
+  "relation_id": "R019",
+  "h_id": "H06",
+  "h_sort": 6,
+  "h_topic": "일제 식민 통치와 저항이 사회와 생활에 미친 영향",
+  "work_id": "M18",
+  "title": "팬레터",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "문학·예술",
+   "시대 생활",
+   "역사적 상상"
+  ],
+  "connection_summary": "1930년대 경성 문단을 모티브로 한 허구의 작가·편지 이야기를 통해 당시 도시의 문학·출판 문화를 보여준다. 실제 문단과 허구를 구분하는 생활문화 보조 자료로 적합하다.",
+  "lesson_activity": "1930년대 경성의 잡지·문단 자료와 《팬레터》의 가상 작가들을 비교해 ‘실제 문학 문화 / 작품의 창작’ 표를 만든다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Musical/Detail?num=2366",
+  "number_source_url": "https://ch.yes24.com/Article/details/80242"
+ },
+ {
+  "relation_id": "R021",
+  "h_id": "H06",
+  "h_sort": 6,
+  "h_topic": "일제 식민 통치와 저항이 사회와 생활에 미친 영향",
+  "work_id": "M21",
+  "title": "여명의 눈동자",
+  "relation_strength": "보조",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실제 사건",
+   "시대 생활",
+   "전쟁과 기억"
+  ],
+  "connection_summary": "일제강점기 강제 동원부터 광복·전쟁까지 이어지는 격동을 개인의 삶으로 보여준다. H06에서는 강제 동원과 저항을, H07에서는 광복 이후 전쟁과 삶의 변화를 각각 선별해 연결할 수 있다.",
+  "lesson_activity": "강제 동원 관련 사진·증언과 〈멈추지 않는다〉의 안전한 일부 장면을 연결해 식민 통치가 개인의 이동·가족·선택에 미친 영향을 정리한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/News/Detail?num=12084",
+  "number_source_url": "https://www.themusical.co.kr/Musical/Detail?num=2650"
+ },
+ {
+  "relation_id": "R029",
+  "h_id": "H06",
+  "h_sort": 6,
+  "h_topic": "일제 식민 통치와 저항이 사회와 생활에 미친 영향",
+  "work_id": "M28",
+  "title": "소란스러운 나의 서림에서",
+  "relation_strength": "핵심",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "시대 생활",
+   "문학·예술",
+   "역사적 상상"
+  ],
+  "connection_summary": "1940년의 양희와 1980년의 해준을 책으로 연결해 서로의 시대를 묻게 한다. H06에서는 양희의 1940년 시선에 초점을 두고 식민지 시대의 자유·저항·여성의 삶을 탐구한다.",
+  "lesson_activity": "〈당신이 사는 세상〉에서 양희가 미래에 던지는 질문을 골라 1940년의 현실 자료와 비교하고 ‘그때 사람들이 바랐던 세상’을 추론한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://tickets.interpark.com/contents/notice/detail/107",
+  "number_source_url": "https://v.daum.net/v/20250504172400141"
+ },
+ {
+  "relation_id": "R020",
+  "h_id": "H07",
+  "h_sort": 7,
+  "h_topic": "8·15 광복과 6·25 전쟁이 사회와 생활에 미친 영향",
+  "work_id": "M20",
+  "title": "나와 나타샤와 흰 당나귀",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "실존 인물",
+   "문학·예술",
+   "전쟁과 기억"
+  ],
+  "connection_summary": "백석과 자야의 사랑과 실제 시를 바탕으로 하되 해방 이후 분단이 두 사람의 생이별로 이어지는 삶의 변화를 보여준다. 광복과 분단이 개인 관계에 남긴 영향을 보는 보조 자료다.",
+  "lesson_activity": "백석의 생애 연표와 실제 시를 보고 광복 이후 분단으로 이어진 생이별을 표시한 뒤 ‘정치적 변화가 개인 관계에 남긴 영향’을 기록한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Magazine/Detail?num=3007",
+  "number_source_url": "https://playvod.imbc.com/Templete/VodView?bid=1000855100577100000"
+ },
+ {
+  "relation_id": "R022",
+  "h_id": "H07",
+  "h_sort": 7,
+  "h_topic": "8·15 광복과 6·25 전쟁이 사회와 생활에 미친 영향",
+  "work_id": "M21",
+  "title": "여명의 눈동자",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "실제 사건",
+   "시대 생활",
+   "전쟁과 기억"
+  ],
+  "connection_summary": "작품 후반의 광복·분단·한국전쟁 서사는 전쟁이 개인의 가족·관계·생존을 어떻게 바꾸는지 보여준다. H07에서는 민감한 폭력 장면을 피하고 광복 이후 삶의 변화만 선별한다.",
+  "lesson_activity": "광복 이후부터 한국전쟁까지 인물의 이동과 가족 관계를 안전한 줄거리 자료로 정리하고, 전쟁이 생활에 미친 영향을 ‘이동·가족·생계’로 분류한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/News/Detail?num=12084",
+  "number_source_url": "https://www.themusical.co.kr/Musical/Detail?num=2650"
+ },
+ {
+  "relation_id": "R024",
+  "h_id": "H07",
+  "h_sort": 7,
+  "h_topic": "8·15 광복과 6·25 전쟁이 사회와 생활에 미친 영향",
+  "work_id": "M23",
+  "title": "여신님이 보고 계셔",
+  "relation_strength": "보조",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "시대 생활",
+   "전쟁과 기억",
+   "역사적 상상"
+  ],
+  "connection_summary": "6·25 전쟁 속 남북 군인들이 무인도에서 살아남는 가상 이야기다. 전쟁 트라우마·가족에 대한 그리움·신뢰 회복을 통해 전쟁이 개인의 삶에 미친 영향을 탐구할 수 있다.",
+  "lesson_activity": "〈여신님이 보고 계셔〉 속 순호의 변화 과정을 따라가며 전쟁 전·중·후의 감정 카드를 만들고 전쟁 트라우마를 역사 사실과 구분해 이해한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Magazine/Detail?num=3393",
+  "number_source_url": "https://m.ticket.yes24.com/Notice/Detail.aspx?bid=13875&order=1&type=1"
+ },
+ {
+  "relation_id": "R025",
+  "h_id": "H07",
+  "h_sort": 7,
+  "h_topic": "8·15 광복과 6·25 전쟁이 사회와 생활에 미친 영향",
+  "work_id": "M24",
+  "title": "귀환",
+  "relation_strength": "핵심",
+  "history_link_mode": "팩션·상상 비교",
+  "relation_basis": [
+   "실제 사건",
+   "전쟁과 기억"
+  ],
+  "connection_summary": "6·25 전사자 유해 발굴과 남겨진 사람의 기억을 현재까지 연결한다. 전쟁의 영향이 전쟁 당시뿐 아니라 가족·후손의 삶에 장기적으로 이어진다는 점을 보여준다.",
+  "lesson_activity": "전사자 유해 발굴 사진·기사와 〈내가 술래가 되면〉을 연결해 ‘전쟁은 언제 끝나는가?’라는 질문에 근거를 들어 답한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/Magazine/Detail?num=4561",
+  "number_source_url": "https://www.themusical.co.kr/Magazine/Detail?num=4351"
+ },
+ {
+  "relation_id": "R026",
+  "h_id": "H07",
+  "h_sort": 7,
+  "h_topic": "8·15 광복과 6·25 전쟁이 사회와 생활에 미친 영향",
+  "work_id": "M25",
+  "title": "생명의 항해",
+  "relation_strength": "핵심",
+  "history_link_mode": "실제 인물·사건 중심",
+  "relation_basis": [
+   "실제 사건",
+   "시대 생활",
+   "전쟁과 기억"
+  ],
+  "connection_summary": "장진호 전투와 흥남 철수, 메러디스 빅토리호의 실제 기록을 피란민의 삶과 결합한다. 전쟁이 민간인의 이동·가족·생존에 미친 영향을 직접 살펴보기 좋다.",
+  "lesson_activity": "흥남 철수 지도·사진과 〈그날의 맹세〉의 인물 상황을 연결해 피란민에게 필요했던 선택을 ‘이동·가족·생존’ 세 범주로 정리한다.",
+  "use_status": "즉시 활용",
+  "work_source_url": "https://www.themusical.co.kr/News/Detail?num=135",
+  "number_source_url": "https://www.themusical.co.kr/Musical/Detail?num=1631"
+ }
+]

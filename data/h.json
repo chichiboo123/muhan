@@ -1,0 +1,72 @@
+[
+ {
+  "h_id": "H01",
+  "sort_order": 1,
+  "era_label": "선사 시대·고조선",
+  "era_short": "선사·고조선",
+  "topic": "선사 시대·고조선 사람들의 생활",
+  "standard_code": "6사04-01",
+  "standard_text": "선사 시대와 고조선의 유적과 유물을 활용하여 당시 사람들의 생활을 추론한다.",
+  "official_category": "문명의 발생과 고대 세계의 형성 / 국가의 형성과 발전"
+ },
+ {
+  "h_id": "H02",
+  "sort_order": 2,
+  "era_label": "고대",
+  "era_short": "고대",
+  "topic": "고대 사람들의 생각과 생활",
+  "standard_code": "6사04-02",
+  "standard_text": "역사 기록이나 유적과 유물에 나타난 고대 사람들의 생각과 생활을 추론한다.",
+  "official_category": "국가의 형성과 발전 / 통일신라와 발해"
+ },
+ {
+  "h_id": "H03",
+  "sort_order": 3,
+  "era_label": "고려",
+  "era_short": "고려",
+  "topic": "고려 시대 사회 모습과 사람들의 생활",
+  "standard_code": "6사04-03",
+  "standard_text": "다양한 역사 자료를 활용하여 고려 시대 사회 모습과 사람들의 생활을 추론한다.",
+  "official_category": "고려의 성립과 변천"
+ },
+ {
+  "h_id": "H04",
+  "sort_order": 4,
+  "era_label": "조선",
+  "era_short": "조선",
+  "topic": "조선 시대 유교 문화와 사람들의 생각·생활",
+  "standard_code": "6사05-01",
+  "standard_text": "조선 시대 사람들의 생각과 생활에 유교 문화가 미친 영향을 파악한다.",
+  "official_category": "조선의 성립과 발전"
+ },
+ {
+  "h_id": "H05",
+  "sort_order": 5,
+  "era_label": "조선 후기·개항기",
+  "era_short": "조선 후기·개항기",
+  "topic": "조선 후기·개항기 사회·문화 변화와 달라진 생활",
+  "standard_code": "6사05-02",
+  "standard_text": "조선 후기 사회·문화적 변화와 개항기 근대 문물 수용 과정에서 달라진 사람들의 생활을 이해한다.",
+  "official_category": "조선 사회의 변동"
+ },
+ {
+  "h_id": "H06",
+  "sort_order": 6,
+  "era_label": "일제강점기",
+  "era_short": "일제강점기",
+  "topic": "일제 식민 통치와 저항이 사회와 생활에 미친 영향",
+  "standard_code": "6사06-01",
+  "standard_text": "일제의 식민 통치와 이에 대한 저항이 사회와 생활에 미친 영향을 이해한다.",
+  "official_category": "근·현대 사회로의 전환"
+ },
+ {
+  "h_id": "H07",
+  "sort_order": 7,
+  "era_label": "광복·6·25 전쟁",
+  "era_short": "광복·전쟁",
+  "topic": "8·15 광복과 6·25 전쟁이 사회와 생활에 미친 영향",
+  "standard_code": "6사06-02",
+  "standard_text": "8·15 광복과 6·25 전쟁이 사회와 생활에 미친 영향을 파악한다.",
+  "official_category": "근·현대 사회로의 전환"
+ }
+]

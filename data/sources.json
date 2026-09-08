@@ -1,0 +1,554 @@
+[
+ {
+  "source_id": "SRC001",
+  "usage": "작품·대표 넘버",
+  "provider": "경기아트센터",
+  "source_type": "공연기관·공식",
+  "verified_target": "M01 금악",
+  "url": "https://www.ggac.or.kr/?p=154&page=23&reqIdx=202105060902295817&viewMode=view"
+ },
+ {
+  "source_id": "SRC002",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M02 화랑",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=1854"
+ },
+ {
+  "source_id": "SRC003",
+  "usage": "대표 넘버",
+  "provider": "벅스",
+  "source_type": "공식 음원 플랫폼",
+  "verified_target": "M02 화랑",
+  "url": "https://music.bugs.co.kr/album/290781"
+ },
+ {
+  "source_id": "SRC004",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M03 원효",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=1703"
+ },
+ {
+  "source_id": "SRC005",
+  "usage": "대표 넘버",
+  "provider": "노컷뉴스",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M03 원효",
+  "url": "https://www.nocutnews.co.kr/news/892592"
+ },
+ {
+  "source_id": "SRC006",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M04 왕세자 실종사건",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=1752"
+ },
+ {
+  "source_id": "SRC007",
+  "usage": "대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M04 왕세자 실종사건",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=1877"
+ },
+ {
+  "source_id": "SRC008",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M05 세종, 1446",
+  "url": "https://www.themusical.co.kr/News/Detail?num=13741"
+ },
+ {
+  "source_id": "SRC009",
+  "usage": "대표 넘버",
+  "provider": "대한민국 정책브리핑",
+  "source_type": "공공기관·공식",
+  "verified_target": "M05 세종, 1446",
+  "url": "https://www.korea.kr/news/examPassView.do?newsId=148865425"
+ },
+ {
+  "source_id": "SRC010",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M06 난설",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=2965"
+ },
+ {
+  "source_id": "SRC011",
+  "usage": "대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M06 난설",
+  "url": "https://www.themusical.co.kr/Magazine/Detail?num=4566"
+ },
+ {
+  "source_id": "SRC012",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M07 화성에서 꿈꾸다",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=696"
+ },
+ {
+  "source_id": "SRC013",
+  "usage": "대표 넘버",
+  "provider": "국제신문",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M07 화성에서 꿈꾸다",
+  "url": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0540&key=20080707.22017205033"
+ },
+ {
+  "source_id": "SRC014",
+  "usage": "작품·대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M08 바람의 나라_무휼",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=1445"
+ },
+ {
+  "source_id": "SRC015",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M09 스웨그에이지: 외쳐, 조선!",
+  "url": "https://www.themusical.co.kr/Magazine/Detail?num=4439"
+ },
+ {
+  "source_id": "SRC016",
+  "usage": "대표 넘버",
+  "provider": "벅스",
+  "source_type": "공식 음원 플랫폼",
+  "verified_target": "M09 스웨그에이지: 외쳐, 조선!",
+  "url": "https://music.bugs.co.kr/track/6074478?wl_ref=list_tr_08_ab"
+ },
+ {
+  "source_id": "SRC017",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M10 아랑가",
+  "url": "https://www.themusical.co.kr/Magazine/Detail?num=4537"
+ },
+ {
+  "source_id": "SRC018",
+  "usage": "대표 넘버",
+  "provider": "예스24 채널",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M10 아랑가",
+  "url": "https://ch.yes24.com/article/details/79993"
+ },
+ {
+  "source_id": "SRC019",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M11 명성황후",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=420"
+ },
+ {
+  "source_id": "SRC020",
+  "usage": "대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M11 명성황후",
+  "url": "https://www.themusical.co.kr/Media/Detail?num=7317"
+ },
+ {
+  "source_id": "SRC021",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M12 잃어버린 얼굴 1895",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=2215"
+ },
+ {
+  "source_id": "SRC022",
+  "usage": "대표 넘버",
+  "provider": "벅스",
+  "source_type": "공식 음원 플랫폼",
+  "verified_target": "M12 잃어버린 얼굴 1895",
+  "url": "https://music.bugs.co.kr/album/529931"
+ },
+ {
+  "source_id": "SRC023",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M13 곤 투모로우",
+  "url": "https://www.themusical.co.kr/News/Detail?num=13747"
+ },
+ {
+  "source_id": "SRC024",
+  "usage": "대표 넘버",
+  "provider": "MyMusic5",
+  "source_type": "보조 음원 자료",
+  "verified_target": "M13 곤 투모로우",
+  "url": "https://www.mymusic5.com/thmusics2/105991"
+ },
+ {
+  "source_id": "SRC025",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M14 아리랑",
+  "url": "https://www.themusical.co.kr/Magazine/Detail?num=2492"
+ },
+ {
+  "source_id": "SRC026",
+  "usage": "대표 넘버",
+  "provider": "브릿지경제",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M14 아리랑",
+  "url": "https://www.viva100.com/20170728010010839"
+ },
+ {
+  "source_id": "SRC027",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M15 신흥무관학교",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=2613"
+ },
+ {
+  "source_id": "SRC028",
+  "usage": "대표 넘버",
+  "provider": "K-공감",
+  "source_type": "공공기관·공식",
+  "verified_target": "M15 신흥무관학교",
+  "url": "https://gonggam.korea.kr/newsContentView.es?mid=a10215000000&news_id=EBC6D4010D8C4203E0540021F662AC5F&section_id=NCCD_VIDEO"
+ },
+ {
+  "source_id": "SRC029",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M16 영웅",
+  "url": "https://m.themusical.co.kr/Musical/Detail?articlePage=4&mediaPage=1&num=3034"
+ },
+ {
+  "source_id": "SRC030",
+  "usage": "대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M16 영웅",
+  "url": "https://www.themusical.co.kr/Media/Detail?num=2916"
+ },
+ {
+  "source_id": "SRC031",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M17 윤동주, 달을 쏘다.",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=2302"
+ },
+ {
+  "source_id": "SRC032",
+  "usage": "대표 넘버",
+  "provider": "예스24 채널",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M17 윤동주, 달을 쏘다.",
+  "url": "https://ch.yes24.com/article/details/78696"
+ },
+ {
+  "source_id": "SRC033",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M18 팬레터",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=2366"
+ },
+ {
+  "source_id": "SRC034",
+  "usage": "대표 넘버",
+  "provider": "예스24 채널",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M18 팬레터",
+  "url": "https://ch.yes24.com/Article/details/80242"
+ },
+ {
+  "source_id": "SRC035",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M20 나와 나타샤와 흰 당나귀",
+  "url": "https://www.themusical.co.kr/Magazine/Detail?num=3007"
+ },
+ {
+  "source_id": "SRC036",
+  "usage": "대표 넘버",
+  "provider": "MBC",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M20 나와 나타샤와 흰 당나귀",
+  "url": "https://playvod.imbc.com/Templete/VodView?bid=1000855100577100000"
+ },
+ {
+  "source_id": "SRC037",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M21 여명의 눈동자",
+  "url": "https://www.themusical.co.kr/News/Detail?num=12084"
+ },
+ {
+  "source_id": "SRC038",
+  "usage": "대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M21 여명의 눈동자",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=2650"
+ },
+ {
+  "source_id": "SRC039",
+  "usage": "작품·대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M22 왕의 나라",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=2185"
+ },
+ {
+  "source_id": "SRC040",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M23 여신님이 보고 계셔",
+  "url": "https://www.themusical.co.kr/Magazine/Detail?num=3393"
+ },
+ {
+  "source_id": "SRC041",
+  "usage": "대표 넘버",
+  "provider": "예스24 티켓",
+  "source_type": "공식 예매·공연 정보",
+  "verified_target": "M23 여신님이 보고 계셔",
+  "url": "https://m.ticket.yes24.com/Notice/Detail.aspx?bid=13875&order=1&type=1"
+ },
+ {
+  "source_id": "SRC042",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M24 귀환",
+  "url": "https://www.themusical.co.kr/Magazine/Detail?num=4561"
+ },
+ {
+  "source_id": "SRC043",
+  "usage": "대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M24 귀환",
+  "url": "https://www.themusical.co.kr/Magazine/Detail?num=4351"
+ },
+ {
+  "source_id": "SRC044",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M25 생명의 항해",
+  "url": "https://www.themusical.co.kr/News/Detail?num=135"
+ },
+ {
+  "source_id": "SRC045",
+  "usage": "대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M25 생명의 항해",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=1631"
+ },
+ {
+  "source_id": "SRC046",
+  "usage": "작품",
+  "provider": "이음",
+  "source_type": "공연기관·공식",
+  "verified_target": "M26 두근두근 움스프렌즈: 신석기 더 비기닝",
+  "url": "https://www.ieum.or.kr/user/show/view.do?idx=811"
+ },
+ {
+  "source_id": "SRC047",
+  "usage": "작품",
+  "provider": "문화저널",
+  "source_type": "웹 자료",
+  "verified_target": "M27 한왕! 바람, 노래가 되다",
+  "url": "https://munhwajl.kr/article_preview_2608"
+ },
+ {
+  "source_id": "SRC048",
+  "usage": "작품",
+  "provider": "인터파크 티켓",
+  "source_type": "공식 예매·공연 정보",
+  "verified_target": "M28 소란스러운 나의 서림에서",
+  "url": "https://tickets.interpark.com/contents/notice/detail/107"
+ },
+ {
+  "source_id": "SRC049",
+  "usage": "대표 넘버",
+  "provider": "다음뉴스",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M28 소란스러운 나의 서림에서",
+  "url": "https://v.daum.net/v/20250504172400141"
+ },
+ {
+  "source_id": "SRC050",
+  "usage": "작품",
+  "provider": "연합뉴스",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M29 몽유도원",
+  "url": "https://www.yna.co.kr/view/AKR20260107144700005"
+ },
+ {
+  "source_id": "SRC051",
+  "usage": "대표 넘버",
+  "provider": "YouTube",
+  "source_type": "영상 자료",
+  "verified_target": "M29 몽유도원",
+  "url": "https://www.youtube.com/watch?v=tfBJodDcdxw"
+ },
+ {
+  "source_id": "SRC052",
+  "usage": "작품",
+  "provider": "국립중앙박물관",
+  "source_type": "공공기관·공식",
+  "verified_target": "M31 가야의 노래",
+  "url": "https://www.museum.go.kr/MUSEUM/contents/M0102030000.do?cp=36&schM=view&showId=514989&type=type1&typeCode=culture"
+ },
+ {
+  "source_id": "SRC053",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M32 가야십이지곡",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=2150"
+ },
+ {
+  "source_id": "SRC054",
+  "usage": "작품",
+  "provider": "연합뉴스",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M33 오션스",
+  "url": "https://www.yna.co.kr/view/AKR20220804072000005"
+ },
+ {
+  "source_id": "SRC055",
+  "usage": "작품·대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M34 쌍화별곡",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=1887"
+ },
+ {
+  "source_id": "SRC056",
+  "usage": "작품",
+  "provider": "문화포털",
+  "source_type": "공공기관·공식",
+  "verified_target": "M35 꼭두별초",
+  "url": "https://www.culture.go.kr/portal/cltKnw/artCont/view.do?cdVal=B&knwldgClsfCd=B154&knwldgSn=8633&menuNo=200022"
+ },
+ {
+  "source_id": "SRC057",
+  "usage": "대표 넘버",
+  "provider": "국악방송",
+  "source_type": "웹 자료",
+  "verified_target": "M35 꼭두별초",
+  "url": "https://www.igbf.kr/gugak_web/radio/radio_program_board.jsp?bIdx=129363&idx=RD2014001829&pageNo=49&state=view&sub_id=744&sub_num=0"
+ },
+ {
+  "source_id": "SRC058",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M36 팔만대장경",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=571"
+ },
+ {
+  "source_id": "SRC059",
+  "usage": "작품",
+  "provider": "DIMF",
+  "source_type": "공연기관·공식",
+  "verified_target": "M37 왕자대전",
+  "url": "https://www.dimf.or.kr/portal/festival/view.do?idx=204&mId=0203020100&searchType=001"
+ },
+ {
+  "source_id": "SRC060",
+  "usage": "대표 넘버",
+  "provider": "DIMF",
+  "source_type": "공연기관·공식",
+  "verified_target": "M37 왕자대전",
+  "url": "https://www.dimf.or.kr/portal/festival/view.do?idx=182&mId=0203020200&searchType=002"
+ },
+ {
+  "source_id": "SRC061",
+  "usage": "작품·대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M38 이순신",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=1403"
+ },
+ {
+  "source_id": "SRC062",
+  "usage": "작품·대표 넘버",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M40 대장금",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=1601"
+ },
+ {
+  "source_id": "SRC063",
+  "usage": "작품",
+  "provider": "더뮤지컬",
+  "source_type": "공연 전문 DB·매체",
+  "verified_target": "M41 칠서",
+  "url": "https://www.themusical.co.kr/Musical/Detail?num=2475"
+ },
+ {
+  "source_id": "SRC064",
+  "usage": "대표 넘버",
+  "provider": "예스24 채널",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M41 칠서",
+  "url": "https://ch.yes24.com/article/details/79756"
+ },
+ {
+  "source_id": "SRC065",
+  "usage": "작품",
+  "provider": "인터파크 티켓",
+  "source_type": "공식 예매·공연 정보",
+  "verified_target": "M42 한복 입은 남자",
+  "url": "https://tickets.interpark.com/contents/notice/detail/11139"
+ },
+ {
+  "source_id": "SRC066",
+  "usage": "작품",
+  "provider": "CJ아지트",
+  "source_type": "공연기관·공식",
+  "verified_target": "M44 판",
+  "url": "https://www.cjazit.org/support/stage-up/selection/1323?p=2"
+ },
+ {
+  "source_id": "SRC067",
+  "usage": "대표 넘버",
+  "provider": "뉴시스",
+  "source_type": "언론·전문 기사",
+  "verified_target": "M44 판",
+  "url": "https://mobile.newsis.com/view/NISX20180531_0000323264"
+ },
+ {
+  "source_id": "SRC068",
+  "usage": "작품",
+  "provider": "수원시",
+  "source_type": "공공기관·공식",
+  "verified_target": "M45 정조",
+  "url": "https://www.suwon.go.kr/culture/endCultureView.do?ctrSeqNo=461&listType=end&q_currPage=32&q_sortName=name"
+ },
+ {
+  "source_id": "SRC069",
+  "usage": "작품·대표 넘버",
+  "provider": "남양주문화재단",
+  "source_type": "공연기관·공식",
+  "verified_target": "M47 다산, 물 위의 별",
+  "url": "https://www.nyjcf.or.kr/www/19?date=2026-09-12&action=read&action-value=105"
+ }
+]
